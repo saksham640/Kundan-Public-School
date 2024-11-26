@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.css";
 import logo from "/logos/insignia.png";
-import TitleChanger from "../TitleChanger/TitleChanger";
+import TitleChanger from "../TitleChanger/TitleChanger.jsx";
 import { PiStudentFill } from "react-icons/pi";
 import { FaBookOpen } from "react-icons/fa6";
 import { FaChalkboardTeacher } from "react-icons/fa";

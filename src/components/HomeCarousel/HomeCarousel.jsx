@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "./HomeCarousel.module.css"
-import FrontTitle from "../FrontTitle/FrontTitle";
-import Marquee from "../Marquee/Marquee";
+import FrontTitle from "../FrontTitle/FrontTitle.jsx";
+import Marquee from "../Marquee/Marquee.jsx";
 
 export default function HomeCarousel({imageUrls,titleText,marqueeText}){
 
