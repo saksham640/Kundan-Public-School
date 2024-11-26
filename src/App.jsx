@@ -2,7 +2,7 @@ import HomeCarousel from "./components/HomeCarousel/HomeCarousel.jsx"
 import CardSlider from "./components/CardSlider/CardSlider.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx"
 import TopNav from "./components/TopNav/TopNav.jsx"
-import styles from "../src/App.module.css.jsx"
+import styles from "../src/App.module.css"
 import LongCard from "./components/LongCard/LongCard.jsx"
 import CardSliderVertical from "./components/CardSliderVertical/CardSliderVertical.jsx";
 import BgScroller from "./components/BgScroller/BgScroller.jsx";
