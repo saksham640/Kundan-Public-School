@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    width: 40vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    font-size: 30px;
+    overflow: hidden;
+    z-index: 200;
+    color: rgb(0, 0, 44);
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}

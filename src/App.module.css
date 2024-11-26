@@ -1,0 +1,11 @@
+.eventsAndAchievements{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+.centreHeadings{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}

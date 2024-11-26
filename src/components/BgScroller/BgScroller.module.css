@@ -1,0 +1,23 @@
+.bgScroller {
+    width: 100vw;
+    height: 50vh; /* Increased for better effect */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .image {
+    height: 150vh;
+    width: 150vw;
+    filter: blur(5px);
+    will-change: transform; /* Hint for performance */
+  }
+
+  .values{
+    color: white;
+    border: 1px solid red;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    width: 95vw;
+    height: 48vh;
+  }
