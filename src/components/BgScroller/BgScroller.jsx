@@ -24,13 +24,19 @@ export default function BgScroller({ parallaxValues }) {
   return (
     <div className={styles.bgScroller}>
         <div className={styles.values}>
-            
+            <h1 id={styles.campus}>{parallaxValues.title}</h1>
+            <h2 id={styles.description}>{parallaxValues.description}</h2>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             </div>
       <img
         className={styles.image}
-        src="/carousel_images/img_4.jpg"
+        src="/carousel_images/img_3.jpg"
         style={{
-          transform: `translateY(${(-1750 + scroll) * 0.5}px)`,
+          transform: `translateY(${(-2100 + scroll) * 0.5}px)`,
           transition: "transform 0.1s ease-out", // Smooth transition
         }}
       />

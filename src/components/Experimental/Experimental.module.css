@@ -1,0 +1,38 @@
+.Experimental{
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    align-self:center;
+    width: 80vw;
+    height: 250px;
+    margin-bottom: 5rem;
+    flex-direction: row-reverse;
+    padding-left: 1rem;
+    border: 10px solid rgb(64, 152, 219);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+.title{
+    font-size: 4em;
+    color: rgb(0, 2, 36);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.textVals{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+}
+
+.image{
+    height: 90%;
+    margin-top: 1.7rem;
+}
+
+.description{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}

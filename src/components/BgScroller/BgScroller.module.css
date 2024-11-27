@@ -1,23 +1,52 @@
 .bgScroller {
     width: 100vw;
-    height: 50vh; /* Increased for better effect */
+    height: 40vh; /* Increased for better effect */
     overflow: hidden;
     position: relative;
   }
   
   .image {
-    height: 150vh;
-    width: 150vw;
+    height: 110vh;
+    width: 110vw;
     filter: blur(5px);
     will-change: transform; /* Hint for performance */
   }
 
   .values{
-    color: white;
-    border: 1px solid red;
+    color: rgb(255, 255, 255);
     display: flex;
     position: absolute;
     z-index: 500;
     width: 95vw;
     height: 48vh;
+    justify-self: center;
+    margin-left: 2.5%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #campus{
+    margin-bottom: 3rem;
+    font-size: 4.6em;
+    margin-right: 67%;
+    color: yellow;
+    border: 10px solid transparent;
+    display: block;
+    text-shadow: 3px 3px 3px rgb(133, 133, 133);
+  }
+
+  #description{
+    font-size: 1.8em;
+    color:rgb(255, 255, 255);
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 5px solid transparent;
+    border-left-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    background-color: rgba(0, 2, 50, 0.255);
+    border-radius: 5px;
   }

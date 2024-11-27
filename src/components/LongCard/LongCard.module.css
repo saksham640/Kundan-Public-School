@@ -18,6 +18,7 @@
     border-top-left-radius: 3rem;
     box-shadow: 3px 3px 3px 3px rgb(211, 211, 211);
     overflow: hidden !important;
+    transform: scale(1.1);
 }
 
 .textBox{

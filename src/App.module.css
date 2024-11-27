@@ -9,3 +9,38 @@
     justify-content: space-between;
     overflow-x: hidden;
 }
+
+.sup{
+    transform: scale(0.8) translateX(2vw)
+}
+
+.supSenior{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgb(255, 255, 255)), url(/backgrounds/sup2.jpg);
+
+}
+
+.supSibling{
+    display: flex;
+    width: 25vw;
+    height: 60vh;
+    align-self: center;
+    background-color: rgb(221, 244, 255);
+    transform: translate(6vw,-3vh);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardText{
+    text-align: center;
+    margin-top: 2rem;
+}
+

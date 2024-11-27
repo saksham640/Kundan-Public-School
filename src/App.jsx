@@ -6,6 +6,9 @@ import styles from "../src/App.module.css"
 import LongCard from "./components/LongCard/LongCard.jsx"
 import CardSliderVertical from "./components/CardSliderVertical/CardSliderVertical.jsx";
 import BgScroller from "./components/BgScroller/BgScroller.jsx";
+import Experimental from "./components/Experimental/Experimental.jsx";
+import Experimental2 from "./components/Experimental2/Experimental2.jsx";
+
 let carouselImages = [];
 for(let i = 0; i < 4; i++){
   carouselImages[i] = `/carousel_images/img_${i+1}.jpg`;
@@ -34,6 +37,10 @@ const message = {image: "/Faculty/president.jpg" ,name:"Some guy's Name", descri
 
 const parallaxValues = {title:"Campus", description:"The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids."}
 
+const ExperimentalValues = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png"}
+
+const Experimental2Values = {title: "Infrastructure", description:"Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", image: "/carousel_images/img_5.jpg"}
+
 
 export default function App(){
   return(
@@ -54,7 +61,18 @@ export default function App(){
       <LongCard cardValues={message}/>
       <h1 style={{marginLeft:"6rem"}}>Know The School:</h1>
       <BgScroller parallaxValues = {parallaxValues}/>
-      <div style={{marginBottom:"70vh"}}></div>
+      <br/>
+      <div className={styles.supSenior}>
+        <div className={styles.supSibling}>
+          <h1 className={styles.siblingHeading}>About School</h1>
+          <h2 className={styles.cardText}>Carrying forward the legacy of over 20 years of experience in academics, the society is now offering its expertise in the field of secondary education, where the young, developing brains of your kids are polished to bring out the genius in them. Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.</h2>
+        </div>
+        <div className={styles.sup}>
+          <Experimental values={ExperimentalValues}/>
+          <Experimental2 values={Experimental2Values}/>
+        </div>
+      </div>
+      <BgScroller parallaxValues = {parallaxValues}/>
     </>
   )
 } 
