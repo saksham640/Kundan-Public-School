@@ -11,6 +11,7 @@
     border: 10px solid rgb(64, 152, 219);
     border-top-color: transparent;
     border-left-color: transparent;
+    overflow: visible;
 }
 
 .title{

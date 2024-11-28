@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 48vh;
+    height: 24em;
     width: 30vw;
     margin-right: 4rem;
     border-radius: 1rem;
     background-color:rgb(237, 250, 255);
     align-self: center;
     overflow-y: scroll;
+    border: 6px solid rgb(84, 84, 136);
+    border-bottom-color: transparent;
 }
 
 .card{

@@ -1,0 +1,89 @@
+.photoGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28vw; /* Maintain original width */
+    margin: 2rem auto;
+    background: linear-gradient(rgba(255, 255, 255, 0.467), rgba(255, 255, 255, 0.385));
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    overflow: hidden;
+    transform: translateX(7rem);
+  }
+  
+  .row {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 1rem;
+    justify-items: center;
+    width: 100%;
+  }
+  
+  .img {
+    max-width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out, filter 0.2s ease-in-out;
+  }
+  
+  .img:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    filter: opacity(0.9);
+
+  }
+  
+  /* Popup overlay that covers the entire document */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: scroll;
+  }
+  
+  .popupContent {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    overflow: scroll;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 1rem;
+  }
+  
+  .popupImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    transform: scale(1.1);
+    color: #ff5f5f;
+  }
+  

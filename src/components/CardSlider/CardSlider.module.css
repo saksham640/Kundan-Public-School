@@ -1,7 +1,7 @@
 .cardSlider {
     display: flex;
     width: 55vw;
-    height: 50vh;
+    height: 25em;
     margin-left: 4rem;
     scroll-behavior: smooth;
     transition: scroll 0.3s ease-in-out;
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 15vw;
-    height: 40vh;
+    height: 20em;
     margin-left: 1%;
     margin-right: 1%;
     flex: 0 0 210px;

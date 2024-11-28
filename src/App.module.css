@@ -11,7 +11,7 @@
 }
 
 .sup{
-    transform: scale(0.8) translateX(2vw)
+    transform: scale(0.75 );
 }
 
 .supSenior{
@@ -23,24 +23,17 @@
 
 }
 
-.supSibling{
-    display: flex;
-    width: 25vw;
-    height: 60vh;
-    align-self: center;
-    background-color: rgb(221, 244, 255);
-    transform: translate(6vw,-3vh);
-    border-radius: 1rem;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .cardText{
     text-align: center;
     margin-top: 2rem;
 }
 
+.forBg{
+    background: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.755), rgba(255, 255, 255, 0.912)),url(/backgrounds/sup2.jpg);
+    background-size: 120%;
+}
+
+.formAndExperimental{
+    display: flex;
+    justify-content: space-between;
+}
