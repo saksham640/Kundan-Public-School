@@ -10,7 +10,7 @@ export default function LongCard({cardValues}){
                     <h3 className={styles.description} style={{marginTop:"0.5rem", marginRight:"1rem", marginLeft:"1rem", fontSize:"100%"}}>{cardValues.description}</h3>
                 </div>
                 <div className={styles.authorBox}>
-                <h3 className={styles.author} style={{marginRight:"5%"}}>Dr. Rajeev Hora</h3>
+                <h3 className={styles.author} style={{marginRight:"5%"}}>{cardValues.name}</h3>
                 </div>
             </div>
         </div>

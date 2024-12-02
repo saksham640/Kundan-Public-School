@@ -10,7 +10,6 @@ export default function CardSlider({cardValues}){
 
     return(
         <div className={styles.cardSlider}>
-            <FaAngleDoubleLeft id={styles.leftIcon} className={styles.sliderIcons}/>
             {cardValues.map(cardValue=>(
                 <div className={styles.card}>
                     <h2>{cardValue.name}</h2>
@@ -18,7 +17,6 @@ export default function CardSlider({cardValues}){
                     <h3>{cardValue.description}</h3>
                 </div>
             ))}
-            <FaAngleDoubleRight className={styles.sliderIcons} id={styles.rightIcon}/>
         </div>
     )
 }

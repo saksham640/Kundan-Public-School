@@ -39,7 +39,6 @@ export default function BgScroller({ parallaxValues }) {
         src="/carousel_images/img_3.jpg"
         style={{
           transform: `translateY(${(offsetConstant + scroll) * 0.5}px)`,
-          transition: "transform 0.1s ease-out",
         }}
       />
     </div>

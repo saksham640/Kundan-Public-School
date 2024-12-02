@@ -13,14 +13,20 @@ import PhotoGallery from "./components/PhotoGallery/PhotoGallery.jsx";
 import EnquiryForm from "./components/EnquiryForm/EnquiryForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
-let carouselImages = [];
-for(let i = 0; i < 4; i++){
-  carouselImages[i] = `/carousel_images/img_${i+1}.jpg`;
-}
+const carouselImages = [
+  "https://i.ibb.co/fpwJ9B8/17.jpg",
+  "https://i.ibb.co/rp4yL0d/13.jpg",
+  "https://i.ibb.co/CQqVhP2/img9.jpg",
+  "https://i.ibb.co/y0kFW4g/img3.jpg",
+  "/carousel_images/img_4.jpg",
+
+];
+
+
 
 const titles = ["Welcome To Kundan Public School"];
-const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Officialy affiliated with CBSE"];
-const events = [{name: "Independance Day Activitysdjfnsdkjfnsd", description: "It was a really fun day man", image: "/activity_Images/img_1.jpg"},
+const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Approved by the government of punjab"];
+const events = [{name: "Independance Day Activi", description: "It was a really fun day man", image: "/activity_Images/img_1.jpg"},
 {name: "Teacher's Day Celebration", description: "some description about this event", image: "/activity_Images/img_2.jpg"},
 {name: "Some activity", description: "some description about this event", image: "/activity_Images/img_3.jpg"},
 {name: "Diwali Activity", description: "We made rangoli and stuff", image: "/activity_Images/img_4.jpg"},{name: "Teacher's Day Celebration", description: "some description about this event", image: "/activity_Images/img_2.jpg"},
@@ -28,20 +34,20 @@ const events = [{name: "Independance Day Activitysdjfnsdkjfnsd", description: "I
 {name: "Diwali Activity", description: "We made rangoli and stuff", image: "/activity_Images/img_4.jpg"}];
 
 const achievements = [
-  "Our school implemented a comprehensive STEM curriculum, significantly improving student engagement and performance in science, technology, engineering, and mathematics subjects.",
-  "The school robotics team won first place in the regional robotics competition, demonstrating outstanding skills in engineering, programming, and teamwork.",
-  "Launched a successful environmental awareness campaign, resulting in the school earning a Green School certification for its efforts in sustainability.",
-  "The school's debate team advanced to the national finals, showcasing exceptional public speaking, critical thinking, and argumentation skills.",
-  "Students organized and executed a large-scale charity fundraiser, raising significant funds for local and international humanitarian causes.",
-  "Introduced a peer tutoring program that led to improved academic performance and stronger collaborative relationships among students.",
-  "The school's music department performed a concert at a prestigious venue, receiving acclaim for their exceptional talent and dedication."
+  "Kundan Public School is soon to be affiliated with CBSE",
+  "Some achievement",
+  "some achievement",
+  "some achievement",
+  "some achievement",
+  "some achievemnet",
+  "some achievement"
 ];
 
-const message = {image: "/Faculty/president.jpg" ,name:"Some guy's Name", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country."}
+const message = {image: "/Faculty/president.jpg" ,name:"Dr. Rajiner Hora", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country."}
 
 const parallaxValues = {title:"Campus", description:"The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.",offsetConstant: -2100}
 
-const parallaxValues2 = {title:"Facilities", description:"Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ",offsetConstant: -2900}
+const parallaxValues2 = {title:"Facilities", description:"Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ",offsetConstant: -3200}
 
 const ExperimentalValues = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
 
