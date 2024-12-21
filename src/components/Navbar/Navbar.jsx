@@ -9,8 +9,6 @@ import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
 
-
-
 export default function Navbar() {
 
     const title = "Kundan Public School";
@@ -64,8 +62,6 @@ export default function Navbar() {
                         <CiLogin className={styles.icons}/>
                         <h3 className={styles.option}>Teacher Login</h3>
                     </div>
-                    
-
                 </div>
             </div>
         </div>

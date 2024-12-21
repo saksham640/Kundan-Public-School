@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../TitleChanger/TitleChanger.module.css";
 
-export default function TextSwitcher({ text1, text2 }) {
+export default function TextSwitcher({ text1, text2, size, color, marginLeft}) {
     const [visibleText, setVisibleText] = useState(text1);
     const [isFading, setIsFading] = useState(false);
 
@@ -22,7 +22,8 @@ export default function TextSwitcher({ text1, text2 }) {
 
     return (
         <div className={styles.container}>
-            <h1 className={`${styles.text} ${isFading ? styles.fadeOut : styles.fadeIn}`}>{visibleText}</h1>
+           <h1 className={`${styles.text} ${isFading ? styles.fadeOut : styles.fadeIn}`} style={{fontSize: `${size}vw`, color: color, marginLeft: `${marginLeft}%`}}>
+                {visibleText}</h1>
         </div>
     );
 }

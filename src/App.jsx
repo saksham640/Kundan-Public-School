@@ -12,6 +12,7 @@ import BigCard from "./components/BigCard/BigCard.jsx";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery.jsx";
 import EnquiryForm from "./components/EnquiryForm/EnquiryForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import MobileNavBar from "./components/mobileNavBar/MobileNavBar.jsx";
 
 const carouselImages = [
   "https://i.ibb.co/fpwJ9B8/17.jpg",
@@ -21,8 +22,6 @@ const carouselImages = [
   "/carousel_images/img_4.jpg",
 
 ];
-
-
 
 const titles = ["Welcome To Kundan Public School"];
 const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Approved by the government of punjab"];
@@ -66,19 +65,19 @@ const photoGalleryData = [
   { id: 7, img: "/activity_Images/img_2.jpg" },
   { id: 8, img: "/activity_Images/img_3.jpg" },
   { id: 9, img: "/activity_Images/img_3.jpg" },
-
 ];
 
 const afterExp = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
 
 const afterExp2 = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
 
-
 export default function App(){
   return(
     <>
       <TopNav></TopNav>
+      <MobileNavBar/>
       <Navbar></Navbar>
+
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle}/>
       <div className={styles.centreHeadings}>
       <h1 style={{fontFamily : "sans-serif", marginTop : "3rem", marginLeft : "6rem"}}>Latest Events:</h1>

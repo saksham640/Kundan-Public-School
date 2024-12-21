@@ -24,3 +24,9 @@
     50% { transform: translateY(-9px); }
     100% { transform: translateY(0); }
 }
+
+@media (max-width: 648px) {
+    .titleText{
+        display: none;
+    }
+}

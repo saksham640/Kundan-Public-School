@@ -13,6 +13,8 @@
 }
 
 .logo{
+    width: 7vw;
+    min-width: 80px;
     max-width: 100px;
     z-index: 10;
     margin: 0;
@@ -33,8 +35,7 @@
     align-content: center;
     box-shadow: 1px 50px 50px 30px  rgb(165, 223, 255,0.85);
     overflow-x: hidden;
-    
-    
+    font-size: 1.1vw;
 }
 
 .titleBox{
@@ -50,7 +51,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    font-size: 1.1vw
 }
+
 .navOptionBox{
     display: flex;
     align-self: center;
@@ -109,6 +112,12 @@
 .icons{
     font-size: 1.3rem;
     padding-right: 3px;
+}
+
+@media (max-width: 648px){
+    .navbar{
+        display: none;
+    }
 }
 
 
