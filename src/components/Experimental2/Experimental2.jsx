@@ -11,8 +11,6 @@ export default function Experimental2({values}){
             <h1 className={styles.title}>{values.title}</h1>
             <h2 className={styles.description}>{values.description}</h2>
             </div>
-
-
         </div>
     )
 

@@ -19,7 +19,7 @@
     align-self: center;
     justify-content: center;
     justify-self: center;
-    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgb(255, 255, 255)), url(/backgrounds/sup2.jpg);
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
 
 }
 
@@ -49,6 +49,9 @@
     }
     .centreHeadings{
         display: none;
+    }
+    .supSenior{
+        flex-direction: column;
     }
     
 }
