@@ -37,3 +37,18 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width:648px){
+    .eventsAndAchievements{
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;    
+    }
+    .centreHeadings{
+        display: none;
+    }
+    
+}

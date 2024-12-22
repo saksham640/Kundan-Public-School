@@ -10,12 +10,12 @@
     justify-self: center;
     margin-bottom: 5rem;
     margin-top: 3rem;
-    border-bottom-right-radius: 3rem;
+    border-bottom-right-radius: 2rem;
     align-items: center;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-top-left-radius: 3rem;
+    border-top-left-radius: 2rem;
     box-shadow: 3px 3px 3px 3px rgb(211, 211, 211);
     overflow: hidden !important;
     transform: scale(1.1);
@@ -58,7 +58,8 @@
     height: auto;
 }
 
-*{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+@media (max-width:648px){
+    .longCard{
+        display: none;
+    }
 }

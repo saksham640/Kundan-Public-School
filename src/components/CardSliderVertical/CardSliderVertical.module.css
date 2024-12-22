@@ -9,7 +9,7 @@
     background-color:rgb(237, 250, 255);
     align-self: center;
     overflow-y: scroll;
-    border: 6px solid rgb(84, 84, 136);
+    border: 3px solid rgb(104, 136, 165);
     border-bottom-color: transparent;
 }
 
@@ -31,4 +31,15 @@
     flex-grow: 0;
     flex-shrink: 0;
     box-shadow: 2px 2px 2px 2px rgb(237, 237, 237);
+}
+
+@media (max-width:648px){
+    .cardSliderVertical{
+        width:85vw;
+        margin: 0;
+        height: 20em;
+    }
+    .card{
+        height: 5em;
+    }
 }

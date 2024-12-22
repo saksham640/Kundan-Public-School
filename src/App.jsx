@@ -13,6 +13,7 @@ import PhotoGallery from "./components/PhotoGallery/PhotoGallery.jsx";
 import EnquiryForm from "./components/EnquiryForm/EnquiryForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import MobileNavBar from "./components/mobileNavBar/MobileNavBar.jsx";
+import MobVisionaryMessage from "./components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 
 const carouselImages = [
   "https://i.ibb.co/fpwJ9B8/17.jpg",
@@ -83,13 +84,17 @@ export default function App(){
       <h1 style={{fontFamily : "sans-serif", marginTop : "3rem", marginLeft : "6rem"}}>Latest Events:</h1>
       <h1 style={{fontFamily : "sans-serif", marginTop : "3rem", marginRight:"12vw", color:"navy"}}>Achievements</h1>
       </div>
+      <br/>
       <div className={styles.eventsAndAchievements}>
       <CardSlider cardValues = {events}/>
+      <br/>
       <CardSliderVertical cardValues = {achievements}/>
       </div>
       <br/>
       <br/>
       <LongCard cardValues={message}/>
+      <MobVisionaryMessage/>
+      <br/>
       <h1 style={{textAlign:"center", fontFamily:"sans-serif", color:"navy"}}>Know The School:</h1>
       <br/>
       <BgScroller parallaxValues = {parallaxValues}/>
