@@ -31,10 +31,43 @@
 
 .image{
     height: 90%;
-    margin-bottom: 0.2rem
+    margin-bottom: 0.2rem;
+    border-radius: 1rem;
 }
 
 .description{
     font-size: 1.5em;
     margin-bottom: 30px;
+}
+@media(max-width:648px){
+    .Experimental{
+        transform: scale(0.5);
+        width: 80vw !important;
+        transform: scale(0) !important;
+        transform: translateX(0) !important;
+        height: 20em;
+        margin: 0;
+        border-width: 6px;
+        margin-bottom: 2em;
+    }
+    .title{
+        font-size: 5.2vw;
+        overflow:visible ;
+        margin: 0;
+        text-align: start;
+    }
+    .description{
+        font-size: 4vw;
+        overflow:visible;
+        margin: 0;
+    }
+    .image{
+        max-width: 70%;
+        max-height: 60%;
+        margin-bottom: 0 !important;
+        transform: translateY(50%);
+    }
+    .textVals{
+        padding-left: 1rem;
+    }
 }

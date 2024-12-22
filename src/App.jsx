@@ -45,11 +45,13 @@ const achievements = [
 
 const message = {image: "/Faculty/president.jpg" ,name:"Dr. Rajiner Hora", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country."}
 
+const MobMessage = {title: "Visionary", image: "/Faculty/president.jpg", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country.", author: "-Dr. Rajinder Hora"}
+
 const parallaxValues = {title:"Campus", description:"The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.",offsetConstant: -2100}
 
 const parallaxValues2 = {title:"Facilities", description:"Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ",offsetConstant: -3200}
 
-const ExperimentalValues = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
+const ExperimentalValues = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_4.jpg", scale: "1", translate: "0"}
 
 const ourTeaching = {title:"Our Teaching Methodology", description: `At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process`, image: "/logos/insignia.png"
 }
@@ -68,9 +70,11 @@ const photoGalleryData = [
   { id: 9, img: "/activity_Images/img_3.jpg" },
 ];
 
-const afterExp = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
+const afterExp = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/carousel_images/img_5.jpg", scale: "1", translate: "0"}
 
-const afterExp2 = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/activity_Images/img_1-modified.png", scale: "1", translate: "0"}
+const afterExp2 = {title:"Staff And Faculty", description:"A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.",image:"/carousel_images/img_5.jpg", scale: "1", translate: "0"}
+
+const researchMethodologyMob = {title: "Our Methodology", image: "/logos/ins2.png", description: "At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process", author: ""}
 
 export default function App(){
   return(
@@ -93,7 +97,7 @@ export default function App(){
       <br/>
       <br/>
       <LongCard cardValues={message}/>
-      <MobVisionaryMessage/>
+      <MobVisionaryMessage values={MobMessage}/>
       <br/>
       <h1 style={{textAlign:"center", fontFamily:"sans-serif", color:"navy"}}>Know The School:</h1>
       <br/>
@@ -116,6 +120,7 @@ export default function App(){
       </div>
       <div className={styles.forBg}>
       <BigCard values={ourTeaching}/>
+      <MobVisionaryMessage values={researchMethodologyMob}/>
       </div>
       <Footer/>
     </>

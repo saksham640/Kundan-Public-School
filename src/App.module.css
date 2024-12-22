@@ -53,5 +53,8 @@
     .supSenior{
         flex-direction: column;
     }
+    .sup{
+        transform: scale(1);
+    }
     
 }

@@ -109,3 +109,15 @@
     transform: translateY(0);
   }
 }
+
+@media(max-width:648px){
+   .admission-form-container{
+    transform: scale(1);
+    transform: translate(0);
+    margin: 0;
+    align-self: center;
+    width: 80vw;
+    padding-bottom: 0;
+   }
+
+}
