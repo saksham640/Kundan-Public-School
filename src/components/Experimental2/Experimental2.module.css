@@ -55,6 +55,8 @@
         overflow:visible ;
         margin: 0;
         text-align: start;
+        margin-top: 50%;
+        text-align: center;
     }
     .description{
         font-size: 4vw;
