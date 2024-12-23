@@ -124,6 +124,7 @@ export default function App(){
       <BigCard values={ourTeaching}/>
       <MobVisionaryMessage values={researchMethodologyMob}/>
       </div>
+      <br/>
       <Footer/>
     </>
   )
