@@ -17,10 +17,10 @@
 .supSenior{
     display: flex;
     align-self: center;
-    justify-content: center;
     justify-self: center;
+    align-items: center;
     background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
-
+    width: 100;
 }
 
 .cardText{
@@ -43,6 +43,16 @@ nav{
     position: sticky;
     z-index: 999999;
 }
+
+.supSenior{
+    overflow-x: hidden;
+    width: 100%
+}
+
+.sup{
+    overflow-x: hidden;
+}
+
 
 @media (max-width:648px){
     .eventsAndAchievements{

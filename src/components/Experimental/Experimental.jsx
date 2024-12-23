@@ -7,7 +7,7 @@ export default function Experimental({values}){
 
 
     return(
-        <div style = {{transform:`scale(${beeg}) translateX(${pos}vw)`}} className={styles.Experimental}>
+        <div className={styles.Experimental}>
             <img src= {values.image} className={styles.image}>
             </img>
 

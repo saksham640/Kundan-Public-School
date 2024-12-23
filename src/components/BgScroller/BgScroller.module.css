@@ -1,5 +1,5 @@
 .bgScroller {
-    width: 100vw;
+    width: 100%;
     height: 40vh; /* Increased for better effect */
     overflow: hidden;
     position: relative;
