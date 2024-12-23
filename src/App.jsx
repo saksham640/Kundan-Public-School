@@ -1,3 +1,5 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import HomeCarousel from "./components/HomeCarousel/HomeCarousel.jsx"
 import CardSlider from "./components/CardSlider/CardSlider.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx"
@@ -14,6 +16,7 @@ import EnquiryForm from "./components/EnquiryForm/EnquiryForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import MobileNavBar from "./components/mobileNavBar/MobileNavBar.jsx";
 import MobVisionaryMessage from "./components/MobVisionaryMessage/MobVisionaryMessage.jsx"
+import About from "./components/About/About.jsx";
 
 const carouselImages = [
   "https://i.ibb.co/fpwJ9B8/17.jpg",
@@ -75,6 +78,14 @@ const afterExp2 = {title:"Our Objective", description:"Our objective is to provi
 const afterExp = {title:"The School", description:"Carrying forward the legacy of over 20 years of experience in academics, the society is now offering its expertise in the field of secondary education, where the young, developing brains of your kids are polished to bring out the genius in them. ",image:"/carousel_images/img_5.jpg", scale: "1", translate: "0"}
 
 const researchMethodologyMob = {title: "Our Methodology", image: "/logos/ins2.png", description: "At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process", author: ""}
+
+const router = createBrowserRouter(
+  [
+    {path: "/about",
+     element: <About/>
+    },
+  ]
+)
 
 export default function App(){
   return(
