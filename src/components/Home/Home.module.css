@@ -1,0 +1,76 @@
+.eventsAndAchievements{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+.centreHeadings{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.sup{
+    transform: scale(0.75 );
+}
+
+.supSenior{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
+    width: 100;
+}
+
+.cardText{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.forBg{
+    background: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.755), rgba(255, 255, 255, 0.912)),url(/backgrounds/sup2.jpg);
+    background-size: 120%;
+}
+
+.formAndExperimental{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    top: 0;
+    position: sticky;
+    z-index: 999999;
+}
+
+.supSenior{
+    overflow-x: hidden;
+    width: 100%
+}
+
+.sup{
+    overflow-x: hidden;
+}
+
+
+@media (max-width:648px){
+    .eventsAndAchievements{
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;    
+    }
+    .centreHeadings{
+        display: none;
+    }
+    .supSenior{
+        flex-direction: column;
+    }
+    .sup{
+        transform: scale(1);
+    }
+    
+}
