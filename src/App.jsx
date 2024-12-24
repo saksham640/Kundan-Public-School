@@ -1,15 +1,15 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter, } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import ErrorElement from "./components/ErrorElement/ErrorElement.jsx";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
       element: <Home/>,
-
+      errorElement: <ErrorElement/>,
     },
     {
       path: "/about",
