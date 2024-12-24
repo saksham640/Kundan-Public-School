@@ -123,6 +123,7 @@
     color: white;
     background: transparent;
     padding: 0;
+    z-index: 9999;
 }
 
 .NavLink:hover{

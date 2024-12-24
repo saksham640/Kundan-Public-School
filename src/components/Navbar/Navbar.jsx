@@ -19,11 +19,9 @@ export default function Navbar() {
             <div className={styles.titleBox}>
                 <h1 className={styles.motto}>Learn Achieve Inspire</h1>
             </div>
-
-            <img className={styles.logo} src={logo} alt="Logo" onClick={()=>{
-                location.assign("/");
-            }}/>
-
+            <NavLink to={"/"} className={styles.NavLink}>
+            <img className={styles.logo} src={logo} alt="Logo"/>
+            </NavLink>
             <div className={styles.titleBox}>
                 <h1
                     className={styles.name}>
@@ -34,24 +32,24 @@ export default function Navbar() {
             <div className={styles.navMenu}>
                 <div className={styles.navOptionBox}>
 
-                    
+                    <NavLink to={"/admissions"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <PiStudentFill className={styles.icons}/>
-                    <h3 className={styles.option} onClick={()=>{location.assign("/admissions")}}>Admissions</h3>
+                    <h3 className={styles.option}>Admissions</h3>
                     </div>
-
-
+                    </NavLink>
+                    <NavLink to={"/cirriculum"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <FaBookOpen className={styles.icons}/>
-                    <h3 className={styles.option} onClick={()=>{location.assign("/cirriculum")}}>Curriculum</h3>
+                    <h3 className={styles.option}>Curriculum</h3>
                     </div>
-
-
+                    </NavLink>
+                    <NavLink to={"/faculty"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <FaChalkboardTeacher className={styles.icons}/>
-                    <h3 className={styles.option} onClick={()=>{location.assign("/faculty")}}>Faculty</h3>
+                    <h3 className={styles.option}>Faculty</h3>
                     </div>
-
+                    </NavLink>
 
                     <NavLink to={"/about"} className={styles.NavLink}>
                     <div className={styles.yo}>
@@ -62,20 +60,24 @@ export default function Navbar() {
 
                 </div>
                 <div className={styles.navOptionBox}>
+                <NavLink to={"/calender"} className={styles.NavLink}>
                     <div className={styles.yo}>
                         <SlCalender className={styles.icons}/>
-                        <h3 className={styles.option} onClick={()=>{location.assign("/calender")}}>Calender</h3>
+                        <h3 className={styles.option} >Calender</h3>
                     </div>
-
+                </NavLink>
+                <NavLink to={"/holidays"} className={styles.NavLink}>
                     <div className={styles.yo}>
                         <MdHolidayVillage className={styles.icons}/>
-                        <h3 className={styles.option} onClick={()=>{location.assign("/holidays")}}>Holidays</h3>
+                        <h3 className={styles.option}>Holidays</h3>
                     </div>
-
+                </NavLink>
+                <NavLink to={"/login"} className={styles.NavLink}>
                     <div className={styles.yo}>
                         <CiLogin className={styles.icons}/>
-                        <h3 className={styles.option} onClick={()=>{location.assign("/login")}}>Teacher Login</h3>
+                        <h3 className={styles.option}>Teacher Login</h3>
                     </div>
+                </NavLink>
                 </div>
             </div>
         </div>
