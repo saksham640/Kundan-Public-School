@@ -1,10 +1,9 @@
 import React from 'react'
-import Nav from '../Nav'
-import Footer from '../Footer/Footer'
+import Nav from '../Nav.jsx'
+import Footer from '../Footer/Footer.jsx'
 import styles from "../About/About.module.css"
 import MobVisionaryMessage from "../MobVisionaryMessage/MobVisionaryMessage.jsx"
 import PcCard from "../PcCard/PcCard.jsx"
-import { image } from 'framer-motion/client'
 
 const OurHistory = {title: "Kaushalya Kundan Charitable Trust",
   image:"logos/KKCS.png",
