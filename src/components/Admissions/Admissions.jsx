@@ -3,6 +3,7 @@ import styles from "../Admissions/Admissions.module.css"
 import Footer from "../Footer/Footer"
 import Nav from "../Nav"
 import Table from "../Table/Table"
+import EnquiryForm from "../EnquiryForm/EnquiryForm"
 
 const AgeHeadings = ["Class", "Age as on March 31, 2025", "Date of Birth Range"]
 
@@ -29,7 +30,7 @@ const feeTableData = {
     ]   
 }
 
-
+const style = {marginLef: 500};
 export default function Admissions(){
     return(
         <>
@@ -40,8 +41,13 @@ export default function Admissions(){
             <h1>Age Criteria: </h1>
             <Table values={AgeTableData} headings={AgeHeadings}/>
             <br/>
+            <div style={{display: "flex", justifyContent: "center"}}>
+            <EnquiryForm/>
+            </div>
+            <br/>
             <h1>Fee Structure: </h1>
             <Table values={feeTableData} headings={feeHeadings}/>
+            <br/>
             <br/>
             <Footer/>
         </>

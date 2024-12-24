@@ -17,12 +17,10 @@ import MobVisionaryMessage from "../MobVisionaryMessage/MobVisionaryMessage.jsx"
 import styles from "../Home/Home.module.css"
 
 const carouselImages = [
-  "https://i.ibb.co/fpwJ9B8/17.jpg",
+  "/carousel_images/img_2.jpg",
   "https://i.ibb.co/rp4yL0d/13.jpg",
-  "https://i.ibb.co/CQqVhP2/img9.jpg",
   "https://i.ibb.co/y0kFW4g/img3.jpg",
   "/carousel_images/img_4.jpg",
-
 ];
 
 const titles = ["Welcome To Kundan Public School"];
