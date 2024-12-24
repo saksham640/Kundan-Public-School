@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./pcCard.module.css"; // Import CSS Module
+import styles from "./PcCard.module.css"; // Import CSS Module
 
 export default function Card({values}){
   

@@ -14,7 +14,6 @@ import EnquiryForm from "../EnquiryForm/EnquiryForm.jsx";
 import Footer from "../Footer/Footer.jsx";
 import MobileNavBar from "../mobileNavBar/MobileNavBar.jsx";
 import MobVisionaryMessage from "../MobVisionaryMessage/MobVisionaryMessage.jsx"
-import About from "../About/About.jsx";
 import styles from "../Home/Home.module.css"
 
 const carouselImages = [
