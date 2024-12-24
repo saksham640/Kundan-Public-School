@@ -32,35 +32,35 @@ export default function Navbar() {
                 <div className={styles.navOptionBox}>
                     <div className={styles.yo}>
                     <PiStudentFill className={styles.icons}/>
-                    <h3 className={styles.option}>Admissions</h3>
+                    <h3 className={styles.option} onClick={()=>{location.assign("/admissions")}}>Admissions</h3>
                     </div>
                     <div className={styles.yo}>
                     <FaBookOpen className={styles.icons}/>
-                    <h3 className={styles.option}>Curriculum</h3>
+                    <h3 className={styles.option} onClick={()=>{location.assign("/cirriculum")}}>Curriculum</h3>
                     </div>
                     <div className={styles.yo}>
                     <FaChalkboardTeacher className={styles.icons}/>
-                    <h3 className={styles.option}>Faculty</h3>
+                    <h3 className={styles.option} onClick={()=>{location.assign("/faculty")}}>Faculty</h3>
                     </div>
                     <div className={styles.yo}>
                     <FaClock className={styles.icons}/>
-                    <h3 className={styles.option}>Our History</h3>
+                    <h3 className={styles.option} onClick={()=>{location.assign("/about")}}>Our History</h3>
                     </div>
                 </div>
                 <div className={styles.navOptionBox}>
                     <div className={styles.yo}>
                         <SlCalender className={styles.icons}/>
-                        <h3 className={styles.option}>Calender</h3>
+                        <h3 className={styles.option} onClick={()=>{location.assign("/calender")}}>Calender</h3>
                     </div>
 
                     <div className={styles.yo}>
                         <MdHolidayVillage className={styles.icons}/>
-                        <h3 className={styles.option}>Holidays</h3>
+                        <h3 className={styles.option} onClick={()=>{location.assign("/holidays")}}>Holidays</h3>
                     </div>
 
                     <div className={styles.yo}>
                         <CiLogin className={styles.icons}/>
-                        <h3 className={styles.option}>Teacher Login</h3>
+                        <h3 className={styles.option} onClick={()=>{location.assign("/login")}}>Teacher Login</h3>
                     </div>
                 </div>
             </div>

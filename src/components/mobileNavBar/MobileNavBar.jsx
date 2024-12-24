@@ -29,7 +29,6 @@ export default function MobileNavBar(){
             },350)
         }
     }
-
     return(
         <div className={styles.NavBar}>
             <img className={styles.logo} src="logos/ins2.png"></img>
@@ -56,7 +55,7 @@ export default function MobileNavBar(){
                                     </div>
                                     <div className={styles.yo}>
                                     <FaClock className={styles.icons}/>
-                                    <h3 className={styles.option}>Our History</h3>
+                                    <h3 className={styles.option} onClick={()=>{location.assign("/about")}}>Our History</h3>
                                     </div>
                                 </div>
                                 <div className={styles.navOptionBox}>
