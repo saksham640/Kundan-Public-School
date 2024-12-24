@@ -10,7 +10,13 @@
     padding-top: 5px;
     position: absolute;
     top: 10px;
+    cursor: pointer;
 }
+
+.logo:active{
+    transform: scale(0.95);
+}
+
 .NavBar{
     display: flex;
     justify-content: space-between;

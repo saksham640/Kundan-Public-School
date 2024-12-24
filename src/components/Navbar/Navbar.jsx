@@ -19,7 +19,9 @@ export default function Navbar() {
                 <h1 className={styles.motto}>Learn Achieve Inspire</h1>
             </div>
 
-            <img className={styles.logo} src={logo} alt="Logo" />
+            <img className={styles.logo} src={logo} alt="Logo" onClick={()=>{
+                location.assign("/");
+            }}/>
 
             <div className={styles.titleBox}>
                 <h1

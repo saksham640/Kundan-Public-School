@@ -9,6 +9,10 @@ import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
+import { BiHome } from "react-icons/bi";
+import { CgHome } from "react-icons/cg";
+import { FcHome } from "react-icons/fc";
+import { TiHome } from "react-icons/ti";
 
 export default function MobileNavBar(){
 
@@ -31,7 +35,9 @@ export default function MobileNavBar(){
     }
     return(
         <div className={styles.NavBar}>
-            <img className={styles.logo} src="logos/ins2.png"></img>
+            <img className={styles.logo} src="logos/ins2.png" onClick={()=>{
+                location.assign("/");
+            }}></img>
             <TitleChanger text1= "Kundan Public School"
             text2 = "कुंदन पब्लिक स्कूल"
             size={5}
@@ -41,7 +47,13 @@ export default function MobileNavBar(){
             <div className={styles.menu} style={{right: `${menuPos}vw`, display: menuDisplay}}>
                 <div className={styles.navMenu}>
                                 <div className={styles.navOptionBox}>
-                                    <div className={styles.yo}>
+                                <div className={styles.yo} onClick={()=>{
+                                    location.assign("/");
+                                }}>
+                                    <TiHome className={styles.icons}/>
+                                    <h3 className={styles.option}>Home</h3>
+                                    </div>
+                                    <div className={styles.yo} >
                                     <PiStudentFill className={styles.icons}/>
                                     <h3 className={styles.option}>Admissions</h3>
                                     </div>

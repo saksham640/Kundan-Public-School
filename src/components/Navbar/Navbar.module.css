@@ -19,6 +19,11 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.logo:active{
+    transform: scale(0.9);
 }
 
 .navMenu{
