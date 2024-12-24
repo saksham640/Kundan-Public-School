@@ -1,0 +1,13 @@
+table{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    z-index: -10;
+    position: relative;
+}
+
+td,th{
+    font-size: large;
+    padding: 1rem;
+}
+

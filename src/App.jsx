@@ -3,6 +3,7 @@ import { NavLink, RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import ErrorElement from "./components/ErrorElement/ErrorElement.jsx";
+import Admissions from "./components/Admissions/Admissions.jsx";
 
 const router = createHashRouter(
   [
@@ -15,6 +16,10 @@ const router = createHashRouter(
       path: "/about",
       element: <About/>,
     },
+    {
+      path: "/admissions",
+      element: <Admissions/>
+    }
   ]
 );
 
