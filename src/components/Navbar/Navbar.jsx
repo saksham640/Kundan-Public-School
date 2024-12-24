@@ -8,6 +8,7 @@ import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -46,7 +47,7 @@ export default function Navbar() {
                     </div>
                     <div className={styles.yo}>
                     <FaClock className={styles.icons}/>
-                    <h3 className={styles.option} onClick={()=>{location.assign("/about")}}>Our History</h3>
+                    <NavLink to="/about"><h3 className={styles.option}>Our History</h3></NavLink>
                     </div>
                 </div>
                 <div className={styles.navOptionBox}>
