@@ -44,13 +44,12 @@ export default function Navbar() {
                     <h3 className={styles.option}>Curriculum</h3>
                     </div>
                     </NavLink>
-                    <NavLink to={"/faculty"} className={styles.NavLink}>
+                    <NavLink to={"/prayer"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <FaChalkboardTeacher className={styles.icons}/>
-                    <h3 className={styles.option}>Faculty</h3>
+                    <h3 className={styles.option}>Our Prayer</h3>
                     </div>
                     </NavLink>
-
                     <NavLink to={"/about"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <FaClock className={styles.icons}/>

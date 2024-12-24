@@ -1,0 +1,9 @@
+.prayerBox{
+    width: 70%;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: scroll;
+}

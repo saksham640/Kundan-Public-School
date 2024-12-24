@@ -4,6 +4,8 @@ import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import ErrorElement from "./components/ErrorElement/ErrorElement.jsx";
 import Admissions from "./components/Admissions/Admissions.jsx";
+import Holidays from "./components/Holidays/Holidays.jsx";
+import Prayer from "./components/Prayer/Prayer.jsx";
 
 const router = createHashRouter(
   [
@@ -19,6 +21,14 @@ const router = createHashRouter(
     {
       path: "/admissions",
       element: <Admissions/>
+    },
+    {
+      path: "/holidays",
+      element: <Holidays/>
+    },
+    {
+      path: "/prayer",
+      element: <Prayer/>
     }
   ]
 );
