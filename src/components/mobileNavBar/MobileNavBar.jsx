@@ -13,6 +13,7 @@ import { BiHome } from "react-icons/bi";
 import { CgHome } from "react-icons/cg";
 import { FcHome } from "react-icons/fc";
 import { TiHome } from "react-icons/ti";
+import { NavLink } from "react-router-dom";
 
 export default function MobileNavBar(){
 
@@ -65,10 +66,13 @@ export default function MobileNavBar(){
                                     <FaChalkboardTeacher className={styles.icons}/>
                                     <h3 className={styles.option}>Faculty</h3>
                                     </div>
+                                    <NavLink to={"/about"} className={styles.NavLink}>
                                     <div className={styles.yo}>
                                     <FaClock className={styles.icons}/>
-                                    <h3 className={styles.option} onClick={()=>{location.assign("/about")}}>Our History</h3>
+                                    <h3 className={styles.option}>Our History</h3>
                                     </div>
+                                    </NavLink>
+
                                 </div>
                                 <div className={styles.navOptionBox}>
                                     <div className={styles.yo}>

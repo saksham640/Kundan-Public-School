@@ -33,22 +33,33 @@ export default function Navbar() {
 
             <div className={styles.navMenu}>
                 <div className={styles.navOptionBox}>
+
+                    
                     <div className={styles.yo}>
                     <PiStudentFill className={styles.icons}/>
                     <h3 className={styles.option} onClick={()=>{location.assign("/admissions")}}>Admissions</h3>
                     </div>
+
+
                     <div className={styles.yo}>
                     <FaBookOpen className={styles.icons}/>
                     <h3 className={styles.option} onClick={()=>{location.assign("/cirriculum")}}>Curriculum</h3>
                     </div>
+
+
                     <div className={styles.yo}>
                     <FaChalkboardTeacher className={styles.icons}/>
                     <h3 className={styles.option} onClick={()=>{location.assign("/faculty")}}>Faculty</h3>
                     </div>
+
+
+                    <NavLink to={"/about"} className={styles.NavLink}>
                     <div className={styles.yo}>
                     <FaClock className={styles.icons}/>
-                    <NavLink to="/about"><h3 className={styles.option}>Our History</h3></NavLink>
+                    <h3 className={styles.option}>Our History</h3>
                     </div>
+                    </NavLink>
+
                 </div>
                 <div className={styles.navOptionBox}>
                     <div className={styles.yo}>

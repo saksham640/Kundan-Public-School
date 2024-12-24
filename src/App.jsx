@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { NavLink, RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import ErrorElement from "./components/ErrorElement/ErrorElement.jsx";

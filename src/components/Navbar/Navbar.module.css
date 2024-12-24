@@ -118,6 +118,17 @@
     padding-right: 3px;
 }
 
+.NavLink{
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    padding: 0;
+}
+
+.NavLink:hover{
+    color: rgb(64, 152, 219)
+}
+
 
 @media (max-width: 648px){
     .navbar{
