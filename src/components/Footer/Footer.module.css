@@ -50,4 +50,14 @@ h4{
     text-align: center;
 }
 
-    
+.NavLink{
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    padding: 0;
+    z-index: 9999;
+}
+
+.NavLink:hover{
+    color: rgb(64, 152, 219)
+}
