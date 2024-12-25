@@ -53,6 +53,11 @@ nav{
     overflow-x: hidden;
 }
 
+a{
+    padding: 2px;
+    text-decoration: none;
+}
+
 
 @media (max-width:648px){
     .eventsAndAchievements{

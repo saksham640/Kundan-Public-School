@@ -18,7 +18,7 @@ export default function PhotoGallery({ photos }) {
       <div className={styles.photoGallery}>
         <div className={styles.row}>
           <h1 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
-            Photo Gallery
+            Photo Gallery (click to view)
           </h1>
         </div>
         <div className={styles.grid}>
