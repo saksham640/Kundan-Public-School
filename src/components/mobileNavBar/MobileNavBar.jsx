@@ -12,93 +12,93 @@ import { FaClock } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 
-export default function MobileNavBar(){
+export default function MobileNavBar() {
 
     const [menuPos, setMenuPos] = useState(-70);
     const [menuDisplay, setMenuDisplay] = useState("none");
-    function handleMenuButton(){
-        if(menuDisplay == "none"){
+    function handleMenuButton() {
+        if (menuDisplay == "none") {
             setMenuDisplay("flex");
-            setTimeout(()=>{
+            setTimeout(() => {
                 setMenuPos(0);
-            },5)
+            }, 5)
             return;
-        } else if(menuDisplay == "flex"){
-            setMenuPos(-70); 
-            
-            setTimeout(()=>{
+        } else if (menuDisplay == "flex") {
+            setMenuPos(-70);
+
+            setTimeout(() => {
                 setMenuDisplay("none");
-            },350)
+            }, 350)
         }
     }
-    return(
+    return (
         <div className={styles.NavBar}>
             <NavLink to={"/"} className={styles.NavLink}>
-            <img className={styles.logo} src="logos/ins2.png"></img>
+                <img className={styles.logo} src="logos/ins2.png"></img>
             </NavLink>
 
-            <TitleChanger text1= "Kundan Public School"
-            text2 = "कुंदन पब्लिक स्कूल"
-            size={5}
-            color = {"white"}
-            marginLeft = {25}/>
-            <IoMenu className={styles.menuIcon} onClick={handleMenuButton}/>
-            <div className={styles.menu} style={{right: `${menuPos}vw`, display: menuDisplay}}>
+            <TitleChanger text1="Kundan Public School"
+                text2="कुंदन पब्लिक स्कूल"
+                size={5}
+                color={"white"}
+                marginLeft={25} />
+            <IoMenu className={styles.menuIcon} onClick={handleMenuButton} />
+            <div className={styles.menu} style={{ right: `${menuPos}vw`, display: menuDisplay }}>
                 <div className={styles.navMenu}>
-                                <div className={styles.navOptionBox}>
-                                
-                                <NavLink to={"/"} className={styles.NavLink}>
-                                <div className={styles.yo}>
-                                    <TiHome className={styles.icons}/>
-                                    <h3 className={styles.option}>Home</h3>
-                                    </div>
-                                </NavLink>
-                                <NavLink to={"/admissions"} className={styles.NavLink}>
-                                    <div className={styles.yo} >
-                                    <PiStudentFill className={styles.icons}/>
-                                    <h3 className={styles.option}>Admissions</h3>
-                                    </div>
-                                </NavLink>
-                                <NavLink to={"/cirriculm"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                    <FaBookOpen className={styles.icons}/>
-                                    <h3 className={styles.option}>Curriculum</h3>
-                                    </div>
-                                </NavLink>
-                                <NavLink to={"/prayer"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                    <FaChalkboardTeacher className={styles.icons}/>
-                                    <h3 className={styles.option}>Our Prayer</h3>
-                                    </div>
-                                </NavLink>
-                                <NavLink to={"/about"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                    <FaClock className={styles.icons}/>
-                                    <h3 className={styles.option}>Our History</h3>
-                                    </div>
-                                </NavLink>
-                                </div>
-                                <div className={styles.navOptionBox}>
-                                <NavLink to={"/calender"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                        <SlCalender className={styles.icons}/>
-                                        <h3 className={styles.option}>Calender</h3>
-                                    </div>
-                                    </NavLink>
-                                    <NavLink to={"/holidays"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                        <MdHolidayVillage className={styles.icons}/>
-                                        <h3 className={styles.option}>Holidays</h3>
-                                    </div>
-                                    </NavLink>
-                                    <NavLink to={"/login"} className={styles.NavLink}>
-                                    <div className={styles.yo}>
-                                        <CiLogin className={styles.icons}/>
-                                        <h3 className={styles.option}>Teacher Login</h3>
-                                    </div>
-                                    </NavLink>
-                                </div>
+                    <div className={styles.navOptionBox}>
+
+                        <NavLink to={"/"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <TiHome className={styles.icons} />
+                                <h3 className={styles.option}>Home</h3>
                             </div>
+                        </NavLink>
+                        <NavLink to={"/admissions"} className={styles.NavLink}>
+                            <div className={styles.yo} >
+                                <PiStudentFill className={styles.icons} />
+                                <h3 className={styles.option}>Admissions</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/cirriculm"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <FaBookOpen className={styles.icons} />
+                                <h3 className={styles.option}>Curriculum</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/prayer"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <FaChalkboardTeacher className={styles.icons} />
+                                <h3 className={styles.option}>Our Prayer</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/about"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <FaClock className={styles.icons} />
+                                <h3 className={styles.option}>Our History</h3>
+                            </div>
+                        </NavLink>
+                    </div>
+                    <div className={styles.navOptionBox}>
+                        <NavLink to={"/calender"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <SlCalender className={styles.icons} />
+                                <h3 className={styles.option}>Calender</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/holidays"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <MdHolidayVillage className={styles.icons} />
+                                <h3 className={styles.option}>Holidays</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/login"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <CiLogin className={styles.icons} />
+                                <h3 className={styles.option}>Teacher Login</h3>
+                            </div>
+                        </NavLink>
+                    </div>
+                </div>
             </div>
         </div>
     );
