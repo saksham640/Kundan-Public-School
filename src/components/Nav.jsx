@@ -5,7 +5,7 @@ import TopNav from "./TopNav/TopNav"
 
 export default function Nav(){
   return(
-    <div style={{position:"sticky", top:0}}>
+    <div style={{position:"sticky", top:0, zIndex: 9}}>
       <TopNav/>
       <MobileNavBar/>
       <Navbar/>

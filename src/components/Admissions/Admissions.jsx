@@ -41,13 +41,13 @@ export default function Admissions(){
             <h1>Age Criteria: </h1>
             <Table values={AgeTableData} headings={AgeHeadings}/>
             <br/>
-            <div style={{display: "flex", justifyContent: "center"}}>
-            <EnquiryForm/>
-            </div>
             <br/>
             <h1>Fee Structure: </h1>
             <Table values={feeTableData} headings={feeHeadings}/>
             <br/>
+            <div style={{display: "flex", justifyContent: "center"}}>
+            <EnquiryForm/>
+            </div>
             <br/>
             <Footer/>
         </>

@@ -1,13 +1,40 @@
 table{
     margin-left: 50%;
     transform: translateX(-50%);
-    border: 1px solid black;
     z-index: -10;
     position: relative;
+    font-family: sans-serif;
+    width: 50%;
+    border-radius: 1rem;
+
+
 }
 
 td,th{
-    font-size: large;
-    padding: 1rem;
+    padding: 1.8vw;
 }
 
+th{
+    font-size: 1em;
+    background-color: rgba(44, 176, 242, 0.925);
+    color: white;
+
+}
+
+tr{
+    border-radius: 1rem;
+}
+
+tr:nth-child(even){
+    background-color: rgb(232, 232, 232);
+}
+
+
+@media (max-width:648px){
+    table{
+        width: 90%;
+    }
+    td{
+        font-size: 0.9em;
+    }
+}
