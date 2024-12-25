@@ -36,9 +36,9 @@ export default function Admissions(){
         <>
             <Nav/>
             <br/>
-            <h1>All Information about Admissions: </h1>
+            <h1 className={styles.heading}>All Information about Admissions: </h1>
             <br/>
-            <h1>Age Criteria: </h1>
+            <h1 className={styles.heading}>Age Criteria: </h1>
             <Table values={AgeTableData} headings={AgeHeadings}/>
             <br/>
             <br/>

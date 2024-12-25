@@ -43,7 +43,7 @@ export default function Holidays(){
             <Nav/>
             <br/>
             <br/>
-            <h1>List of Holidays: </h1>
+            <h1 className={styles.heading}>List of Holidays: </h1>
             <Table values={holidayTableData} headings={holidayHeading}/>
             <Footer/>
             <br/>
