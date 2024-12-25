@@ -11,8 +11,8 @@ export default function TopNav(){
             <h3>Socials: </h3>
             <TiSocialFacebookCircular className={styles.socialIcon} onClick={()=>{location.assign("https://www.kundanpublicschool.org/#/errorPage")}}/>
             <TiSocialInstagram className={styles.socialIcon} onClick={()=>{location.assign("https://www.instagram.com/kundanpublicschool/")}}/>
-            <TiSocialLinkedin className={styles.socialIcon}/>
-            <TiSocialYoutube className={styles.socialIcon}/>
+            <TiSocialLinkedin className={styles.socialIcon} onClick={()=>{location.assign("https://www.kundanpublicschool.org/#/errorPage")}}/>
+            <TiSocialYoutube className={styles.socialIcon} onClick={()=>{location.assign("https://www.kundanpublicschool.org/#/errorPage")}}/>
         </div>
     )
 }
