@@ -41,6 +41,8 @@ export default function Holidays(){
     return(
         <>
             <Nav/>
+            <br/>
+            <br/>
             <h1>List of Holidays: </h1>
             <Table values={holidayTableData} headings={holidayHeading}/>
             <Footer/>
