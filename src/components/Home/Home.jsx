@@ -15,31 +15,30 @@ import Footer from "../Footer/Footer.jsx";
 import MobileNavBar from "../mobileNavBar/MobileNavBar.jsx";
 import MobVisionaryMessage from "../MobVisionaryMessage/MobVisionaryMessage.jsx"
 import styles from "../Home/Home.module.css"
+import { image } from "framer-motion/client";
 
 const carouselImages = [
-  "/carousel_images/img_2.jpg",
+  "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg",
   "https://i.ibb.co/rp4yL0d/13.jpg",
+  "/carousel_images/img_2.jpg",
   "https://i.ibb.co/y0kFW4g/img3.jpg",
+  "https://i.ibb.co/JK9Jbmr/IMG-20241224-WA0003-1.jpg",
   "/carousel_images/img_4.jpg",
 ];
 
 const titles = ["Welcome To Kundan Public School"];
 const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Approved by the government of punjab"];
-const events = [{name: "Independance Day Activi", description: "It was a really fun day man", image: "/activity_Images/img_1.jpg"},
-{name: "Teacher's Day Celebration", description: "some description about this event", image: "/activity_Images/img_2.jpg"},
-{name: "Some activity", description: "some description about this event", image: "/activity_Images/img_3.jpg"},
-{name: "Diwali Activity", description: "We made rangoli and stuff", image: "/activity_Images/img_4.jpg"},{name: "Teacher's Day Celebration", description: "some description about this event", image: "/activity_Images/img_2.jpg"},
-{name: "Some activity", description: "some description about this event", image: "/activity_Images/img_3.jpg"},
-{name: "Diwali Activity", description: "We made rangoli and stuff", image: "/activity_Images/img_4.jpg"}];
+const events = [
+  {name: "Christmas Celebration",image: "https://i.ibb.co/7WHxXMb/Whats-App-Image-2024-12-24-at-12-16-31-e6075736.jpg", description:"The School carried out a Christmas Celebration on 24th December"},
+  {name: "Sports Day",image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", description:"Students Competing in various Sports Events for Sports Day"},
+  {name: "Sports Day",image:"https://i.ibb.co/Vg6TVgn/Whats-App-Image-2024-12-21-at-10-31-10-67f8d88f.jpg", description:"Students being Awarded Medals for their performance in Sports Day"},
+  {name: "Trip To Local Zoo", image: "https://i.ibb.co/QnKTSBB/img1.jpg", description:"The School Organized a Trip to The Ludhiana Zoo"},
+  {name: "Religious Place Visit", image: "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg", description: "The School organized a trip to Gurudwara Sahib"},
+  {name: "Field Excursion to Animal Park", image:"https://i.ibb.co/T4Kb67D/Whats-App-Image-2024-12-02-at-13-53-34-21021c0b.jpg", description: "Field Excursion to Animal Park"},
+];
 
 const achievements = [
-  "Kundan Public School is soon to be affiliated with CBSE",
-  "Some achievement",
-  "some achievement",
-  "some achievement",
-  "some achievement",
-  "some achievemnet",
-  "some achievement"
+  
 ];
 
 const message = {image: "/Faculty/president.jpg" ,name:"Dr. Rajiner Hora", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country."}
