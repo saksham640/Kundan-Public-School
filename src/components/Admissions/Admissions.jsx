@@ -42,7 +42,7 @@ export default function Admissions(){
             <Table values={AgeTableData} headings={AgeHeadings}/>
             <br/>
             <br/>
-            <h1>Fee Structure: </h1>
+            <h1 className={styles.heading}>Fee Structure: </h1>
             <Table values={feeTableData} headings={feeHeadings}/>
             <br/>
             <div style={{display: "flex", justifyContent: "center"}}>
