@@ -63,11 +63,11 @@ const photoGalleryData = [
   { id: 2, img: "/activity_Images/img_1.jpg" },
   { id: 3, img: "/activity_Images/img_2.jpg" },
   { id: 4, img: "/activity_Images/img_3.jpg" },
-  { id: 5, img: "/activity_Images/bgScroll.jpg" },
-  { id: 6, img: "/activity_Images/img_1.jpg" },
-  { id: 7, img: "/activity_Images/img_2.jpg" },
-  { id: 8, img: "/activity_Images/img_3.jpg" },
-  { id: 9, img: "/activity_Images/img_3.jpg" },
+  { id: 5, img: "https://i.ibb.co/QnKTSBB/img1.jpg" },
+  { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg"},
+  { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg"},
+  { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg"},
+  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg"},
 ];
 
 const afterExp2 = { title: "Our Objective", description: "Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.", image: "/carousel_images/img_5.jpg", scale: "1", translate: "0" }
