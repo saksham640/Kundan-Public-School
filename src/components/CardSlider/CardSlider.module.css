@@ -2,7 +2,7 @@
     display: flex;
     width: 55vw;
     height: 25em;
-    margin-left: 4rem;
+    margin-left: 1vw;
     scroll-behavior: smooth;
     transition: scroll 0.3s ease-in-out;
     overflow-x: scroll;
@@ -94,6 +94,7 @@
         height: 35vh;
         border: 0;
         border-radius: 0;
+        margin-bottom: 4vw;
 
     }
     .card{

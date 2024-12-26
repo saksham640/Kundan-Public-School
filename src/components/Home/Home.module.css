@@ -1,6 +1,6 @@
 .eventsAndAchievements{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     overflow-x: hidden;
 }
@@ -8,6 +8,15 @@
     display: flex;
     justify-content: space-between;
     overflow-x: hidden;
+}
+
+.withHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+    align-content: center;
 }
 
 .sup{
@@ -58,6 +67,10 @@ a{
     text-decoration: none;
 }
 
+.heading{
+    margin-bottom: 1vw;
+}
+
 
 @media (max-width:648px){
     .eventsAndAchievements{
@@ -67,6 +80,7 @@ a{
         justify-content: center;
         margin: 0;
         padding: 0;    
+        
     }
     .centreHeadings{
         display: none;
