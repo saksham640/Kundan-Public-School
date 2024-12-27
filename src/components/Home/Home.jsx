@@ -87,18 +87,20 @@ export default function Home() {
       </nav>
 
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle} />
+      <div className={styles.centreHeadings}>
+        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginLeft: "6rem" }}>Latest Events:</h1>
+        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginRight: "12vw", color: "navy" }}>School News: </h1>
+      </div>
       <br />
       <div className={styles.eventsAndAchievements}>
-        <div className={styles.withHeading}>
-          <h1 className={styles.heading}>Latest Events:</h1>
-          <CardSlider cardValues={events} />
-        </div>
-      <div className={styles.withHeading}>
-          <h1 className={styles.heading}>School News:</h1>
-          <CardSliderVertical cardValues={achievements} />
-      </div>
+        <CardSlider cardValues={events} />
+        <br />
+        <CardSliderVertical cardValues={achievements} />
       </div>
       <br />
+      <br />
+      <LongCard cardValues={message} />
+      <MobVisionaryMessage values={MobMessage} />
       <br />
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif", color: "navy" }}>Know The School:</h1>
       <br />

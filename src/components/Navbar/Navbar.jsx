@@ -25,7 +25,10 @@ export default function Navbar() {
                 <img className={styles.logo} src={logo} alt="Logo" />
             </NavLink>
             <div className={styles.titleBox}>
-                <h1 className={styles.motto}>Kundan Public School</h1>
+                <h1
+                    className={styles.name}>
+                    <TitleChanger text1="Kundan Public School" text2="कुंदन पब्लिक स्कूल"></TitleChanger>
+                </h1>
             </div>
 
             <div className={styles.navMenu}>
