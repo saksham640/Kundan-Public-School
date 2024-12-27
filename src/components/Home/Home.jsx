@@ -99,8 +99,6 @@ export default function Home() {
       </div>
       <br />
       <br />
-      <LongCard cardValues={message} />
-      <MobVisionaryMessage values={MobMessage} />
       <br />
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif", color: "navy" }}>Know The School:</h1>
       <br />
