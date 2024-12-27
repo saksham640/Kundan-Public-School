@@ -1,41 +1,41 @@
 .cardSlider {
     display: flex;
-    width: 55vw;
+    width: 50%;
     margin-left: 1vw;
     scroll-behavior: smooth;
     transition: scroll 0.3s ease-in-out;
     overflow-x: scroll;
     align-items: center;
-    border: 5px solid rgb(228, 228, 228);
-    border-top: transparent;
-    border-right: transparent;
-    border-bottom: transparent;
+    border: 1px solid rgb(228, 228, 228);
     padding-left: 1%;
     font-family: sans-serif;
+    height: 100%;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 15vw;
     margin-left: 1%;
     margin-right: 1%;
-    flex: 0 0 210px;
+    flex: 0 0 190px;
     background-color: rgb(237, 250, 255);
     border-radius: 1.5rem;
     box-shadow: 2px 2px 2px 2px rgb(237, 237, 237);
     overflow: hidden;
-    padding: 10px;
     text-align: center;
+    align-items: center;
+    height: 14em;
+    padding: 5px;
 }
 
 .card img {
-    width: 100%;
-    height: 12vw; /* Fixed height for the image */
+    width: 9vw;
     object-fit: cover; /* Crops the image to fit the specified dimensions */
     border-radius: 1rem;
-    min-height: 170px;
+    padding-top: 5px;
+    min-width: 200px;
+    min-height: 130px;
 }
 
 .card h2, .card h4, .card p {
@@ -47,7 +47,7 @@
 }
 
 .card h2 {
-    font-size: 1.2em;
+    font-size: 1.5vw;
     color: #333;
 }
 
@@ -103,6 +103,9 @@
     }
     .card img{
         max-height: 60%;
+    }
+    .card h2{
+        font-size: 3.5vw;
     }
     
 }

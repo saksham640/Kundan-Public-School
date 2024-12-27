@@ -1,8 +1,9 @@
 .eventsAndAchievements{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     overflow-x: hidden;
+    align-items: center;
 }
 .centreHeadings{
     display: flex;

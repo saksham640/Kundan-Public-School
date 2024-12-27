@@ -48,7 +48,7 @@
     border-top-color: rgb(255, 255, 255);
     background-color: rgba(0, 2, 50, 0.255);
     border-radius: 5px;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
   }
 @media (max-width:648px){
   .image{
@@ -64,5 +64,13 @@
     font-size: 4.5vw;
     padding: 10px;
     overflow: visible;
+  }
+}
+@media (min-width:1000px){
+  #campus{
+    font-size: 4vw;
+  }
+  #description{
+    font-size: 2vw;
   }
 }

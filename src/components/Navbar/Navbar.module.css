@@ -42,7 +42,7 @@
 
 .titleBox{
     display: flex;
-    width: 40vw;
+    width: 50%;
     z-index: 15;
     margin-bottom: 5vw;
     text-align: center;
