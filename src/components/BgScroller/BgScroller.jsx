@@ -30,11 +30,6 @@ export default function BgScroller({ parallaxValues }) {
         <div className={styles.values}>
             <h1 id={styles.campus}>{parallaxValues.title}</h1>
             <h2 id={styles.description}>{parallaxValues.description}</h2>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
             </div>
       <img
         className={styles.image}
