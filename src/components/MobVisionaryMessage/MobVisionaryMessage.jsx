@@ -10,7 +10,6 @@ export default function Card({values}){
       <div className={styles.cardContent}>
         <img
           src={values.image}
-          alt="Visionary"
           className={styles.cardImage}
         />
         <div className={styles.cardMessage}>

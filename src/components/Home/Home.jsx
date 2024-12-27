@@ -37,18 +37,18 @@ const events = [
 ];
 
 const achievements = [
-<p>Enquiries are Open for New Admission, Kindly Click on <a href="/#/admissions">Admissions</a> To Register</p>,
-<p>List of Holidays is Published. Click <a href="/#/holidays">Holidays</a> To View</p>,
-<p>Kundan Public School has been Approved by The Government of Punjab</p>,
+  <p>Enquiries are Open for New Admission, Kindly Click on <a href="/#/admissions">Admissions</a> To Register</p>,
+  <p>List of Holidays is Published. Click <a href="/#/holidays">Holidays</a> To View</p>,
+  <p>Kundan Public School has been Approved by The Government of Punjab</p>,
 ];
 
 const message = { image: "/Faculty/president.jpg", name: "Dr. Rajiner Hora", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country." }
 
 const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country.", author: "-Dr. Rajinder Hora" }
 
-const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600}
+const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600 }
 
-const parallaxValues2 = { title: "Facilities", description: "Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", offsetConstant: window.innerWidth <= 648? -3100: -2300}
+const parallaxValues2 = { title: "Facilities", description: "Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", offsetConstant: window.innerWidth <= 648 ? -3100 : -2300 }
 
 const ExperimentalValues = { title: "Staff And Faculty", description: "A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.", image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
@@ -64,10 +64,10 @@ const photoGalleryData = [
   { id: 3, img: "/activity_Images/img_2.jpg" },
   { id: 4, img: "/activity_Images/img_3.jpg" },
   { id: 5, img: "https://i.ibb.co/QnKTSBB/img1.jpg" },
-  { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg"},
-  { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg"},
-  { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg"},
-  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg"},
+  { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg" },
+  { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg" },
+  { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg" },
+  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg" },
 ];
 
 const afterExp2 = { title: "Our Objective", description: "Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.", image: "/carousel_images/img_5.jpg", scale: "1", translate: "0" }
@@ -89,9 +89,17 @@ export default function Home() {
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle} />
       <br />
       <div className={styles.eventsAndAchievements}>
-        <CardSlider cardValues={events} />
-        <br />
-        <CardSliderVertical cardValues={achievements} />
+        
+          <div className={styles.withHeadings}>
+            <h1>Events:</h1>
+          <CardSlider cardValues={events} />
+          </div>
+          
+          <div className={styles.withHeadings}>
+          <h1>School News:</h1>
+          <CardSliderVertical cardValues={achievements} />
+          </div>
+      
       </div>
       <br />
       <br />
@@ -106,9 +114,9 @@ export default function Home() {
           <Experimental2 values={Experimental2Values} />
         </div>
       </div>
-      <br/>
+      <br />
       <BgScroller parallaxValues={parallaxValues2} />
-      <br/>
+      <br />
       <div className={styles.supSenior}>
         <EnquiryForm />
         <div className={styles.sup}>
@@ -121,8 +129,8 @@ export default function Home() {
         <MobVisionaryMessage values={researchMethodologyMob} />
       </div>
       <br />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <Footer />
     </>
   )

@@ -3,7 +3,7 @@ import logo from "/logos/insignia.png";
 import TitleChanger from "../TitleChanger/TitleChanger.jsx";
 import { PiStudentFill } from "react-icons/pi";
 import { FaBook, FaBookOpen } from "react-icons/fa6";
-import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaChalkboardTeacher, FaSchool } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
@@ -51,8 +51,8 @@ export default function Navbar() {
                     </NavLink>
                     <NavLink to={"/about"} className={styles.NavLink}>
                         <div className={styles.yo}>
-                            <FaClock className={styles.icons} />
-                            <h3 className={styles.option}>Our History</h3>
+                            <FaSchool className={styles.icons} />
+                            <h3 className={styles.option}>About Us</h3>
                         </div>
                     </NavLink>
 

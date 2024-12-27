@@ -29,6 +29,7 @@
     align-items: center;
     flex-direction: column; 
     margin-left: 10%;
+    cursor: pointer;
 }
 
 .logo{
@@ -80,5 +81,6 @@ h4{
     }
     .disclaimer{
         font-size: 3vw;
+        cursor: pointer;
     }
 }
