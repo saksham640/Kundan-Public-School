@@ -107,6 +107,7 @@ export default function Home() {
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif", color: "navy" }}>Know The School:</h1>
       <br />
       <BgScroller parallaxValues={parallaxValues} />
+      <br/>
       <div className={styles.supSenior}>
         <PhotoGallery photos={photoGalleryData} />
         <div className={styles.sup}>
