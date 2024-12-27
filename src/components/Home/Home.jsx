@@ -94,7 +94,7 @@ export default function Home() {
             <h1>Events:</h1>
           <CardSlider cardValues={events} />
           </div>
-          
+          <br/>
           <div className={styles.withHeadings}>
           <h1>School News:</h1>
           <CardSliderVertical cardValues={achievements} />

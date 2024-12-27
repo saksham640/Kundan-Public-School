@@ -4,7 +4,7 @@ import TitleChanger from "../TitleChanger/TitleChanger.jsx"
 import { IoMenu } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
 import { FaBookOpen } from "react-icons/fa6";
-import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaChalkboardTeacher, FaSchool } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
@@ -73,8 +73,8 @@ export default function MobileNavBar() {
                         </NavLink>
                         <NavLink to={"/about"} className={styles.NavLink}>
                             <div className={styles.yo}>
-                                <FaClock className={styles.icons} />
-                                <h3 className={styles.option}>Our History</h3>
+                                <FaSchool className={styles.icons} />
+                                <h3 className={styles.option}>About Us</h3>
                             </div>
                         </NavLink>
                     </div>
@@ -89,12 +89,6 @@ export default function MobileNavBar() {
                             <div className={styles.yo}>
                                 <MdHolidayVillage className={styles.icons} />
                                 <h3 className={styles.option}>Holidays</h3>
-                            </div>
-                        </NavLink>
-                        <NavLink to={"/login"} className={styles.NavLink}>
-                            <div className={styles.yo}>
-                                <CiLogin className={styles.icons} />
-                                <h3 className={styles.option}>Teacher Login</h3>
                             </div>
                         </NavLink>
                     </div>
