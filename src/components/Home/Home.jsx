@@ -87,10 +87,6 @@ export default function Home() {
       </nav>
 
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle} />
-      <div className={styles.centreHeadings}>
-        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginLeft: "6rem" }}>Latest Events:</h1>
-        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginRight: "12vw", color: "navy" }}>School News: </h1>
-      </div>
       <br />
       <div className={styles.eventsAndAchievements}>
         <CardSlider cardValues={events} />

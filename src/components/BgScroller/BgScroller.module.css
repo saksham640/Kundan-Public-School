@@ -30,8 +30,7 @@
   }
 
   #campus{
-    margin-bottom: 3rem;
-    font-size: 4.6em;
+    font-size: 5vw;
     margin-right: 67%;
     color: yellow;
     border: 10px solid transparent;
@@ -40,7 +39,7 @@
   }
 
   #description{
-    font-size: 1.8em;
+    font-size: 2.5vw;
     color:rgb(255, 255, 255);
     margin-left: 7%;
     margin-right: 7%;
@@ -49,6 +48,7 @@
     border-top-color: rgb(255, 255, 255);
     background-color: rgba(0, 2, 50, 0.255);
     border-radius: 5px;
+    margin-bottom: 7%;
   }
 @media (max-width:648px){
   .image{
