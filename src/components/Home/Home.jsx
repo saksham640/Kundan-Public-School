@@ -46,9 +46,9 @@ const message = { image: "/Faculty/president.jpg", name: "Dr. Rajiner Hora", des
 
 const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country.", author: "-Dr. Rajinder Hora" }
 
-const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600 }
+const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -2100 }
 
-const parallaxValues2 = { title: "Facilities", description: "Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", offsetConstant: -2500 }
+const parallaxValues2 = { title: "Facilities", description: "Further, Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", offsetConstant: -3500 }
 
 const ExperimentalValues = { title: "Staff And Faculty", description: "A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.", image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
@@ -87,18 +87,20 @@ export default function Home() {
       </nav>
 
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle} />
+      <div className={styles.centreHeadings}>
+        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginLeft: "6rem" }}>Latest Events:</h1>
+        <h1 style={{ fontFamily: "sans-serif", marginTop: "3rem", marginRight: "12vw", color: "navy" }}>School News: </h1>
+      </div>
       <br />
       <div className={styles.eventsAndAchievements}>
-        <div className={styles.withHeading}>
-          <h1 className={styles.heading}>Latest Events:</h1>
-          <CardSlider cardValues={events} />
-        </div>
-      <div className={styles.withHeading}>
-          <h1 className={styles.heading}>School News:</h1>
-          <CardSliderVertical cardValues={achievements} />
-      </div>
+        <CardSlider cardValues={events} />
+        <br />
+        <CardSliderVertical cardValues={achievements} />
       </div>
       <br />
+      <br />
+      <LongCard cardValues={message} />
+      <MobVisionaryMessage values={MobMessage} />
       <br />
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif", color: "navy" }}>Know The School:</h1>
       <br />

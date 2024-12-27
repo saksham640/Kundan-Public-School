@@ -4,16 +4,18 @@
     justify-content: center !important;
     align-self: center !important;
     align-items: center !important; 
+    width: 100%;
 }
 
 .text {
     text-align: center !important;
     transition: opacity 0.2s ease-in-out;
-    font-size: 1.9vw;
+    font-size: 1.7vw;
     overflow: hidden;
     z-index: 200;
     color: black;
     font-family: sans-serif;
+    text-align: center !important;
 }
 
 .fadeIn {
@@ -22,4 +24,10 @@
 
 .fadeOut {
     opacity: 0;
+}
+
+@media(max-width:648px){
+    .text{
+        font-size: 2.4vw;
+    }
 }

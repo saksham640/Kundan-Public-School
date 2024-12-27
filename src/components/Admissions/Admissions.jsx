@@ -1,4 +1,3 @@
-import { data } from "react-router-dom"
 import styles from "../Admissions/Admissions.module.css"
 import Footer from "../Footer/Footer"
 import Nav from "../Nav"
