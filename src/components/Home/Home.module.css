@@ -19,22 +19,21 @@
     align-content: center;
 }
 
-.sup{
-    transform: scale(0.75 );
-}
 
 .supSenior{
     display: flex;
-    align-self: center;
-    justify-self: center;
+    justify-content: space-around;
+    align-content: space-around;
     align-items: center;
     background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
     width: 100;
+    color: rgb(30, 30, 30);
 }
 
 .cardText{
     text-align: center;
     margin-top: 2rem;
+    color:rgb(30, 30, 30);
 }
 
 .forBg{
@@ -45,12 +44,13 @@
 .formAndExperimental{
     display: flex;
     justify-content: space-between;
+    color: rgb(30, 30, 30);;
 }
 
 nav{
     top: 0;
     position: sticky;
-    z-index: 999999;
+    z-index: 999;
 }
 
 .supSenior{

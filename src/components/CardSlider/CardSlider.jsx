@@ -12,9 +12,8 @@ export default function CardSlider({cardValues}){
         <div className={styles.cardSlider}>
             {cardValues.map(cardValue=>(
                 <div className={styles.card}>
-                    <h2>{cardValue.name}</h2>
                     <img src={cardValue.image}></img>
-                    <h3>{cardValue.description}</h3>
+                    <h2>{cardValue.name}</h2>
                 </div>
             ))}
         </div>

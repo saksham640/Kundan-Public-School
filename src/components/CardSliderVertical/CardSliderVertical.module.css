@@ -9,8 +9,6 @@
     background-color:rgb(237, 250, 255);
     align-self: center;
     overflow-y: scroll;
-    border: 3px solid rgb(104, 136, 165);
-    border-bottom-color: transparent;
 }
 
 .card{

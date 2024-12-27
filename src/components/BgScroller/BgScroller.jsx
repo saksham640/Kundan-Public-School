@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import styles from "../BgScroller/BgScroller.module.css";
 
+
 export default function BgScroller({ parallaxValues }) {
   const [scroll, setScroll] = useState(0);
-  const offsetConstant = parallaxValues.offsetConstant;
+  let offsetConstant = parallaxValues.offsetConstant;
+  
 
   useEffect(() => {
     let animationFrame;

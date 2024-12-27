@@ -2,13 +2,15 @@ import styles from "./Navbar.module.css";
 import logo from "/logos/insignia.png";
 import TitleChanger from "../TitleChanger/TitleChanger.jsx";
 import { PiStudentFill } from "react-icons/pi";
-import { FaBookOpen } from "react-icons/fa6";
+import { FaBook, FaBookOpen } from "react-icons/fa6";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { HiHome } from "react-icons/hi";
+import { BiBook, BiBookOpen } from "react-icons/bi";
 
 export default function Navbar() {
 
@@ -56,22 +58,22 @@ export default function Navbar() {
 
                 </div>
                 <div className={styles.navOptionBox}>
-                    <NavLink to={"/calender"} className={styles.NavLink}>
+                    <NavLink to={"/"} className={styles.NavLink}>
                         <div className={styles.yo}>
-                            <SlCalender className={styles.icons} />
-                            <h3 className={styles.option} >Calender</h3>
+                            <HiHome className={styles.icons} />
+                            <h3 className={styles.option} >Home</h3>
+                        </div>
+                    </NavLink>
+                    <NavLink to={"/cirriculum"} className={styles.NavLink}>
+                        <div className={styles.yo}>
+                            <FaBook className={styles.icons} />
+                            <h3 className={styles.option}>Cirriculum</h3>
                         </div>
                     </NavLink>
                     <NavLink to={"/holidays"} className={styles.NavLink}>
                         <div className={styles.yo}>
                             <MdHolidayVillage className={styles.icons} />
                             <h3 className={styles.option}>Holidays</h3>
-                        </div>
-                    </NavLink>
-                    <NavLink to={"/login"} className={styles.NavLink}>
-                        <div className={styles.yo}>
-                            <CiLogin className={styles.icons} />
-                            <h3 className={styles.option}>Teacher Login</h3>
                         </div>
                     </NavLink>
                 </div>

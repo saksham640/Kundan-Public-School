@@ -14,13 +14,13 @@ export default function Footer(){
                     <NavLink to={"/error"} className={styles.NavLink}><h3>&gt; Mandatory Disclosures</h3></NavLink>
                     <NavLink to={"/admissions"} className={styles.NavLink}><h3>&gt; Fee Structure</h3></NavLink>
                     <br/>
-                    <h5>© 2024 Kundan Public School . All Rights Reserved.</h5>
+                    <h5 className={styles.disclaimer}>© 2024 Kundan Public School . All Rights Reserved.</h5>
             </div>
 
             <div className={styles.map} onClick={()=>{location.assign("https://maps.app.goo.gl/52v2gdn2fKXyHkJm7")}}>
                 <img src="logos/gmaps.png" className={styles.mapsIcon}>
                 </img>
-                <h4>View On Maps</h4>
+                <h4 className={styles.viewOnMaps}>View On Maps</h4>
             </div>
            
         </div>

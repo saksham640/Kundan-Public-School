@@ -8,6 +8,7 @@
     margin-bottom: 3vw;
     border-bottom-color: transparent;
     border-right: transparent;
+    color: rgb(40, 40, 40);;
 }
 
 .logoAndTitle{
@@ -15,7 +16,6 @@
     justify-content: start;
     margin-bottom: 1vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(0, 0, 0);
     flex-direction: row;
     align-items: center;
     text-shadow: 2px 2px 2px rgb(255, 255, 255);
@@ -34,7 +34,6 @@
 
 .description{
     font-size: 1.4vw;
-    color: black;
     padding: 0rem;
     overflow: hidden;
     text-align: left;

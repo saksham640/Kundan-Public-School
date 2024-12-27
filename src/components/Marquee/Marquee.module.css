@@ -3,7 +3,7 @@
     height: 100px;
     position: absolute;
     z-index: 500;
-    background-color: rgba(189, 238, 255, 0.433);
+    background-color: rgba(106, 144, 156, 0.526);
     top:80vh;
     margin-left: 15%;
     border-radius: 1rem;
@@ -38,7 +38,7 @@
         margin-left: 50%;
         transform: translateX(-50%);
         height: 4em;
-        top: 25em;
+        top: 60vh;
     }
     .MarqueeText{
         font-size: 1.5rem;

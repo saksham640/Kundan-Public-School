@@ -17,9 +17,9 @@ export default function PhotoGallery({ photos }) {
     <>
       <div className={styles.photoGallery}>
         <div className={styles.row}>
-          <h1 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
-            Photo Gallery (click to view)
-          </h1>
+          <h2 style={{ textAlign: "center", fontFamily: "sans-serif" }}>
+            Photo Gallery (Click To View)
+          </h2>
         </div>
         <div className={styles.grid}>
           {photos.map((photo, index) => (

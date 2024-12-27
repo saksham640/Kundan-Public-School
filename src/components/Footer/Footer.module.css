@@ -7,11 +7,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 120%;
-    background-position-y:70% ;
+    background-position-y:40% ;
     color: white;
     font-family: sans-serif;
     width: 100;
-    height: 12em;
+    height: 13em;
     width: 100%;
     bottom: 0;
 }
@@ -22,7 +22,6 @@
     justify-content: center;
     align-items: center;
     margin-left: 2%;
-    
 }
 .map{
     display: flex;
@@ -48,6 +47,7 @@ a{
 
 h4{
     text-align: center;
+    margin-top: 5px;
 }
 
 .NavLink{
@@ -60,4 +60,25 @@ h4{
 
 .NavLink:hover{
     color: rgb(64, 152, 219)
+}
+
+@media (max-width: 648px){
+    .footer{
+        height: 23vh;
+    }
+    h2{
+        font-size: 5vw;
+        margin: 0;
+        text-align: start;
+        text-align: left;
+    }
+    h4{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 3vw;
+    }
+    .disclaimer{
+        font-size: 3vw;
+    }
 }

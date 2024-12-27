@@ -45,9 +45,8 @@ export default function Holidays(){
             <br/>
             <h1 className={styles.heading}>List of Holidays: </h1>
             <Table values={holidayTableData} headings={holidayHeading}/>
+            <br/>
             <Footer/>
-            <br/>
-            <br/>
         </>
     )
 }
