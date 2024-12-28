@@ -6,11 +6,9 @@ import { FaBook, FaBookOpen } from "react-icons/fa6";
 import { FaChalkboardTeacher, FaSchool } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
-import { CiLogin } from "react-icons/ci";
-import { FaClock } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
-import { BiBook, BiBookOpen } from "react-icons/bi";
+
 
 export default function Navbar() {
 
@@ -66,8 +64,8 @@ export default function Navbar() {
                     </NavLink>
                     <NavLink to={"/cirriculum"} className={styles.NavLink}>
                         <div className={styles.yo}>
-                            <FaBook className={styles.icons} />
-                            <h3 className={styles.option}>Cirriculum</h3>
+                            <SlCalender className={styles.icons} />
+                            <h3 className={styles.option}>Calender</h3>
                         </div>
                     </NavLink>
                     <NavLink to={"/holidays"} className={styles.NavLink}>

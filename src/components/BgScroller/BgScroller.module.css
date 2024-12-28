@@ -44,11 +44,11 @@
     margin-left: 7%;
     margin-right: 7%;
     border: 5px solid transparent;
-    border-left-color: rgb(255, 255, 255);
-    border-top-color: rgb(255, 255, 255);
-    background-color: rgba(0, 2, 50, 0.255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.586);
     border-radius: 5px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 @media (max-width:648px){
   .image{
@@ -68,9 +68,9 @@
 }
 @media (min-width:1000px){
   #campus{
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   #description{
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
 }
