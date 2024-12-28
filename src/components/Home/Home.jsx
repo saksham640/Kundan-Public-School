@@ -25,7 +25,7 @@ const carouselImages = [
   "/carousel_images/img_4.jpg",
 ];
 
-const titles = ["Welcome To Kundan Public School"];
+const titles = ["“Education is not the filling of a pail, but the lighting of a fire.”"];
 const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Approved by the government of punjab"];
 const events = [
   { name: "Christmas Celebration", image: "https://i.ibb.co/7WHxXMb/Whats-App-Image-2024-12-24-at-12-16-31-e6075736.jpg", description: "The School carried out a Christmas Celebration on 24th December" },
@@ -99,7 +99,6 @@ export default function Home() {
           <h1>School News:</h1>
           <CardSliderVertical cardValues={achievements} />
           </div>
-      
       </div>
       <br />
       <br />
