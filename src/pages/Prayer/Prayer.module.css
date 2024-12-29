@@ -1,0 +1,26 @@
+.prayerBox {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poem {
+    text-align: left;
+    line-height: 2; /* Adjust line height for readability */
+    white-space: pre-line; /* Ensure line breaks are respected */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a clean font */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color for better visibility */
+}
+
+p{
+    text-align: center;
+}
+.heading{
+    color: rgb(0, 0, 86);
+}

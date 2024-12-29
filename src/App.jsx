@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink, RouterProvider, createHashRouter } from "react-router-dom";
-import Home from "./components/Home/Home.jsx";
-import About from "./components/About/About.jsx";
-import ErrorElement from "./components/ErrorElement/ErrorElement.jsx";
-import Admissions from "./components/Admissions/Admissions.jsx";
-import Holidays from "./components/Holidays/Holidays.jsx";
-import Prayer from "./components/Prayer/Prayer.jsx";
+import Home from "./pages/Home/Home.jsx";
+import About from "./pages/About/About.jsx";
+import ErrorElement from "./pages/ErrorElement/ErrorElement.jsx";
+import Admissions from "./pages/Admissions/Admissions.jsx";
+import Holidays from "./pages/Holidays/Holidays.jsx";
+import Prayer from "./pages/Prayer/Prayer.jsx";
 
 const router = createHashRouter(
   [

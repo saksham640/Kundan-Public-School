@@ -1,7 +1,7 @@
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer.jsx";
 import styles from "../Holidays/Holidays.module.css"
-import Nav from "../Nav";
-import Table from "../Table/Table"
+import Nav from "../../components/Nav.jsx";
+import Table from "../../components/Table/Table.jsx"
 
 const holidayHeading = ["S. No.", "Name of the Holiday"];
 
