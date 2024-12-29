@@ -6,6 +6,7 @@ import ErrorElement from "./pages/ErrorElement/ErrorElement.jsx";
 import Admissions from "./pages/Admissions/Admissions.jsx";
 import Holidays from "./pages/Holidays/Holidays.jsx";
 import Prayer from "./pages/Prayer/Prayer.jsx";
+import db from "../src/configs/fireBaseConfig.js"
 
 const router = createHashRouter(
   [
