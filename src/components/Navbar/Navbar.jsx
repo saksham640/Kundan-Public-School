@@ -74,6 +74,12 @@ export default function Navbar() {
                             <h3 className={styles.option}>Holidays</h3>
                         </div>
                     </NavLink>
+                    <NavLink to={"/adminPanel"} className={styles.NavLink}>
+                        <div className={styles.yo}>
+                            <MdHolidayVillage className={styles.icons} />
+                            <h3 className={styles.option}>Login</h3>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </div>

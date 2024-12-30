@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../EnquiryForm/EnquiryForm.css";
+import db from "../../configs/fireBaseConfig.js"
+import { collection,addDoc } from "firebase/firestore";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +19,16 @@ const EnquiryForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Form submitted successfully!\n${JSON.stringify(formData, null, 2)}`);
-  };
+  const handleSubmit = async (e) => {
+    event.preventDefault()
+    console.log(formData);
+    const newDoc = await addDoc(collection(db,"requests"),{
+      formData
+    });
+    console.log("sumbitted");
+    alert("form submitted, you will get the response as soon as possible");
+    window.scrollTo(0,0)
+  }
 
   return (
     <div className="admission-form-container">

@@ -6,7 +6,7 @@ import ErrorElement from "./pages/ErrorElement/ErrorElement.jsx";
 import Admissions from "./pages/Admissions/Admissions.jsx";
 import Holidays from "./pages/Holidays/Holidays.jsx";
 import Prayer from "./pages/Prayer/Prayer.jsx";
-import db from "../src/configs/fireBaseConfig.js"
+import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 
 const router = createHashRouter(
   [
@@ -30,6 +30,10 @@ const router = createHashRouter(
     {
       path: "/prayer",
       element: <Prayer/>
+    },
+    {
+      path: "/adminPanel",
+      element: <AdminPanel/>
     }
   ]
 );

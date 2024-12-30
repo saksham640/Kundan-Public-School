@@ -11,6 +11,7 @@ import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
+import { BiLogIn } from "react-icons/bi";
 
 export default function MobileNavBar() {
 
@@ -89,6 +90,12 @@ export default function MobileNavBar() {
                             <div className={styles.yo}>
                                 <MdHolidayVillage className={styles.icons} />
                                 <h3 className={styles.option}>Holidays</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/adminPanel"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <BiLogIn className={styles.icons} />
+                                <h3 className={styles.option}>Login</h3>
                             </div>
                         </NavLink>
                     </div>
