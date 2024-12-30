@@ -10,4 +10,13 @@
     width: 7em;
     margin-left: 5px;
     border-radius: 0.5rem;
+    background-color: rgb(255, 63, 63);
+    color: white;
+    cursor: pointer;
+    font-weight: 800;
+    padding: .2rem;
+}
+
+.deleteButton:active{
+    transform: scale(0.95);
 }

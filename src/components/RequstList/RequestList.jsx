@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from "../RequstList/RequestList.module.css"
 
 export default function RequestList({values}){
@@ -9,7 +10,9 @@ export default function RequestList({values}){
                     <h1 className={styles.phone}>phone: {request.phone}</h1>
                     <h1 className={styles.email}>email: {request.email}</h1>
                     <br/>
-                    <button className={styles.deleteButton}>Delete Request</button>
+                    <button className={styles.deleteButton}
+                    value={request.reqId}
+                    onClick={()=>{request.deleteFunction(event); setDeletion(request.status)}}>Delete Requst</button>
                     <br/>
                     <hr/>
                 </div>

@@ -3,3 +3,7 @@
     font-family: sans-serif;
     text-align: center;
 }
+.contentWrap{
+    margin-bottom: 13em;
+    min-height: 55.9vh;
+}

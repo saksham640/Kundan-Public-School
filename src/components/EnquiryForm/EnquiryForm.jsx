@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../EnquiryForm/EnquiryForm.css";
 import db from "../../configs/fireBaseConfig.js"
-import { collection,addDoc } from "firebase/firestore";
+import { collection,addDoc,setDoc,doc, getDoc, count } from "firebase/firestore";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -19,15 +19,30 @@ const EnquiryForm = () => {
     });
   };
 
+  const getCount = async function(){
+    const docRef = doc(db,"count","requestCount");
+    const docSnap = await getDoc(docRef);
+    console.log(docSnap.data().count);
+    return(docSnap.data().count);
+  }
+
+  const increaseCount = async function(){
+    let newcount = await getCount();
+    await setDoc(doc(db,"count","requestCount"),{
+      count: newcount+1,
+    });
+  }
+
   const handleSubmit = async (e) => {
     event.preventDefault()
     console.log(formData);
-    const newDoc = await addDoc(collection(db,"requests"),{
+    await setDoc(doc(db,"requests",(`${await getCount()+1}`)),{
       formData
     });
     console.log("sumbitted");
+    await increaseCount();
     alert("form submitted, you will get the response as soon as possible");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
   }
 
   return (
