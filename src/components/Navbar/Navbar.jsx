@@ -62,7 +62,7 @@ export default function Navbar() {
                             <h3 className={styles.option} >Home</h3>
                         </div>
                     </NavLink>
-                    <NavLink to={"/cirriculum"} className={styles.NavLink}>
+                    <NavLink to={"/calender"} className={styles.NavLink}>
                         <div className={styles.yo}>
                             <SlCalender className={styles.icons} />
                             <h3 className={styles.option}>Calender</h3>

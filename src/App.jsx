@@ -7,6 +7,7 @@ import Admissions from "./pages/Admissions/Admissions.jsx";
 import Holidays from "./pages/Holidays/Holidays.jsx";
 import Prayer from "./pages/Prayer/Prayer.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
+import Calender from "./pages/Calender/Calender.jsx";
 
 const router = createHashRouter(
   [
@@ -34,6 +35,10 @@ const router = createHashRouter(
     {
       path: "/adminPanel",
       element: <AdminPanel/>
+    },
+    {
+      path: "/calender",
+      element: <Calender/>
     }
   ]
 );
