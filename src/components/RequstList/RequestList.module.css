@@ -3,6 +3,7 @@
     flex-direction: column;
     font-family: sans-serif;
     font-size: 70%;
+    margin-left: 5px;
 }
 
 .deleteButton{
