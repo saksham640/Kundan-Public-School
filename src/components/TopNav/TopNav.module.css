@@ -29,6 +29,11 @@
     transform: scale(1.5);
 }
 
+.viewCount{
+    position: absolute;
+    left: 0;
+}
+
 @media(max-width: 648px) {
     .topNav{
         height: 1.6em;

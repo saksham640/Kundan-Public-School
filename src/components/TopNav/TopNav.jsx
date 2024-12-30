@@ -8,6 +8,7 @@ import { TiSocialYoutube } from "react-icons/ti";
 export default function TopNav(){
     return(
         <div className={styles.topNav}>
+            <h3 className={styles.viewCount}>View Count:</h3>
             <h3>Socials: </h3>
             <TiSocialFacebookCircular className={styles.socialIcon} onClick={()=>{location.assign("https://www.kundanpublicschool.org/#/errorPage")}}/>
             <TiSocialInstagram className={styles.socialIcon} onClick={()=>{location.assign("https://www.instagram.com/kundanpublicschool/")}}/>
