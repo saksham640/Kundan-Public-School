@@ -1,6 +1,6 @@
 .bgScroller {
     width: 100%;
-    height: 40vh; /* Increased for better effect */
+    height: 50vh; /* Increased for better effect */
     overflow: hidden;
     position: relative;
     background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), url("/carousel_images/img_2.jpg")

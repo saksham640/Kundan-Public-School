@@ -7,6 +7,7 @@
     background-color: #eef2f5;
     margin: auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
   }
   
   .cardHeading {
@@ -26,7 +27,7 @@
   
   .cardImage {
     width: 50%;
-    max-width: 120px;
+    max-width: 150px;
     border-radius: 8px;
   }
   

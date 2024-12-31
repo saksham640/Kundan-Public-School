@@ -27,6 +27,7 @@ export default function Calender(){
         <div className={styles.Calender}>
             <Nav/>
             <br/>
+            <h1 className={styles.heading}>Academic Calender:</h1>
             <Table headings={headings} values={values}/>
             <br/>
             <div style={{
