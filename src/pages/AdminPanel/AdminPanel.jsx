@@ -37,6 +37,7 @@ export default function AdminPanel() {
                 email: doc.data().formData.email,
                 reqId: doc.id,
                 deleteFunction: deleteRequest,
+                date: `${doc.data().formData.date}`,
             })
         })
         setRequestValues(vals);

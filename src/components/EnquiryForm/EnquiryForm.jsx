@@ -9,6 +9,7 @@ const EnquiryForm = () => {
     email: "",
     phone: "",
     callback: false,
+    date: `${new Date()}`,
   });
 
   const handleInputChange = (e) => {
