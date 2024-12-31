@@ -47,7 +47,7 @@ const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", descri
 
 const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600 }
 
-const parallaxValues2 = { title: "Facilities", description: <p>Further, Kundan Public School offers<ul> <li>Lush Green Lawns</li> <li>24 Hour Power Backup</li> <li>Water Cooling Systems & Purifiers</li> <li>CCTV Surveillance</li> <li>Ramp Facility</li> <li>Latest Teaching Technology</li> <li>Spacious Playgrounds</li> </ul></p>, offsetConstant: window.innerWidth <= 648 ? -3100 : -2100 }
+const parallaxValues2 = { title: "Facilities", description: <p>Further, Kundan Public School offers<ul> <li>Lush Green Lawns</li> <li>24 Hour Power Backup</li> <li>Water Cooling Systems & Purifiers</li> <li>CCTV Surveillance</li> <li>Ramp Facility</li> <li>Latest Teaching Technology</li> <li>Spacious Playgrounds</li> </ul></p>, offsetConstant: window.innerWidth <= 648 ? -3100 : -2200 }
 
 const ExperimentalValues = { title: "Staff And Faculty", description: "A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.", image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
