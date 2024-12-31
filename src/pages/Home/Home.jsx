@@ -12,8 +12,13 @@ import PhotoGallery from "../../components/PhotoGallery/PhotoGallery.jsx";
 import EnquiryForm from "../../components/EnquiryForm/EnquiryForm.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import MobileNavBar from "../../components/mobileNavBar/MobileNavBar.jsx";
-import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"  
+import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 import styles from "../Home/Home.module.css"
+import { image } from "framer-motion/client";
+
+import db from "../../configs/fireBaseConfig.js"
+import { getDocs, setDoc, collection, doc } from "firebase/firestore";
+import { useEffect, useState } from "react";
 
 const carouselImages = [
   "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg",
@@ -26,20 +31,6 @@ const carouselImages = [
 
 const titles = ["“Education is not the filling of a pail, but the lighting of a fire.”"];
 const marqueeTitle = ["Admissions open for Batch 2025-2026", "Kundan Public School has been Approved by the government of punjab"];
-const events = [
-  { name: "Christmas Celebration", image: "https://i.ibb.co/7WHxXMb/Whats-App-Image-2024-12-24-at-12-16-31-e6075736.jpg", description: "The School carried out a Christmas Celebration on 24th December" },
-  { name: "Sports Day", image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", description: "Students Competing in various Sports Events for Sports Day" },
-  { name: "Sports Day", image: "https://i.ibb.co/Vg6TVgn/Whats-App-Image-2024-12-21-at-10-31-10-67f8d88f.jpg", description: "Students being Awarded Medals for their performance in Sports Day" },
-  { name: "Trip To Local Zoo", image: "https://i.ibb.co/QnKTSBB/img1.jpg", description: "The School Organized a Trip to The Ludhiana Zoo" },
-  { name: "Religious Place Visit", image: "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg", description: "The School organized a trip to Gurudwara Sahib" },
-  { name: "Field Excursion to Animal Park", image: "https://i.ibb.co/T4Kb67D/Whats-App-Image-2024-12-02-at-13-53-34-21021c0b.jpg", description: "Field Excursion to Animal Park" },
-];
-
-const achievements = [
-  <p>Enquiries are Open for New Admission, Kindly Click on <a href="/#/admissions">Admissions</a> To Register</p>,
-  <p>List of Holidays is Published. Click <a href="/#/holidays">Holidays</a> To View</p>,
-  <p>Kundan Public School has been Approved by The Government of Punjab</p>,
-];
 
 const message = { image: "/Faculty/president.jpg", name: "Dr. Rajiner Hora", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country." }
 
@@ -76,7 +67,43 @@ const afterExp = { title: "The School", description: "Carrying forward the legac
 const researchMethodologyMob = { title: "Our Methodology", image: "/logos/ins2.png", description: "At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process", author: "" }
 
 
+
 export default function Home() {
+
+  const [events, setEvents] = useState([{name: "Loading...", image: "Loading..."}])
+  const [achievements,setAchievements] = useState([]);
+
+  const getEvents = async function () {
+    const collectionRef = collection(db, "schoolEvents");
+    const docSnaps = await getDocs(collectionRef);
+    let newEvents = [];
+    docSnaps.docs.forEach((doc) => {
+      newEvents.push({
+        name: doc.data().name,
+        image: doc.data().image,
+      })
+    })
+    console.log(newEvents);
+    setEvents(newEvents);
+  }
+
+  const getNews = async function(){
+    const collectionRef = collection(db,"schoolNews");
+    const docSnaps = await getDocs(collectionRef);
+    let newNews = [];
+    docSnaps.docs.forEach((doc)=>{
+      newNews.push(
+        doc.data().news
+      )
+    })
+    setAchievements(newNews);
+  }
+
+  useEffect(() => {
+    getEvents();
+    getNews();
+  }, []);
+
   return (
     <>
       <nav>
@@ -88,16 +115,16 @@ export default function Home() {
       <HomeCarousel imageUrls={carouselImages} titleText={titles} marqueeText={marqueeTitle} />
       <br />
       <div className={styles.eventsAndAchievements}>
-        
-          <div className={styles.withHeadings}>
-            <h1>Events:</h1>
+
+        <div className={styles.withHeadings}>
+          <h1>Events:</h1>
           <CardSlider cardValues={events} />
-          </div>
-          <br/>
-          <div className={styles.withHeadings}>
+        </div>
+        <br />
+        <div className={styles.withHeadings}>
           <h1>School News:</h1>
           <CardSliderVertical cardValues={achievements} />
-          </div>
+        </div>
       </div>
       <br />
       <br />
@@ -105,7 +132,7 @@ export default function Home() {
       <h1 style={{ textAlign: "center", fontFamily: "sans-serif", color: "navy" }}>Know The School:</h1>
       <br />
       <BgScroller parallaxValues={parallaxValues} />
-      <br/>
+      <br />
       <div className={styles.supSenior}>
         <PhotoGallery photos={photoGalleryData} />
         <div className={styles.sup}>
