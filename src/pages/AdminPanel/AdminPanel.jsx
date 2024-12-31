@@ -76,12 +76,34 @@ export default function AdminPanel() {
                     <PcCard values={{
                         title: "Login to Access", description: <form>
                             <label for="username">Username: </label>
-                            <input type="text" id="username"></input>
+                            <input type="text" id="username" style={{
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                padding: "0.5rem"
+                                
+                            }}></input>
                             <br />
+                            <br/>
                             <label for="password">Password: </label>
-                            <input type="password" id="password"></input>
+                            <input type="password" id="password" style={{
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                padding: "0.5rem",
+                                
+                            }}></input>
                             <br />
-                            <input type="submit" onClick={(event) => { authorization(event) }}></input>
+                            <br/>
+                            <input type="submit" style={{
+                                padding: "0.5rem",
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                backgroundColor: "navy",
+                                color: "white",
+                                fontWeight: "700",
+                                fontSize: "large",
+                                cursor: "pointer"
+
+                            }} onClick={(event) => { authorization(event) }}></input>
                         </form>,
                         image: "/logos/ins2.png"
                     }} />
@@ -89,12 +111,34 @@ export default function AdminPanel() {
                     <MobVisionaryMessage values={{
                         title: "Login to Access", description: <form>
                             <label for="username">Username: </label>
-                            <input type="text" id="username"></input>
+                            <input type="text" id="username" style={{
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                padding: "0.5rem"
+                                
+                            }}></input>
                             <br />
+                            <br/>
                             <label for="password">Password: </label>
-                            <input type="password" id="password"></input>
+                            <input type="password" id="password" style={{
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                padding: "0.5rem",
+                                
+                            }}></input>
                             <br />
-                            <input type="submit" onClick={(event) => { authorization(event) }}></input>
+                            <br/>
+                            <input type="submit" style={{
+                                padding: "0.5rem",
+                                borderRadius: "1rem",
+                                borderColor: "transparent",
+                                backgroundColor: "navy",
+                                color: "white",
+                                fontWeight: "700",
+                                fontSize: "large",
+                                cursor: "pointer"
+
+                            }} onClick={(event) => { authorization(event)}}></input>
                         </form>,
                         image: "/logos/ins2.png"
                     }} />
