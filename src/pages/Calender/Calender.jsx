@@ -28,7 +28,15 @@ export default function Calender(){
             <Nav/>
             <br/>
             <h1 className={styles.heading}>Academic Calender:</h1>
+            <h2 className={styles.heading} style={window.innerWidth <= 648 ? {display: "block" }: {display: "none"}}>Rotate Your Device</h2>
+            
+            <div style={{display:"none"}}>
             <Table headings={headings} values={values}/>
+            </div>
+
+            <div className={styles.noverflow}>
+            <img className = {styles.calender} src="/calender-real.png"></img>
+            </div>
             <br/>
             <div style={{
                 display: "flex",
@@ -38,6 +46,7 @@ export default function Calender(){
                 justifyItems: "center",
                 alignContent: "center"
             }}>
+
             <h2 className={styles.heading}>View All Holidays at: </h2>
             <NavLink to="/holidays"><h2 className={styles.heading} style={{
                 backgroundColor:"skyblue",

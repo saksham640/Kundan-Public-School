@@ -65,13 +65,12 @@ const EnquiryForm = () => {
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="Enter your email"
-            required
+            placeholder="(optional)"
           />
         </div>
         <div className="form-group phone-group">

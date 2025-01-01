@@ -40,6 +40,8 @@ export default function Admissions(){
             <h1 className={styles.heading}>Age Criteria: </h1>
             <Table values={AgeTableData} headings={AgeHeadings}/>
             <br/>
+            <p className={styles.heading} style={{fontSize: "120%", backgroundColor: "rgb(233, 233, 233)"}}>There are no age criteria for applying for admission to Class III and above. The candidate should currently (in academic session 2025-26) be studying in the class previous to the one applied for admission.</p>
+            <br/>
             <br/>
             <h1 className={styles.heading}>Fee Structure: </h1>
             <Table values={feeTableData} headings={feeHeadings}/>

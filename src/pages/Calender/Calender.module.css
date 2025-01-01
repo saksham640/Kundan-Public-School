@@ -3,3 +3,23 @@
     font-family: sans-serif;
     text-align: center;
 }
+
+.calender{
+    max-width: 95%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden !important;
+}
+
+.noverflow{
+    overflow: hidden;
+}
+
+@media(max-width:648px){
+    .calender{
+        transform: rotate(90deg) translateY(30%) translateX(25%);
+        max-width: 150%;
+        margin: 0;
+        margin-bottom: 20rem;
+    }
+}

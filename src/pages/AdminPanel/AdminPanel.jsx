@@ -34,7 +34,7 @@ export default function AdminPanel() {
             vals.push({
                 name: doc.data().formData.name,
                 phone: doc.data().formData.phone,
-                email: doc.data().formData.email,
+                email: (doc.data().formData.email || "Not Given"),
                 reqId: doc.id,
                 deleteFunction: deleteRequest,
                 date: `${doc.data().formData.date}`,
