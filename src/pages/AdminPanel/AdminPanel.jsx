@@ -12,7 +12,7 @@ import db from "../../configs/fireBaseConfig.js"
 export default function AdminPanel() {
 
     const [formVisibility, setFormVisibility] = useState("flex");
-    const [requestValues, setRequestValues] = useState([{}]);
+    const [requestValues, setRequestValues] = useState([{name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..."}]);
 
     const authorization = function (event) {
         event.preventDefault();

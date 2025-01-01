@@ -51,8 +51,7 @@ export default function About() {
     <>
     <Nav/>
     <br/>
-    <h1 className={styles.heading}>About Us:</h1>
-    <br/>
+    <h1 className={styles.heading}>Our History:</h1>
     <MobVisionaryMessage values={OurHistory}/>
     <br/>
     <MobVisionaryMessage values={TheVisionary}/>
