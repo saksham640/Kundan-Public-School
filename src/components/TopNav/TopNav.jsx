@@ -37,6 +37,7 @@ export default function TopNav() {
     if(location.href == "https://www.kundanpublicschool.org"){
     setViewCount();
     }
+    console.log(location.href)
   }, []);
 
   return (
