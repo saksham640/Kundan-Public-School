@@ -40,7 +40,7 @@ export default function TopNav() {
 
   return (
     <div className={styles.topNav}>
-      <h3 className={styles.viewCount}>View Count: {currentCount}</h3>
+      <h3 className={styles.viewCount}>Views: {currentCount}</h3>
       <h3>Socials:</h3>
       <TiSocialFacebookCircular
         className={styles.socialIcon}

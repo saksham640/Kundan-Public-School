@@ -38,6 +38,15 @@ export default function Calender(){
             <img className = {styles.calender} src="/calender-real.png"></img>
             </div>
             <br/>
+            <h2 className={styles.heading}>Click To Download Calender</h2>
+            <div className={styles.downloadBox} onClick={()=>{location.assign("https://drive.google.com/uc?export=download&id=1fdKJ5x25ap-n60ptDFb5QJ6dcfgqlmQF")}}>
+                <img src="/logos/pdf.png" style={{maxHeight: "100%"}} id={styles.pdflogo} onClick={()=>{location.assign("https://drive.google.com/uc?export=download&id=1fdKJ5x25ap-n60ptDFb5QJ6dcfgqlmQF")}}></img>
+                <a href="https://drive.google.com/uc?export=download&id=1fdKJ5x25ap-n60ptDFb5QJ6dcfgqlmQF">
+                    <button className={styles.downloadButton}>Download PDF </button>
+                </a>
+            </div>
+            <br/>
+
             <div style={{
                 display: "flex",
                 flexDirection: "column",

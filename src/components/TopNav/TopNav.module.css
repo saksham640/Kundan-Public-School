@@ -31,7 +31,8 @@
 
 .viewCount{
     position: absolute;
-    left: 0;
+    left: 8px;
+
 }
 
 @media(max-width: 648px) {
