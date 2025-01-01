@@ -34,7 +34,7 @@ export default function TopNav() {
 
   // UseEffect hook to trigger view count update
   useEffect(() => {
-    if(location.href == "https://kundanpublicschool.org/"){
+    if(location.href == "https://www.kundanpublicschool.org/"){
     setViewCount();
     }
   }, []);
