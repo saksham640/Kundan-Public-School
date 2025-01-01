@@ -14,7 +14,6 @@ import Footer from "../../components/Footer/Footer.jsx";
 import MobileNavBar from "../../components/mobileNavBar/MobileNavBar.jsx";
 import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 import styles from "../Home/Home.module.css"
-import { image } from "framer-motion/client";
 
 import db from "../../configs/fireBaseConfig.js"
 import { getDocs, setDoc, collection, doc } from "firebase/firestore";
@@ -57,7 +56,7 @@ const photoGalleryData = [
   { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg" },
   { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg" },
   { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg" },
-  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg" },
+  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg" }, 
 ];
 
 const afterExp2 = { title: "Our Objective", description: "Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.", image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", scale: "1", translate: "0" }
@@ -71,7 +70,7 @@ const researchMethodologyMob = { title: "Our Methodology", image: "/logos/ins2.p
 export default function Home() {
 
   const [events, setEvents] = useState([{name: "Loading...", image: "Loading..."}])
-  const [achievements,setAchievements] = useState([]);
+  const [achievements,setAchievements] = useState(["...Loading"]);
 
   const getEvents = async function () {
     const collectionRef = collection(db, "schoolEvents");
