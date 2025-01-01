@@ -145,11 +145,13 @@ export default function AdminPanel() {
                     }} />
                     <br />
                 </div>
-
                 <div className={styles.requests} style={formVisibility == "none" ? { display: "block" } : { display: "none" }}>
                     <h1 className={styles.heading}>Welcome, Admin</h1>
                     <h2 className={styles.heading}>All pending enquiry requests</h2>
+                    <br/>
                     <RequestList values={requestValues} />
+                    <br/>
+                    
                 </div>
                 <br />
             </div>
