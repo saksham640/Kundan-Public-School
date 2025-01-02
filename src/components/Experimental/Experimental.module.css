@@ -37,6 +37,9 @@
 .description{
     font-size: 1.5vw;
     overflow: visible;
+    font-weight: 100 !important;
+    text-align: left !important;
+    font-family:sans-serif;
 }
 
 @media(max-width:648px){

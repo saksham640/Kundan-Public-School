@@ -12,8 +12,8 @@ export default function Experimental({values}){
             </img>
 
             <div className={styles.textVals}>
-                <h1 className={styles.title}>{values.title}</h1>
-                <h2 className={styles.description}>{values.description}</h2>
+                <h2 className={styles.title}>{values.title}</h2>
+                <h6 className={styles.description}>{values.description}</h6>
             </div>
 
 

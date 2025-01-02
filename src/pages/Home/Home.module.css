@@ -17,7 +17,7 @@
     justify-content: space-around;
     align-content: space-around;
     align-items: center;
-    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.744),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.85),rgba(255, 255, 255, 0.934)), url(/backgrounds/sup2.jpg);
     width: 100;
     color: rgb(30, 30, 30);
 }
@@ -29,7 +29,7 @@
 }
 
 .forBg{
-    background: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.755), rgba(255, 255, 255, 0.912)),url(/backgrounds/sup2.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.918), rgba(255, 255, 255, 0.862), rgba(255, 255, 255, 0.912)),url(/backgrounds/sup2.jpg);
     background-size: 120%;
 }
 
