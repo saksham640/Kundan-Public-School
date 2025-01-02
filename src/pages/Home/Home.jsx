@@ -37,12 +37,29 @@ const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", descri
 
 const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600 }
 
-const parallaxValues2 = { title: "Facilities", description: <p>Further, Kundan Public School offers<ul> <li>Lush Green Lawns</li> <li>24 Hour Power Backup</li> <li>Water Cooling Systems & Purifiers</li> <li>CCTV Surveillance</li> <li>Ramp Facility</li> <li>Latest Teaching Technology</li> <li>Spacious Playgrounds</li> </ul></p>, offsetConstant: window.innerWidth <= 648 ? -3100 : -2800 }
+const parallaxValues2 = { title: "Facilities", description:
+<div>
+  Further, Kundan Public School offers
+  <ul style={window.innerWidth <= 648 ? {fontSize: "95%"}: {display: "flex", margin: "1rem", fontSize: "110%"}}>
+    <br/>
+    <div style={{marginRight: "10%",paddingLeft: "10px"}}>
+    <li style={{paddingBottom: "5px"}}>Lush Green Lawns</li>
+    <li style={{paddingBottom: "5px"}}>24 Hour Power Backup</li>
+    <li style={{paddingBottom: "5px"}}>Water Cooling Systems & Purifiers</li>
+    </div>
+    <div style={{marginRight: "10%",paddingLeft: "10px"}}>
+    <li style={{paddingBottom: "5px"}}>CCTV Surveillance</li> <li style={{paddingBottom: "5px"}}>Ramp Facility</li>
+    <li style={{paddingBottom: "5px"}}>Latest Teaching Technology</li>
+    <li style={{paddingBottom: "5px"}}>Spacious Playgrounds</li> 
+    </div>
+    </ul>
+    </div>,
+    offsetConstant: window.innerWidth <= 648 ? -3100 : -2800 }
 
 const ExperimentalValues = { title: "Staff And Faculty", description: "A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.", image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
 const ourTeaching = {
-  title: "Our Teaching Methodology", description: `At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process`, image: "/logos/insignia.png"
+  title: "Our Teaching Methodology", description: `At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process`, image: "/logos/ins2.png"
 }
 
 const Experimental2Values = { title: "Infrastructure", description: "Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", image: "/carousel_images/img_5.jpg", }

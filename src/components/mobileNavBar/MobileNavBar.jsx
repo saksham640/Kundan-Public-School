@@ -35,7 +35,7 @@ export default function MobileNavBar() {
     return (
         <div className={styles.NavBar}>
             <NavLink to={"/"} className={styles.NavLink}>
-                <img className={styles.logo} src="logos/ins2.png"></img>
+                <img className={styles.logo} src="logos/ins4.png"></img>
             </NavLink>
 
             <TitleChanger text1="Kundan Public School"
