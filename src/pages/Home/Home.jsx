@@ -56,13 +56,13 @@ const parallaxValues2 = { title: "Facilities", description:
     </div>,
     offsetConstant: window.innerWidth <= 648 ? -3100 : -2800 }
 
-const ExperimentalValues = { title: "Staff And Faculty", description: <b style={{fontWeight: "100"}}>A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.</b> , image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
+const ExperimentalValues = { title: "Staff And Faculty", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.</b> , image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
 const ourTeaching = {
   title: "Our Teaching Methodology", description: <p style={{fontWeight: "400"}}>At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process</p>, image: "/logos/ins2.png"
 }
 
-const Experimental2Values = { title: "", description: <b style={{fontWeight: "100"}}>Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc.</b>, image: "/carousel_images/img_5.jpg", }
+const Experimental2Values = { title: "", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc.</b>, image: "/carousel_images/img_5.jpg", }
 
 const photoGalleryData = [
   { id: 1, img: "/activity_Images/bgScroll.jpg" },
@@ -76,9 +76,9 @@ const photoGalleryData = [
   { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg" }, 
 ];
 
-const afterExp2 = { title: "Our Objective", description: "Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.", image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", scale: "1", translate: "0" }
+const afterExp2 = { title: "Our Objective", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.</b>, image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", scale: "1", translate: "0" }
 
-const afterExp = { title: "The School", description: "Carrying forward the legacy of over 20 years of experience in academics, the society is now offering its expertise in the field of secondary education, where the young, developing brains of your kids are polished to bring out the genius in them. ", image: "https://i.ibb.co/84ft8YX/Whats-App-Image-2024-12-21-at-10-31-09-d1339696.jpg", scale: "1", translate: "0" }
+const afterExp = { title: "The School", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>Carrying forward the legacy of over 20 years of experience in academics, the society is now offering its expertise in the field of secondary education, where the young, developing brains of your kids are polished to bring out the genius in them.</b>, image: "https://i.ibb.co/84ft8YX/Whats-App-Image-2024-12-21-at-10-31-09-d1339696.jpg", scale: "1", translate: "0" }
 
 const researchMethodologyMob = { title: "Our Methodology", image: "/logos/ins2.png", description: <p>At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process</p>, author: "" }
 
