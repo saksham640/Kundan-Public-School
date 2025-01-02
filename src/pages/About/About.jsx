@@ -75,6 +75,7 @@ export default function About() {
     <br/>
     <PcCard values={PrincipalMessage}/>
     <br/>
+    <h1 style={{fontFamily: "sans-serif", textAlign: "center", paddingBottom: "5px", color: "rgb(0, 0, 70)"}}>Motto:</h1>
     <MottoCard/>
     <br/>
     <Footer/>

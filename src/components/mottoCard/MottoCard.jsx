@@ -6,8 +6,9 @@ const MottoCard = () => {
     <div className={styles.MottoCard}>
         <img src='/logos/ins5.png'></img>
         <div className={styles.textBox}>
+            <br/>
             <h1>Learn Achieve Inspire</h1>
-            <i>-Our Motto</i>
+            <br/>
         </div>
     </div>
   )
