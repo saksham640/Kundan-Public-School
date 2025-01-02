@@ -74,7 +74,6 @@ export default function About() {
     <br/>
     <PcCard values={PrincipalMessage}/>
     <br/>
-    
     <Footer/>
     </>
   )
