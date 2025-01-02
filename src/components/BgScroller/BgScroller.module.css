@@ -48,7 +48,7 @@
     border-bottom-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.586);
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
 @media (max-width:648px){
   .image{
@@ -62,7 +62,6 @@
   }
   #description{
     font-size: 4.5vw;
-    padding: 10px;
     overflow: visible;
   }
 }

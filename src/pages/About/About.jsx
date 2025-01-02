@@ -39,7 +39,7 @@ const PrincipalMessage = {
     <h5 style={{
       fontWeight: "500",
     }}><i>Dr. Anu Singh
-  (BPT, MPT, MA (Psy), MA (Edu), Ph. D)
+  (BPT, B.Ed, MPT, MA (Psy), MA (Edu), Ph. D)
  </i></h5><br/>
  <i> “True teachers are those who use themselves as bridges over which they invite their students to cross; then, having facilitated their crossing, joyfully collapse, encouraging them to create their own.”</i>
   <br/>
