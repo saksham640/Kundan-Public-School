@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer.jsx'
 import styles from "./About.module.css"
 import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 import PcCard from "../../components/PcCard/PcCard.jsx"
+import MottoCard from '../../components/mottoCard/MottoCard.jsx'
 
 const OurHistory = { title: "The Society",
   image:"logos/ins2.png",
@@ -73,6 +74,8 @@ export default function About() {
     <PcCard values={TheVisionary}/>
     <br/>
     <PcCard values={PrincipalMessage}/>
+    <br/>
+    <MottoCard/>
     <br/>
     <Footer/>
     </>

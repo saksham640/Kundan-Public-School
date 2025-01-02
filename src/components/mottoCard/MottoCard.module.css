@@ -1,0 +1,36 @@
+.MottoCard{
+    height: 15vh;
+    width: 40%;
+    display: flex;
+    justify-self: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+    background: linear-gradient(120deg,rgba(255, 234, 0, 0.508), rgba(0, 191, 255, 0.552));
+}
+
+.MottoCard img{
+    max-width: 100px;
+    padding: 1rem;
+}
+
+.MottoCard h1{
+    color: rgb(45, 45, 45);
+}
+
+.MottoCard i{
+    margin-top: 2rem;
+}
+
+@media (max-width:648px){
+    .MottoCard{
+        width: 85%;
+        margin-top: -10%;
+    }
+    .MottoCard h1{
+        font-size: 140%;
+        padding: 1rem;
+    }
+}
