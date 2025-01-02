@@ -62,7 +62,7 @@ const ourTeaching = {
   title: "Our Teaching Methodology", description: `At Kundan Public School we believe that learning is a lifelong process and the main aim of education is to help students to nurture their innate potentialities and to help them in acquiring quality personality traits for a holistic development We understand that every child is unique with their own strengths and capacities and hence it is our responsibility to enhance those capabilities to the maximum level, thus attaining the true purpose of education. For this purpose active engagement of student during the learning process is highly motivated in our school encouraging a student- centric curriculum thus keeping the students at a central position in the learning process`, image: "/logos/ins2.png"
 }
 
-const Experimental2Values = { title: "Infrastructure", description: "Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", image: "/carousel_images/img_5.jpg", }
+const Experimental2Values = { title: "", description: "Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc. ", image: "/carousel_images/img_5.jpg", }
 
 const photoGalleryData = [
   { id: 1, img: "/activity_Images/bgScroll.jpg" },

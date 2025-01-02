@@ -52,13 +52,14 @@
     }
     .title{
         font-size: 6vw;
-        overflow:visible ;
+        overflow:scroll ;
         margin: 0 !important;
     }
     .description{
-        font-size: 4.5vw;
-        overflow:visible;
+        font-size: 100%;
+        overflow:scroll;
         margin: 0 !important;
+        transform: translateY(-5%);
     }
     .image{
         max-width: 40%;
