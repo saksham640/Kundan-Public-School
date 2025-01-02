@@ -18,6 +18,7 @@ import styles from "../Home/Home.module.css"
 import db from "../../configs/fireBaseConfig.js"
 import { getDocs, setDoc, collection, doc } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { text } from "framer-motion/client";
 
 const carouselImages = [
   "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg",
@@ -87,7 +88,7 @@ const researchMethodologyMob = { title: "Our Methodology", image: "/logos/ins2.p
 export default function Home() {
 
   const [events, setEvents] = useState([{name: "Loading...", image: "Loading..."}])
-  const [achievements,setAchievements] = useState(["...Loading"]);
+  const [achievements,setAchievements] = useState([{text: "Loading..."},{text: "Loading..."}]);
 
   const getEvents = async function () {
     const collectionRef = collection(db, "schoolEvents");
@@ -108,8 +109,10 @@ export default function Home() {
     const docSnaps = await getDocs(collectionRef);
     let newNews = [];
     docSnaps.docs.forEach((doc)=>{
-      newNews.push(
-        doc.data().news
+      newNews.push({
+        text: doc.data().news,
+        id: doc.id,
+      }
       )
     })
     setAchievements(newNews);

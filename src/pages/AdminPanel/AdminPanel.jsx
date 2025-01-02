@@ -4,15 +4,20 @@ import styles from "../AdminPanel/AdminPanel.module.css"
 import PcCard from "../../components/PcCard/PcCard.jsx"
 import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 import RequestList from "../../components/RequstList/RequestList.jsx"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { collection, deleteDoc, getDocs, doc,getDoc,setDoc } from "firebase/firestore"
 import db from "../../configs/fireBaseConfig.js"
+import CardSlider from "../../components/CardSlider/CardSlider.jsx"
+import { image } from "framer-motion/client"
+import CardSliderVertical from "../../components/CardSliderVertical/CardSliderVertical.jsx"
 
 
 export default function AdminPanel() {
 
     const [formVisibility, setFormVisibility] = useState("flex");
     const [requestValues, setRequestValues] = useState([{name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..."}]);
+    const [cardValues,setCardValues] = useState([{image: "", name: "Loading...", id: "1"},{image: "", name: "Loading...", id: "1"}]);
+    const [news,setNews] = useState([{text: "Loading...",},{text: "Loading..."}]);
 
     const authorization = function (event) {
         event.preventDefault();
@@ -67,6 +72,64 @@ export default function AdminPanel() {
         console.log("count decreased");
         await loadRequests();
     }
+
+    const getEvents = async function () {
+        const collectionRef = collection(db, "schoolEvents");
+        const docSnaps = await getDocs(collectionRef);
+        let newEvents = [];
+        docSnaps.docs.forEach((doc) => {
+          newEvents.push({
+            name: doc.data().name,
+            image: doc.data().image,
+            id: doc.id,
+          })
+        })
+        setCardValues(newEvents);
+        console.log(newEvents);
+        return newEvents;
+      }
+
+      const deleteEvent = async function(event){
+        const userResponse = confirm("Do you want to delete this event (cannot be undone)");
+        if(userResponse){
+            const docRef = doc(db,"schoolEvents",`${event.target.value}`);
+            await deleteDoc(docRef);
+            setCardValues(await getEvents());
+        }
+      }
+
+      const getNews = async function(){
+        const collectionRef = collection(db,"schoolNews");
+        const docSnaps = await getDocs(collectionRef);
+        let newNews = [];
+        docSnaps.docs.forEach((doc)=>{
+          newNews.push(
+            {
+                text: doc.data().news,
+                id: doc.id,
+            }
+          )
+        })
+        console.log(newNews);
+        setNews(newNews);
+        return newNews;
+      }
+
+      const deleteNews = async function(event){
+        const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
+        if(userRequest){
+            const docRef = doc(db,"schoolNews",`${event.target.value}`);
+            await deleteDoc(docRef);
+            setNews(await getNews());
+        }
+      }
+
+      useEffect(()=>{
+        getEvents();
+        getNews();
+      },[]);
+
+
 
     return (
         <div className={styles.adminPanel}>
@@ -151,7 +214,11 @@ export default function AdminPanel() {
                     <br/>
                     <RequestList values={requestValues} />
                     <br/>
-                    
+                    <br/>
+                    <CardSlider cardValues={cardValues} deleteFunction={deleteEvent}/>
+                    <br/>
+                    <br/>
+                    <CardSliderVertical cardValues={news} deleteFunction = {deleteNews}/>
                 </div>
                 <br />
             </div>
