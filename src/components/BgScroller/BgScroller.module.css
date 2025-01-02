@@ -36,6 +36,7 @@
     border: 10px solid transparent;
     display: block;
     text-shadow: 3px 3px 3px rgb(133, 133, 133);
+    margin-top: 6%;
   }
 
   #description{
