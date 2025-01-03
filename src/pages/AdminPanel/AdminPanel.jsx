@@ -5,7 +5,7 @@ import PcCard from "../../components/PcCard/PcCard.jsx"
 import MobVisionaryMessage from "../../components/MobVisionaryMessage/MobVisionaryMessage.jsx"
 import RequestList from "../../components/RequstList/RequestList.jsx"
 import { useEffect, useState } from "react"
-import { collection, deleteDoc, getDocs, doc,getDoc,setDoc } from "firebase/firestore"
+import { collection, deleteDoc, getDocs, doc, getDoc, setDoc, addDoc } from "firebase/firestore"
 import db from "../../configs/fireBaseConfig.js"
 import CardSlider from "../../components/CardSlider/CardSlider.jsx"
 import { image } from "framer-motion/client"
@@ -15,9 +15,10 @@ import CardSliderVertical from "../../components/CardSliderVertical/CardSliderVe
 export default function AdminPanel() {
 
     const [formVisibility, setFormVisibility] = useState("flex");
-    const [requestValues, setRequestValues] = useState([{name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..."}]);
-    const [cardValues,setCardValues] = useState([{image: "", name: "Loading...", id: "1"},{image: "", name: "Loading...", id: "1"}]);
-    const [news,setNews] = useState([{text: "Loading...",},{text: "Loading..."}]);
+    const [requestValues, setRequestValues] = useState([{ name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..." }]);
+    const [cardValues, setCardValues] = useState([{ image: "", name: "Loading...", id: "1" }, { image: "", name: "Loading...", id: "1" }]);
+    const [news, setNews] = useState([{ text: "Loading...", }, { text: "Loading..." }]);
+    const [newsField, setNewsField] = useState();
 
     const authorization = function (event) {
         event.preventDefault();
@@ -65,7 +66,7 @@ export default function AdminPanel() {
 
     const deleteRequest = async function (e) {
         console.log(e.target);
-        const docRef = doc(db, "requests",await e.target.value);
+        const docRef = doc(db, "requests", await e.target.value);
         await deleteDoc(docRef);
         console.log(`${e.target.value} document deleted`);
         await decreaseCount();
@@ -78,65 +79,69 @@ export default function AdminPanel() {
         const docSnaps = await getDocs(collectionRef);
         let newEvents = [];
         docSnaps.docs.forEach((doc) => {
-          newEvents.push({
-            name: doc.data().name,
-            image: doc.data().image,
-            id: doc.id,
-          })
+            newEvents.push({
+                name: doc.data().name,
+                image: doc.data().image,
+                id: doc.id,
+            })
         })
         setCardValues(newEvents);
         console.log(newEvents);
         return newEvents;
-      }
+    }
 
-      const deleteEvent = async function(event){
+    const deleteEvent = async function (event) {
         const userResponse = confirm("Do you want to delete this event (cannot be undone)");
-        if(userResponse){
-            const docRef = doc(db,"schoolEvents",`${event.target.value}`);
+        if (userResponse) {
+            const docRef = doc(db, "schoolEvents", `${event.target.value}`);
             await deleteDoc(docRef);
             setCardValues(await getEvents());
         }
-      }
+    }
 
-      const getNews = async function(){
-        const collectionRef = collection(db,"schoolNews");
+    const getNews = async function () {
+        const collectionRef = collection(db, "schoolNews");
         const docSnaps = await getDocs(collectionRef);
         let newNews = [];
-        docSnaps.docs.forEach((doc)=>{
-          newNews.push(
-            {
-                text: doc.data().news,
-                id: doc.id,
-            }
-          )
+        docSnaps.docs.forEach((doc) => {
+            newNews.push(
+                {
+                    text: doc.data().news,
+                    id: doc.id,
+                }
+            )
         })
         console.log(newNews);
         setNews(newNews);
         return newNews;
-      }
+    }
 
-      const deleteNews = async function(event){
+    const deleteNews = async function (event) {
         const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
-        if(userRequest){
-            const docRef = doc(db,"schoolNews",`${event.target.value}`);
+        if (userRequest) {
+            const docRef = doc(db, "schoolNews", `${event.target.value}`);
             await deleteDoc(docRef);
             setNews(await getNews());
         }
-      }
+    }
 
-      useEffect(()=>{
+    const addNews = async function(){
+        await addDoc(collection(db,"schoolNews"),{news:newsField});
+        setNews(await getNews());
+    }
+
+
+    useEffect(() => {
         getEvents();
         getNews();
-      },[]);
-
-
+    }, []);
 
     return (
         <div className={styles.adminPanel}>
             <div className={styles.contentWrap}>
-            <Nav />
-            <br />
-                <div style={{ display: formVisibility}}>
+                <Nav />
+                <br />
+                <div style={{ display: formVisibility }}>
                     <PcCard values={{
                         title: "Login to Access", description: <form>
                             <label for="username">Username: </label>
@@ -144,19 +149,19 @@ export default function AdminPanel() {
                                 borderRadius: "1rem",
                                 borderColor: "transparent",
                                 padding: "0.5rem"
-                                
+
                             }}></input>
                             <br />
-                            <br/>
+                            <br />
                             <label for="password">Password: </label>
                             <input type="password" id="password" style={{
                                 borderRadius: "1rem",
                                 borderColor: "transparent",
                                 padding: "0.5rem",
-                                
+
                             }}></input>
                             <br />
-                            <br/>
+                            <br />
                             <input type="submit" style={{
                                 padding: "0.5rem",
                                 borderRadius: "1rem",
@@ -179,19 +184,19 @@ export default function AdminPanel() {
                                 borderRadius: "1rem",
                                 borderColor: "transparent",
                                 padding: "0.5rem"
-                                
+
                             }}></input>
                             <br />
-                            <br/>
+                            <br />
                             <label for="password">Password: </label>
                             <input type="password" id="password" style={{
                                 borderRadius: "1rem",
                                 borderColor: "transparent",
                                 padding: "0.5rem",
-                                
+
                             }}></input>
                             <br />
-                            <br/>
+                            <br />
                             <input type="submit" style={{
                                 padding: "0.5rem",
                                 borderRadius: "1rem",
@@ -202,7 +207,7 @@ export default function AdminPanel() {
                                 fontSize: "large",
                                 cursor: "pointer"
 
-                            }} onClick={(event) => { authorization(event)}}></input>
+                            }} onClick={(event) => { authorization(event) }}></input>
                         </form>,
                         image: "/logos/ins2.png"
                     }} />
@@ -211,14 +216,18 @@ export default function AdminPanel() {
                 <div className={styles.requests} style={formVisibility == "none" ? { display: "block" } : { display: "none" }}>
                     <h1 className={styles.heading}>Welcome, Admin</h1>
                     <h2 className={styles.heading}>All pending enquiry requests</h2>
-                    <br/>
+                    <br />
                     <RequestList values={requestValues} />
-                    <br/>
-                    <br/>
-                    <CardSlider cardValues={cardValues} deleteFunction={deleteEvent}/>
-                    <br/>
-                    <br/>
-                    <CardSliderVertical cardValues={news} deleteFunction = {deleteNews}/>
+                    <br />
+                    <br />
+                    <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} />
+                    <br />
+                    <br />
+                    <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
+                    <br />
+                    <input type="text" onChange={()=>{setNewsField(event.target.value)}}></input>
+                    <br />
+                    <button onClick={addNews}>Add News!</button>
                 </div>
                 <br />
             </div>
