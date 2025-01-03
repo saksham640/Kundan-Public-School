@@ -10,6 +10,7 @@ import db from "../../configs/fireBaseConfig.js"
 import CardSlider from "../../components/CardSlider/CardSlider.jsx"
 import { image } from "framer-motion/client"
 import CardSliderVertical from "../../components/CardSliderVertical/CardSliderVertical.jsx"
+import ImgBBUploader from "../../components/IMGUPLOADER/IMGUPLOADER.jsx"
 
 
 export default function AdminPanel() {
@@ -19,12 +20,14 @@ export default function AdminPanel() {
     const [cardValues, setCardValues] = useState([{ image: "", name: "Loading...", id: "1" }, { image: "", name: "Loading...", id: "1" }]);
     const [news, setNews] = useState([{ text: "Loading...", }, { text: "Loading..." }]);
     const [newsField, setNewsField] = useState();
+    const [isAuthorized, setIsAuthorized] = useState(false);
 
     const authorization = function (event) {
         event.preventDefault();
         if (event.target.form[0].value == "kpsadmin" && event.target.form[1].value == "12345") {
             console.log("welcome");
             loadRequests();
+            setIsAuthorized(true);
         } else {
             alert("incorrect credentials");
             location.reload();
@@ -65,6 +68,7 @@ export default function AdminPanel() {
     }
 
     const deleteRequest = async function (e) {
+        if(isAuthorized){
         console.log(e.target);
         const docRef = doc(db, "requests", await e.target.value);
         await deleteDoc(docRef);
@@ -72,9 +76,13 @@ export default function AdminPanel() {
         await decreaseCount();
         console.log("count decreased");
         await loadRequests();
+        }else{
+            prompt("not authorized/Login again");
+        }
     }
 
     const getEvents = async function () {
+
         const collectionRef = collection(db, "schoolEvents");
         const docSnaps = await getDocs(collectionRef);
         let newEvents = [];
@@ -91,11 +99,15 @@ export default function AdminPanel() {
     }
 
     const deleteEvent = async function (event) {
-        const userResponse = confirm("Do you want to delete this event (cannot be undone)");
-        if (userResponse) {
-            const docRef = doc(db, "schoolEvents", `${event.target.value}`);
-            await deleteDoc(docRef);
-            setCardValues(await getEvents());
+        if (isAuthorized) {
+            const userResponse = confirm("Do you want to delete this event (cannot be undone)");
+            if (userResponse) {
+                const docRef = doc(db, "schoolEvents", `${event.target.value}`);
+                await deleteDoc(docRef);
+                setCardValues(await getEvents());
+            }
+        } else {
+            prompt("not authorized/Login again");
         }
     }
 
@@ -117,17 +129,25 @@ export default function AdminPanel() {
     }
 
     const deleteNews = async function (event) {
+        if(isAuthorized){
         const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
         if (userRequest) {
             const docRef = doc(db, "schoolNews", `${event.target.value}`);
             await deleteDoc(docRef);
             setNews(await getNews());
-        }
+        } 
+    } else {
+        prompt("not authorized/Login again");
+    }
     }
 
-    const addNews = async function(){
-        await addDoc(collection(db,"schoolNews"),{news:newsField});
+    const addNews = async function () {
+        if(isAuthorized){
+        await addDoc(collection(db, "schoolNews"), { news: newsField });
         setNews(await getNews());
+        } else {
+            prompt("not authorized/Login again");
+        }
     }
 
 
@@ -135,6 +155,7 @@ export default function AdminPanel() {
         getEvents();
         getNews();
     }, []);
+
 
     return (
         <div className={styles.adminPanel}>
@@ -225,9 +246,11 @@ export default function AdminPanel() {
                     <br />
                     <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
                     <br />
-                    <input type="text" onChange={()=>{setNewsField(event.target.value)}}></input>
+                    <input type="text" onChange={() => { setNewsField(event.target.value) }}></input>
                     <br />
                     <button onClick={addNews}>Add News!</button>
+                    <br/>
+                    <ImgBBUploader/>
                 </div>
                 <br />
             </div>
