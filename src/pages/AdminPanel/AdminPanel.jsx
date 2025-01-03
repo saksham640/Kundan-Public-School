@@ -242,6 +242,7 @@ export default function AdminPanel() {
                     <br />
                     <br />
                     <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} />
+                    <ImgBBUploader/>
                     <br />
                     <br />
                     <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
@@ -250,7 +251,6 @@ export default function AdminPanel() {
                     <br />
                     <button onClick={addNews}>Add News!</button>
                     <br/>
-                    <ImgBBUploader/>
                 </div>
                 <br />
             </div>
