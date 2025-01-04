@@ -11,6 +11,9 @@ import CardSlider from "../../components/CardSlider/CardSlider.jsx"
 import { image } from "framer-motion/client"
 import CardSliderVertical from "../../components/CardSliderVertical/CardSliderVertical.jsx"
 import ImgBBUploader from "../../components/IMGUPLOADER/IMGUPLOADER.jsx"
+import { PiPlus, PiPlusBold, PiPlusCircle, PiPlusCircleFill } from "react-icons/pi"
+import { BiPlusMedical } from "react-icons/bi"
+import { MdOutlineAdd } from "react-icons/md"
 
 
 export default function AdminPanel() {
@@ -21,6 +24,10 @@ export default function AdminPanel() {
     const [news, setNews] = useState([{ text: "Loading...", }, { text: "Loading..." }]);
     const [newsField, setNewsField] = useState();
     const [isAuthorized, setIsAuthorized] = useState(false);
+    const [file,setFile] = useState(null);
+    const [fileResponse,setFileResponse] = useState("nothing");
+    const API_KEY = "6ec2a3a46418c34ce73ee2dbbbc93cf8";
+    const [eventField, setEventField] = useState("");
 
     const authorization = function (event) {
         event.preventDefault();
@@ -68,18 +75,15 @@ export default function AdminPanel() {
     }
 
     const deleteRequest = async function (e) {
-        if(isAuthorized){
-        console.log(e.target);
-        const docRef = doc(db, "requests", await e.target.value);
-        await deleteDoc(docRef);
-        console.log(`${e.target.value} document deleted`);
-        await decreaseCount();
-        console.log("count decreased");
-        await loadRequests();
-        }else{
-            prompt("not authorized/Login again");
+            console.log(e.target);
+            const docRef = doc(db, "requests", await e.target.value);
+            await deleteDoc(docRef);
+            console.log(`${e.target.value} document deleted`);
+            await decreaseCount();
+            console.log("count decreased");
+            await loadRequests();
         }
-    }
+    
 
     const getEvents = async function () {
 
@@ -129,26 +133,66 @@ export default function AdminPanel() {
     }
 
     const deleteNews = async function (event) {
-        if(isAuthorized){
-        const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
-        if (userRequest) {
-            const docRef = doc(db, "schoolNews", `${event.target.value}`);
-            await deleteDoc(docRef);
-            setNews(await getNews());
-        } 
-    } else {
-        prompt("not authorized/Login again");
-    }
-    }
-
-    const addNews = async function () {
-        if(isAuthorized){
-        await addDoc(collection(db, "schoolNews"), { news: newsField });
-        setNews(await getNews());
+        if (isAuthorized) {
+            const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
+            if (userRequest) {
+                const docRef = doc(db, "schoolNews", `${event.target.value}`);
+                await deleteDoc(docRef);
+                setNews(await getNews());
+            }
         } else {
             prompt("not authorized/Login again");
         }
     }
+
+    const addNews = async function () {
+        if (isAuthorized) {
+            await addDoc(collection(db, "schoolNews"), { news: newsField });
+            setNews(await getNews());
+        } else {
+            prompt("not authorized/Login again");
+        }
+    }
+
+    const handleImage = async function(event){
+        setFile(event.target.files[0]);
+    }
+
+    const uploadImage = async function(){
+        const formData = new FormData();
+        formData.append("image",file);
+        try{
+            const response = await fetch(`https://api.imgbb.com/1/upload?key=${API_KEY}`,{
+                method: "POST",
+                body: formData,
+            });
+            const result = await response.json();
+            console.log(result);
+
+            if(result.success){
+                console.log("Successfully uploaded image link is : ",result.data.url);
+                setFileResponse("url-generated");
+                return(result.data.url);
+            }
+        } catch(event){
+            console.log("error ", event);
+        }
+    }
+
+    const handleEventField = function(event){
+        setEventField(event.target.value);
+    }
+
+    const addEvent = async function(){
+        const docRef = collection(db,"schoolEvents");
+        await addDoc(docRef,{
+            image: await uploadImage(),
+            name: eventField,
+        });
+        console.log("successfully added");
+        setCardValues(await getEvents());
+    }
+
 
 
     useEffect(() => {
@@ -241,19 +285,40 @@ export default function AdminPanel() {
                     <RequestList values={requestValues} />
                     <br />
                     <br />
-                    <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} />
-                    <ImgBBUploader/>
+                    <div className={styles.iAmTired}>
+                        <h2 className={styles.heading}>School News Controls (Delete)</h2>
+                        <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} />
+                        <h2 className={styles.heading}>School News Controls (Add a New Card)</h2>
+                            <div className={styles.addCard}>
+                            <h2 style={fileResponse == "file-sending" ? {}:{display: "none"}}>PLEASE WAIT DATA IS BEING SENT...</h2>
+                            <div style={fileResponse == "file-sending" ? {display: "none"}: {}}>
+                            <h2>Click to add New Card's Image</h2>
+                            <input type="file" onChange={handleImage}></input>
+                            <input type="text" placeholder="Text Material Goes here" onChange={()=>{handleEventField(event)}}></input>
+                            <button className={styles.btn} onClick={()=>{addEvent(); setFileResponse("file-sending")}}>Submit</button>
+                            </div>
+
+                            </div>
+                        <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
+                        <hr />
+                        <h2 className={styles.heading}>School News Controls (Delete)</h2>
+                        <br />
+                        <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
+                        <br />
+                        <h2 className={styles.heading}>Add News</h2>
+                        <br />
+                        <div className={styles.addNews}>
+                            <input type="text" onChange={() => { setNewsField(event.target.value) }}></input>
+                            <br />
+                            <button onClick={addNews} className={styles.btn}>Add News!</button>
+                        </div>
+                        <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
+                    </div>
                     <br />
-                    <br />
-                    <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
-                    <br />
-                    <input type="text" onChange={() => { setNewsField(event.target.value) }}></input>
-                    <br />
-                    <button onClick={addNews}>Add News!</button>
-                    <br/>
                 </div>
                 <br />
             </div>
+            <Footer/>
         </div>
     )
 }
