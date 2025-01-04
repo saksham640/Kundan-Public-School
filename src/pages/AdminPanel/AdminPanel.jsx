@@ -287,7 +287,7 @@ export default function AdminPanel() {
                     <br />
                     <div className={styles.iAmTired}>
                         <h2 className={styles.heading}>School News Controls (Delete)</h2>
-                        <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} />
+                        <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} isAuth={true} />
                         <h2 className={styles.heading}>School News Controls (Add a New Card)</h2>
                             <div className={styles.addCard}>
                             <h2 style={fileResponse == "file-sending" ? {}:{display: "none"}}>PLEASE WAIT DATA IS BEING SENT...</h2>

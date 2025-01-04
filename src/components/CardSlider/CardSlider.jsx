@@ -3,7 +3,7 @@ import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { useState } from "react";
 
-export default function CardSlider({cardValues,deleteFunction}){
+export default function CardSlider({cardValues,deleteFunction,isAuth}){
 
     const [scrollValue,setScrollValue] = useState(0);
 
@@ -12,10 +12,10 @@ export default function CardSlider({cardValues,deleteFunction}){
         <div className={styles.cardSlider}>
             {cardValues.map(cardValue=>(
                 <div className={styles.card} style={(
-                    location.href == "https://www.kundanpublicschool.org/#/adminPanel" || location.href == "http://localhost:5173/#/adminPanel" ||  location.href == "http://localhost:5173/#/adminPanel/" || location.href == "https://www.kundanpublicschool.org/#/adminPanel" ) ?{overflow: "visible"}:{}}>
+                    isAuth == true) ?{overflow: "visible"}:{}}>
                     <button
                     style={(
-                        location.href == "https://www.kundanpublicschool.org/#/adminPanel" || location.href == "http://localhost:5173/#/adminPanel" ||  location.href == "http://localhost:5173/#/adminPanel/" || location.href == "https://www.kundanpublicschool.org/#/adminPanel" ) ?{display: "block", backgroundColor: "red", color:"white", fontSize: "150%", border:0, padding: "0.2rem", borderRadius: "0.5rem"}:{display: "none"}}
+                        isAuth == true ) ?{display: "block", backgroundColor: "red", color:"white", fontSize: "150%", border:0, padding: "0.2rem", borderRadius: "0.5rem"}:{display: "none"}}
                     value={cardValue.id}
                     className={styles.btn}
                     onClick={()=>{deleteFunction(event)}}

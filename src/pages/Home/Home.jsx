@@ -138,7 +138,7 @@ export default function Home() {
 
         <div className={styles.withHeadings}>
           <h1>Events:</h1>
-          <CardSlider cardValues={events} />
+          <CardSlider cardValues={events} isAuth={false}/>
         </div>
         <br />
         <div className={styles.withHeadings}>
