@@ -303,7 +303,7 @@ export default function AdminPanel() {
                         <hr />
                         <h2 className={styles.heading}>School News Controls (Delete)</h2>
                         <br />
-                        <CardSliderVertical cardValues={news} deleteFunction={deleteNews} />
+                        <CardSliderVertical cardValues={news} deleteFunction={deleteNews} isAuth={true} />
                         <br />
                         <h2 className={styles.heading}>Add News</h2>
                         <br />
