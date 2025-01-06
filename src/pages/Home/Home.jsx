@@ -18,7 +18,7 @@ import styles from "../Home/Home.module.css"
 import db from "../../configs/fireBaseConfig.js"
 import { getDocs, setDoc, collection, doc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { text } from "framer-motion/client";
+import { image, text } from "framer-motion/client";
 
 const carouselImages = [
   "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg",
@@ -36,7 +36,7 @@ const message = { image: "/Faculty/president.jpg", name: "Dr. Rajiner Hora", des
 
 const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country.", author: "-Dr. Rajinder Hora" }
 
-const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1400 }
+const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant:window.innerWidth <= 648 ? -1500 : -1600 , image: window.innerWidth <= 648 ? "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg": "https://i.ibb.co/Czkct9x/img-3.jpg"}
 
 const parallaxValues2 = { title: "Facilities", description:
 <div>
@@ -57,7 +57,7 @@ const parallaxValues2 = { title: "Facilities", description:
     </div>
     </ul>
     </div>,
-    offsetConstant: window.innerWidth <= 648 ? -3100 : -2190 }
+    offsetConstant: window.innerWidth <= 648 ? -3500 : -2700, image: "https://i.ibb.co/yVd3CXv/18.jpg"}
 
 const ExperimentalValues = { title: "Staff And Faculty", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.</b> , image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
@@ -66,18 +66,6 @@ const ourTeaching = {
 }
 
 const Experimental2Values = { title: "", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>Kundan Public School offers Lush Green Lawns, 24 Hour Power Backup, Water Cooling Systems & Purifiers CCTV Surveillance, Ramp Facility, Latest Teaching Technology, Spacious Playgrounds etc.</b>, image: "/carousel_images/img_5.jpg", }
-
-const photoGalleryData = [
-  { id: 1, img: "/activity_Images/bgScroll.jpg" },
-  { id: 2, img: "/activity_Images/img_1.jpg" },
-  { id: 3, img: "/activity_Images/img_2.jpg" },
-  { id: 4, img: "/activity_Images/img_3.jpg" },
-  { id: 5, img: "https://i.ibb.co/QnKTSBB/img1.jpg" },
-  { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg" },
-  { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg" },
-  { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg" },
-  { id: 9, img: "https://i.ibb.co/tbbwqM8/img12.jpg" }, 
-];
 
 const afterExp2 = { title: "Our Objective", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>Our objective is to provide the best kind of academic, scientific, technical, cultural, moral and sports education for 360 degree personality development.</b>, image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", scale: "1", translate: "0" }
 
@@ -91,6 +79,7 @@ export default function Home() {
 
   const [events, setEvents] = useState([{name: "Loading...", image: "Loading..."}])
   const [achievements,setAchievements] = useState([{text: "Loading..."},{text: "Loading..."}]);
+  const [galleryData,setGalleryData] = useState([{id: "0", img: ""},{id: "1", img: ""}]);
 
   const getEvents = async function () {
     const collectionRef = collection(db, "schoolEvents");
@@ -102,7 +91,6 @@ export default function Home() {
         image: doc.data().image,
       })
     })
-    console.log(newEvents);
     setEvents(newEvents);
   }
 
@@ -117,13 +105,27 @@ export default function Home() {
       }
       )
     })
-    console.log(newNews);
     setAchievements(newNews);
   }
+
+  const getPhotoGallery = async function(){
+    const collectionRef = collection(db,"photoGallery");
+    const docSnaps = await getDocs(collectionRef);
+    let newPhotoGallery = [];
+    docSnaps.docs.forEach((doc)=>{
+      newPhotoGallery.push({
+        id:doc.id,
+        img: doc.data().img,
+      })
+    })
+    setGalleryData(newPhotoGallery);
+  }
+
 
   useEffect(() => {
     getEvents();
     getNews();
+    getPhotoGallery();
   }, []);
 
   return (
@@ -156,7 +158,7 @@ export default function Home() {
       <BgScroller parallaxValues={parallaxValues} />
       <br />
       <div className={styles.supSenior}>
-        <PhotoGallery photos={photoGalleryData} />
+        <PhotoGallery photos={galleryData} />
         <div className={styles.sup}>
           <Experimental values={ExperimentalValues} />
           <Experimental2 values={Experimental2Values} />

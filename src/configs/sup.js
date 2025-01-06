@@ -1,31 +1,33 @@
-// Import Firebase Firestore
-import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
+// Import Firestore from Firebase
+import {collection, addDoc } from "firebase/firestore"; 
 import db from "../configs/fireBaseConfig.js";
 
-const schoolNewsArray = [
-  { name: "Christmas Celebration", image: "https://i.ibb.co/7WHxXMb/Whats-App-Image-2024-12-24-at-12-16-31-e6075736.jpg", description: "The School carried out a Christmas Celebration on 24th December" },
-  { name: "Sports Day", image: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg", description: "Students Competing in various Sports Events for Sports Day" },
-  { name: "Sports Day", image: "https://i.ibb.co/Vg6TVgn/Whats-App-Image-2024-12-21-at-10-31-10-67f8d88f.jpg", description: "Students being Awarded Medals for their performance in Sports Day" },
-  { name: "Trip To Local Zoo", image: "https://i.ibb.co/QnKTSBB/img1.jpg", description: "The School Organized a Trip to The Ludhiana Zoo" },
-  { name: "Religious Place Visit", image: "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg", description: "The School organized a trip to Gurudwara Sahib" },
-  { name: "Field Excursion to Animal Park", image: "https://i.ibb.co/T4Kb67D/Whats-App-Image-2024-12-02-at-13-53-34-21021c0b.jpg", description: "Field Excursion to Animal Park" },
+// Array of objects to be inserted
+const photoGallery = [
+  { id: 1, img: "https://i.ibb.co/bKdX49T/bgScroll.jpg" },
+  { id: 2, img: "https://i.ibb.co/nkxsPpR/img-1.jpg" },
+  { id: 3, img: "https://i.ibb.co/kHkNQL7/img-2.jpg" },
+  { id: 4, img: "https://i.ibb.co/88kVrNf/img-3.jpg" },
+  { id: 5, img: "https://i.ibb.co/QnKTSBB/img1.jpg" },
+  { id: 6, img: "https://i.ibb.co/3ddFnBr/Whats-App-Image-2024-12-21-at-10-31-07-76222969.jpg" },
+  { id: 7, img: "https://i.ibb.co/344QXrR/Whats-App-Image-2024-12-21-at-10-31-08-1a739383.jpg" },
+  { id: 8, img: "https://i.ibb.co/fYWp50b/Whats-App-Image-2024-12-02-at-13-54-50-d3fefbce.jpg" }, 
 ];
 
-async function pushSchoolNewsWithId() {
-  const collectionRef = collection(db, "schoolEvents");
+// Function to add documents to Firestore
+const uploadToFirestore = async () => {
+  const collectionRef = collection(db, "photoGallery");
 
   try {
-    for (let i = 0; i < schoolNewsArray.length; i++) {
-      const { name, image } = schoolNewsArray[i]; // Destructure to include only name and image
-      const docRef = doc(collectionRef, i.toString()); // Use i as the document ID
-      await setDoc(docRef, { name, image });
-      console.log(`Document added with ID ${i} for: ${name}`);
+    for (const photo of photoGallery) {
+      await addDoc(collectionRef, photo);
+      console.log(`Document with id ${photo.id} added successfully.`);
     }
-    console.log("All documents added successfully with IDs!");
+    console.log("All documents added successfully!");
   } catch (error) {
-    console.error("Error adding document: ", error);
+    console.error("Error adding documents: ", error);
   }
-}
+};
 
 // Call the function
-pushSchoolNewsWithId();
+uploadToFirestore();

@@ -17,14 +17,11 @@ const ErrorElement = () => {
     <>
     <Nav/>
     <br/>
-    <div className='errorBox'>
+    <div className={styles.errorBox}>
       <MobVisionaryMessage values={errorContent}/>
       <PcCard values={errorContent}/>
-      
     </div>
-    <div className={styles.footer}>
         <Footer/>
-    </div>
     </>
   )
 }

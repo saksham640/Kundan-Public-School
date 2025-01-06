@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "../PhotoGallery/PhotoGallery.module.css";
 
-export default function PhotoGallery({ photos }) {
+export default function PhotoGallery({ photos, isAuth, deleteFunction }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -22,14 +22,24 @@ export default function PhotoGallery({ photos }) {
           </h2>
         </div>
         <div className={styles.grid}>
-          {photos.map((photo, index) => (
-            <img
-              key={index}
-              src={photo.img}
-              alt={`Photo ${index}`}
-              className={styles.img}
-              onClick={() => handleImageClick(photo.img)}
-            />
+          {photos.map((photo) => (
+            <div key={photo.id} className={styles.photoItem}>
+              <img
+                src={photo.img}
+                alt={`Photo ${photo.id}`}
+                className={styles.img}
+                onClick={() => handleImageClick(photo.img)}
+              />
+              {isAuth && (
+                <button
+                  className={styles.deleteButton}
+                  value={photo.id}
+                  onClick={(e) => deleteFunction(e.target.value)}
+                >
+                  Delete
+                </button>
+              )}
+            </div>
           ))}
         </div>
       </div>
@@ -42,7 +52,10 @@ export default function PhotoGallery({ photos }) {
           exit={{ opacity: 0 }}
           onClick={closePopup}
         >
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
+          <div
+            className={styles.popupContent}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className={styles.closeButton} onClick={closePopup}>
               &times;
             </button>

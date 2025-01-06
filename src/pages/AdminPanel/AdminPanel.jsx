@@ -14,6 +14,7 @@ import ImgBBUploader from "../../components/IMGUPLOADER/IMGUPLOADER.jsx"
 import { PiPlus, PiPlusBold, PiPlusCircle, PiPlusCircleFill } from "react-icons/pi"
 import { BiPlusMedical } from "react-icons/bi"
 import { MdOutlineAdd } from "react-icons/md"
+import PhotoGallery from "../../components/PhotoGallery/PhotoGallery.jsx"
 
 
 export default function AdminPanel() {
@@ -22,6 +23,7 @@ export default function AdminPanel() {
     const [requestValues, setRequestValues] = useState([{ name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..." }]);
     const [cardValues, setCardValues] = useState([{ image: "", name: "Loading...", id: "1" }, { image: "", name: "Loading...", id: "1" }]);
     const [news, setNews] = useState([{ text: "Loading...", }, { text: "Loading..." }]);
+    const [galleryData,setGalleryData] = useState([{},{}]);
     const [newsField, setNewsField] = useState();
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [file,setFile] = useState(null);
@@ -193,12 +195,38 @@ export default function AdminPanel() {
         setCardValues(await getEvents());
     }
 
+    const getPhotoGallery = async function(){
+        const collectionRef = collection(db,"photoGallery");
+        const docSnaps = await getDocs(collectionRef);
+        let newPhotoGallery = [];
+        docSnaps.docs.forEach((doc)=>{
+          newPhotoGallery.push({
+            id:doc.id,
+            img: doc.data().img,
+          })
+        })
+        setGalleryData(newPhotoGallery);
+      }
 
+      const deleteGalleryPhoto = async function (event) {
+        if (isAuthorized) {
+            const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
+            if (userRequest) {
+                const docRef = doc(db, "schoolNews", `${event.target.value}`);
+                await deleteDoc(docRef);
+                setNews(await getNews());
+            }
+        } else {
+            prompt("not authorized/Login again");
+        }
+    }
 
     useEffect(() => {
         getEvents();
         getNews();
+        getPhotoGallery();
     }, []);
+
 
 
     return (
@@ -313,6 +341,9 @@ export default function AdminPanel() {
                             <button onClick={addNews} className={styles.btn}>Add News!</button>
                         </div>
                         <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
+                        <div style={{}}>
+                        <PhotoGallery photos={galleryData} isAuth={true}/>
+                        </div>
                     </div>
                     <br />
                 </div>

@@ -87,6 +87,27 @@
     color: #ff5f5f;
   }
   
+  .photoItem {
+    position: relative;
+    text-align: center;
+  }
+  
+  .deleteButton {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  .deleteButton:hover {
+    background-color: darkred;
+  }
+  
 @media (max-width:648px){
   .photoGallery{
     margin: 0;
