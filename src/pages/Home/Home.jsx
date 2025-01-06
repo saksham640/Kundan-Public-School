@@ -36,26 +36,28 @@ const message = { image: "/Faculty/president.jpg", name: "Dr. Rajiner Hora", des
 
 const MobMessage = { title: "Visionary", image: "/Faculty/president.jpg", description: "Technical Education is the real jewellery & beauty of human life. It is matter of privilege & immense pleasure that our Institution is producing Technocrats & will help the Country to eradicate unemployment amongst the youth of the Country.", author: "-Dr. Rajinder Hora" }
 
-const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1600 }
+const parallaxValues = { title: "Campus", description: "The school campus sprawls on an area of 3 acres in Sarpanch Colony Ludhiana amidst scenic beauty of the nature ensuring an eco-friendly environment. The campus and the classrooms are under 24 hour CCTV surveillance providing secure and safe environment for your kids.", offsetConstant: -1400 }
 
 const parallaxValues2 = { title: "Facilities", description:
 <div>
-  Further, Kundan Public School offers
-  <ul style={window.innerWidth <= 648 ? {fontSize: "95%"}: {display: "flex", margin: "1rem", fontSize: "110%"}}>
+  Kundan Public School offers
+  <ul style={window.innerWidth <= 648 ? {fontSize: "95%"}: {display: "flex", margin: "1rem", fontSize: "110%", justifyContent: "center", alignItems: "center", justifySelf: "center",}}>
     <br/>
     <div style={{marginRight: "10%",paddingLeft: "10px"}}>
     <li style={{paddingBottom: "5px"}}>Lush Green Lawns</li>
     <li style={{paddingBottom: "5px"}}>24 Hour Power Backup</li>
-    <li style={{paddingBottom: "5px"}}>Water Cooling Systems & Purifiers</li>
     </div>
     <div style={{marginRight: "10%",paddingLeft: "10px"}}>
+    <li style={{paddingBottom: "5px"}}>Water Cooling Systems & Purifiers</li>
     <li style={{paddingBottom: "5px"}}>CCTV Surveillance</li> <li style={{paddingBottom: "5px"}}>Ramp Facility</li>
+    </div>
+    <div>
     <li style={{paddingBottom: "5px"}}>Latest Teaching Technology</li>
     <li style={{paddingBottom: "5px"}}>Spacious Playgrounds</li> 
     </div>
     </ul>
     </div>,
-    offsetConstant: window.innerWidth <= 648 ? -3100 : -2800 }
+    offsetConstant: window.innerWidth <= 648 ? -3100 : -2190 }
 
 const ExperimentalValues = { title: "Staff And Faculty", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.</b> , image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
