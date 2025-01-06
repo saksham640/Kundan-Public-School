@@ -51,7 +51,7 @@ const parallaxValues2 = { title: "Facilities", description:
     <li style={{paddingBottom: "5px"}}>Water Cooling Systems & Purifiers</li>
     <li style={{paddingBottom: "5px"}}>CCTV Surveillance</li> <li style={{paddingBottom: "5px"}}>Ramp Facility</li>
     </div>
-    <div>
+    <div style={{paddingLeft: "10px"}}>
     <li style={{paddingBottom: "5px"}}>Latest Teaching Technology</li>
     <li style={{paddingBottom: "5px"}}>Spacious Playgrounds</li> 
     </div>
