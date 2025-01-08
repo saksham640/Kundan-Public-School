@@ -183,6 +183,7 @@ export default function AdminPanel() {
     }
 
     const addEvent = async function () {
+        if(isAuthorized){
         const docRef = collection(db, "schoolEvents");
         await addDoc(docRef, {
             image: await uploadImage(),
@@ -190,6 +191,7 @@ export default function AdminPanel() {
         });
         console.log("successfully added");
         setCardValues(await getEvents());
+    }
     }
 
     const getPhotoGallery = async function () {
