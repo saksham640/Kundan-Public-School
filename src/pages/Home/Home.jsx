@@ -57,7 +57,7 @@ const parallaxValues2 = { title: "Facilities", description:
     </div>
     </ul>
     </div>,
-    offsetConstant: window.innerWidth <= 648 ? -3500 : -2700, image: "https://i.ibb.co/yVd3CXv/18.jpg"}
+    offsetConstant: window.innerWidth <= 648 ? -3500 : -2600, image: "https://i.ibb.co/yVd3CXv/18.jpg"}
 
 const ExperimentalValues = { title: "Staff And Faculty", description: <b style={window.innerWidth <= 648? {fontWeight: "400"}: {fontWeight: "100"}}>A collaborative team of well trained, experienced & dedicated teaching staff and supporting staff members, including special educator, Clerical Staff, Security Personnel and assistants, we at Kundan Public School strive to provide qualitative education.</b> , image: "/activity_Images/img_4.jpg", scale: "1", translate: "0" }
 
