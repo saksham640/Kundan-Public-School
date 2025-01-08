@@ -10,10 +10,6 @@ import db from "../../configs/fireBaseConfig.js"
 import CardSlider from "../../components/CardSlider/CardSlider.jsx"
 import { image } from "framer-motion/client"
 import CardSliderVertical from "../../components/CardSliderVertical/CardSliderVertical.jsx"
-import ImgBBUploader from "../../components/IMGUPLOADER/IMGUPLOADER.jsx"
-import { PiPlus, PiPlusBold, PiPlusCircle, PiPlusCircleFill } from "react-icons/pi"
-import { BiPlusMedical } from "react-icons/bi"
-import { MdOutlineAdd } from "react-icons/md"
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery.jsx"
 
 
@@ -163,7 +159,7 @@ export default function AdminPanel() {
 
     const uploadImage = async function (imageTarget) {
         const formData = new FormData();
-        formData.append("image", imageTarget == "gallery" ? galleryFile: file);
+        formData.append("image", imageTarget == "gallery" ? galleryFile : file);
         try {
             const response = await fetch(`https://api.imgbb.com/1/upload?key=${API_KEY}`, {
                 method: "POST",
@@ -207,7 +203,7 @@ export default function AdminPanel() {
             })
         })
         setGalleryData(newPhotoGallery);
-        return(newPhotoGallery);
+        return (newPhotoGallery);
     }
 
     const deleteGalleryPhoto = async function (event) {
@@ -223,16 +219,16 @@ export default function AdminPanel() {
         }
     }
 
-    const handleGalleryImage = function(event){
+    const handleGalleryImage = function (event) {
         setGalleryFile(event.target.files[0])
     }
 
     const addPhotoGallery = async function () {
         if (isAuthorized) {
-            const collectionRef = collection(db,"photoGallery");
-            await addDoc(collectionRef,{
+            const collectionRef = collection(db, "photoGallery");
+            await addDoc(collectionRef, {
                 img: await uploadImage("gallery"),
-                id: Math.ceil(Math.random()*100),
+                id: Math.ceil(Math.random() * 100),
             })
             setGalleryData(await getPhotoGallery());
         }
@@ -359,17 +355,17 @@ export default function AdminPanel() {
                         </div>
                         <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
                         <div style={{}}>
-                            <PhotoGallery photos={galleryData} isAuth={true} deleteFunction={()=>{deleteGalleryPhoto(event)}} />
-                            <br/>
+                            <PhotoGallery photos={galleryData} isAuth={true} deleteFunction={() => { deleteGalleryPhoto(event) }} />
+                            <br />
                             <div className={styles.addCard}>
-                            <h2 style={fileResponse == "file-sending" ? {} : { display: "none" }}>PLEASE WAIT DATA IS BEING SENT...</h2>
-                            <div style={fileResponse == "file-sending" ? { display: "none" } : {}}>
-                                <h2>Click to add New Card's Image</h2>
-                                <input type="file" onChange={handleGalleryImage}></input>
-                                <button className={styles.btn} onClick={() => { addPhotoGallery(); setFileResponse("file-sending") }}>Submit</button>
-                            </div>
+                                <h2 style={fileResponse == "file-sending" ? {} : { display: "none" }}>PLEASE WAIT DATA IS BEING SENT...</h2>
+                                <div style={fileResponse == "file-sending" ? { display: "none" } : {}}>
+                                    <h2>Click to add New Card's Image</h2>
+                                    <input type="file" onChange={handleGalleryImage}></input>
+                                    <button className={styles.btn} onClick={() => { addPhotoGallery(); setFileResponse("file-sending") }}>Submit</button>
+                                </div>
 
-                        </div>
+                            </div>
                         </div>
                     </div>
                     <br />
