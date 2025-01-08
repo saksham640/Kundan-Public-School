@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../PhotoGallery/PhotoGallery.module.css";
 
 export default function PhotoGallery({ photos, isAuth, deleteFunction }) {
@@ -12,6 +12,7 @@ export default function PhotoGallery({ photos, isAuth, deleteFunction }) {
   const closePopup = () => {
     setSelectedImage(null);
   };
+
 
   return (
     <>

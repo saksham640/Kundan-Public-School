@@ -23,13 +23,14 @@ export default function AdminPanel() {
     const [requestValues, setRequestValues] = useState([{ name: "Loading...", phone: "Loading...", date: "Loading...", email: "Loading..." }]);
     const [cardValues, setCardValues] = useState([{ image: "", name: "Loading...", id: "1" }, { image: "", name: "Loading...", id: "1" }]);
     const [news, setNews] = useState([{ text: "Loading...", }, { text: "Loading..." }]);
-    const [galleryData,setGalleryData] = useState([{},{}]);
+    const [galleryData, setGalleryData] = useState([{}, {}]);
     const [newsField, setNewsField] = useState();
     const [isAuthorized, setIsAuthorized] = useState(false);
-    const [file,setFile] = useState(null);
-    const [fileResponse,setFileResponse] = useState("nothing");
+    const [file, setFile] = useState(null);
+    const [fileResponse, setFileResponse] = useState("nothing");
     const API_KEY = "6ec2a3a46418c34ce73ee2dbbbc93cf8";
     const [eventField, setEventField] = useState("");
+    const [galleryFile, setGalleryFile] = useState(null);
 
     const authorization = function (event) {
         event.preventDefault();
@@ -77,15 +78,15 @@ export default function AdminPanel() {
     }
 
     const deleteRequest = async function (e) {
-            console.log(e.target);
-            const docRef = doc(db, "requests", await e.target.value);
-            await deleteDoc(docRef);
-            console.log(`${e.target.value} document deleted`);
-            await decreaseCount();
-            console.log("count decreased");
-            await loadRequests();
-        }
-    
+        console.log(e.target);
+        const docRef = doc(db, "requests", await e.target.value);
+        await deleteDoc(docRef);
+        console.log(`${e.target.value} document deleted`);
+        await decreaseCount();
+        console.log("count decreased");
+        await loadRequests();
+    }
+
 
     const getEvents = async function () {
 
@@ -156,38 +157,38 @@ export default function AdminPanel() {
         }
     }
 
-    const handleImage = async function(event){
+    const handleImage = async function (event) {
         setFile(event.target.files[0]);
     }
 
-    const uploadImage = async function(){
+    const uploadImage = async function (imageTarget) {
         const formData = new FormData();
-        formData.append("image",file);
-        try{
-            const response = await fetch(`https://api.imgbb.com/1/upload?key=${API_KEY}`,{
+        formData.append("image", imageTarget == "gallery" ? galleryFile: file);
+        try {
+            const response = await fetch(`https://api.imgbb.com/1/upload?key=${API_KEY}`, {
                 method: "POST",
                 body: formData,
             });
             const result = await response.json();
             console.log(result);
 
-            if(result.success){
-                console.log("Successfully uploaded image link is : ",result.data.url);
+            if (result.success) {
+                console.log("Successfully uploaded image link is : ", result.data.url);
                 setFileResponse("url-generated");
-                return(result.data.url);
+                return (result.data.url);
             }
-        } catch(event){
+        } catch (event) {
             console.log("error ", event);
         }
     }
 
-    const handleEventField = function(event){
+    const handleEventField = function (event) {
         setEventField(event.target.value);
     }
 
-    const addEvent = async function(){
-        const docRef = collection(db,"schoolEvents");
-        await addDoc(docRef,{
+    const addEvent = async function () {
+        const docRef = collection(db, "schoolEvents");
+        await addDoc(docRef, {
             image: await uploadImage(),
             name: eventField,
         });
@@ -195,29 +196,45 @@ export default function AdminPanel() {
         setCardValues(await getEvents());
     }
 
-    const getPhotoGallery = async function(){
-        const collectionRef = collection(db,"photoGallery");
+    const getPhotoGallery = async function () {
+        const collectionRef = collection(db, "photoGallery");
         const docSnaps = await getDocs(collectionRef);
         let newPhotoGallery = [];
-        docSnaps.docs.forEach((doc)=>{
-          newPhotoGallery.push({
-            id:doc.id,
-            img: doc.data().img,
-          })
+        docSnaps.docs.forEach((doc) => {
+            newPhotoGallery.push({
+                id: doc.id,
+                img: doc.data().img,
+            })
         })
         setGalleryData(newPhotoGallery);
-      }
+        return(newPhotoGallery);
+    }
 
-      const deleteGalleryPhoto = async function (event) {
+    const deleteGalleryPhoto = async function (event) {
         if (isAuthorized) {
             const userRequest = confirm("Are you sure you want to delete the news (cannot be undone) ");
             if (userRequest) {
-                const docRef = doc(db, "schoolNews", `${event.target.value}`);
+                const docRef = doc(db, "photoGallery", `${event.target.value}`);
                 await deleteDoc(docRef);
-                setNews(await getNews());
+                setGalleryData(await getPhotoGallery());
             }
         } else {
             prompt("not authorized/Login again");
+        }
+    }
+
+    const handleGalleryImage = function(event){
+        setGalleryFile(event.target.files[0])
+    }
+
+    const addPhotoGallery = async function () {
+        if (isAuthorized) {
+            const collectionRef = collection(db,"photoGallery");
+            await addDoc(collectionRef,{
+                img: await uploadImage("gallery"),
+                id: Math.ceil(Math.random()*100),
+            })
+            setGalleryData(await getPhotoGallery());
         }
     }
 
@@ -317,16 +334,16 @@ export default function AdminPanel() {
                         <h2 className={styles.heading}>School News Controls (Delete)</h2>
                         <CardSlider cardValues={cardValues} deleteFunction={deleteEvent} isAuth={true} />
                         <h2 className={styles.heading}>School News Controls (Add a New Card)</h2>
-                            <div className={styles.addCard}>
-                            <h2 style={fileResponse == "file-sending" ? {}:{display: "none"}}>PLEASE WAIT DATA IS BEING SENT...</h2>
-                            <div style={fileResponse == "file-sending" ? {display: "none"}: {}}>
-                            <h2>Click to add New Card's Image</h2>
-                            <input type="file" onChange={handleImage}></input>
-                            <input type="text" placeholder="Text Material Goes here" onChange={()=>{handleEventField(event)}}></input>
-                            <button className={styles.btn} onClick={()=>{addEvent(); setFileResponse("file-sending")}}>Submit</button>
+                        <div className={styles.addCard}>
+                            <h2 style={fileResponse == "file-sending" ? {} : { display: "none" }}>PLEASE WAIT DATA IS BEING SENT...</h2>
+                            <div style={fileResponse == "file-sending" ? { display: "none" } : {}}>
+                                <h2>Click to add New Card's Image</h2>
+                                <input type="file" onChange={handleImage}></input>
+                                <input type="text" placeholder="Text Material Goes here" onChange={() => { handleEventField(event) }}></input>
+                                <button className={styles.btn} onClick={() => { addEvent(); setFileResponse("file-sending") }}>Submit</button>
                             </div>
 
-                            </div>
+                        </div>
                         <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
                         <hr />
                         <h2 className={styles.heading}>School News Controls (Delete)</h2>
@@ -342,14 +359,24 @@ export default function AdminPanel() {
                         </div>
                         <div style={{ borderBottom: "1px solid black", width: "100%" }}></div>
                         <div style={{}}>
-                        <PhotoGallery photos={galleryData} isAuth={true}/>
+                            <PhotoGallery photos={galleryData} isAuth={true} deleteFunction={()=>{deleteGalleryPhoto(event)}} />
+                            <br/>
+                            <div className={styles.addCard}>
+                            <h2 style={fileResponse == "file-sending" ? {} : { display: "none" }}>PLEASE WAIT DATA IS BEING SENT...</h2>
+                            <div style={fileResponse == "file-sending" ? { display: "none" } : {}}>
+                                <h2>Click to add New Card's Image</h2>
+                                <input type="file" onChange={handleGalleryImage}></input>
+                                <button className={styles.btn} onClick={() => { addPhotoGallery(); setFileResponse("file-sending") }}>Submit</button>
+                            </div>
+
+                        </div>
                         </div>
                     </div>
                     <br />
                 </div>
                 <br />
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
