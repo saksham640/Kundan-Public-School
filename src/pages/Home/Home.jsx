@@ -18,7 +18,6 @@ import styles from "../Home/Home.module.css"
 import db from "../../configs/fireBaseConfig.js"
 import { getDocs, setDoc, collection, doc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { image, text } from "framer-motion/client";
 
 const carouselImages = [
   "https://i.ibb.co/FHD46tq/Whats-App-Image-2024-12-02-at-13-54-17-60d4038a.jpg",
