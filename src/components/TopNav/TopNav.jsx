@@ -3,6 +3,7 @@ import { TiSocialFacebookCircular, TiSocialInstagram, TiSocialLinkedin, TiSocial
 import { getDoc, updateDoc, doc } from "firebase/firestore";
 import db from "../../configs/fireBaseConfig.js";
 import { useEffect, useState } from "react";
+import { IoCall, IoMail } from "react-icons/io5";
 
 export default function TopNav() {
   // Reference to Firestore document
@@ -41,6 +42,13 @@ export default function TopNav() {
   return (
     <div className={styles.topNav}>
       <h3 className={styles.viewCount}>Views: {currentCount}</h3>
+      <div></div> {/*khali space */}
+      <div className={styles.contactInfo}>
+        <a href="tel:9417348549" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 9417348549</h3></a>
+        <a href="tel:973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 973633317</h3></a>
+        <a href="mailto:kundanpublicschool@yahoo.com" className={styles.alink}><h3 id={styles.dugu}><IoMail/> kundanpublicschool@yahoo.com</h3></a>
+      </div>
+      <div className={styles.socialInfo}>
       <h3>Socials:</h3>
       <TiSocialFacebookCircular
         className={styles.socialIcon}
@@ -54,18 +62,7 @@ export default function TopNav() {
           location.assign("https://www.instagram.com/kundanpublicschool/");
         }}
       />
-      <TiSocialLinkedin
-        className={styles.socialIcon}
-        onClick={() => {
-          location.assign("https://www.kundanpublicschool.org/#/errorPage");
-        }}
-      />
-      <TiSocialYoutube
-        className={styles.socialIcon}
-        onClick={() => {
-          location.assign("https://www.kundanpublicschool.org/#/errorPage");
-        }}
-      />
+      </div>
     </div>
   );
 }
