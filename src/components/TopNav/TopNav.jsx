@@ -4,6 +4,7 @@ import { getDoc, updateDoc, doc } from "firebase/firestore";
 import db from "../../configs/fireBaseConfig.js";
 import { useEffect, useState } from "react";
 import { IoCall, IoMail } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 export default function TopNav() {
   // Reference to Firestore document
@@ -43,6 +44,11 @@ export default function TopNav() {
     <div className={styles.topNav}>
       <h3 className={styles.viewCount}>Views: {currentCount}</h3>
       <div></div> {/*khali space */}
+      {window.innerWidth <= 648 && 
+        <div style={{paddingLeft:"40%"}}>
+          <NavLink to={"/contact"} style={{color:"white", backgroundColor: "transparent", fontFamily: "sans-serif", fontWeight: "600"}}>Contact Us</NavLink>
+        </div>
+      }
       <div className={styles.contactInfo}>
         <a href="tel:9417348549" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 9417348549</h3></a>
         <a href="tel:973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 973633317</h3></a>

@@ -8,6 +8,7 @@ import Holidays from "./pages/Holidays/Holidays.jsx";
 import Prayer from "./pages/Prayer/Prayer.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Calender from "./pages/Calender/Calender.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
 
 const router = createHashRouter(
   [
@@ -39,7 +40,11 @@ const router = createHashRouter(
     {
       path: "/calender",
       element: <Calender/>
-    }
+    },
+    {
+      path:"/contact",
+      element:<Contact/>
+    },
   ]
 );
 

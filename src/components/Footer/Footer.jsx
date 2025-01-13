@@ -28,8 +28,10 @@ export default function Footer() {
                 </div>
             </div>
             <div className={styles.contactInfo}>
-                <h3>Contact : </h3>
+                <h3>Contact : &nbsp;</h3>
                <a href = "tel:9417348549" className={styles.NavLink}><h3> <IoCall/> 9417348549</h3> </a>
+               <p>&nbsp; &nbsp;</p>
+               <a href = "tel:7973633317" className={styles.NavLink}><h3> <IoCall/> 7973633317</h3> </a>
                <a href="mailto:kundanpublicschool@yahoo.com" className={styles.NavLink}><h3 style={{paddingLeft: "1rem"}}> <IoMail/> kundanpublicschool@yahoo.com</h3></a>
             </div>
         </div>

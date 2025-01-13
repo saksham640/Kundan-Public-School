@@ -1,7 +1,7 @@
 import styles from "../mobileNavBar/MobileNavBar.module.css"
 import { useState } from "react";
 import TitleChanger from "../TitleChanger/TitleChanger.jsx"
-import { IoMenu } from "react-icons/io5";
+import { IoCall, IoMenu } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
 import { FaBookOpen } from "react-icons/fa6";
 import { FaChalkboardTeacher, FaSchool } from "react-icons/fa";
@@ -48,7 +48,7 @@ export default function MobileNavBar() {
                 <div className={styles.navMenu}>
                     <div className={styles.navOptionBox}>
 
-                        <NavLink to={"/"} className={styles.NavLink}>
+                        <NavLink to={"/contact"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <TiHome className={styles.icons} />
                                 <h3 className={styles.option}>Home</h3>
@@ -58,6 +58,12 @@ export default function MobileNavBar() {
                             <div className={styles.yo} >
                                 <PiStudentFill className={styles.icons} />
                                 <h3 className={styles.option}>Admissions</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/contact"} className={styles.NavLink}>
+                            <div className={styles.yo} >
+                                <IoCall className={styles.icons} />
+                                <h3 className={styles.option}>Contact Us</h3>
                             </div>
                         </NavLink>
                         <NavLink to={"/cirriculm"} className={styles.NavLink}>
@@ -98,6 +104,7 @@ export default function MobileNavBar() {
                                 <h3 className={styles.option}>Login</h3>
                             </div>
                         </NavLink>
+                        
                     </div>
                 </div>
             </div>
