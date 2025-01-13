@@ -11,7 +11,7 @@ const ContactInfo = ()=>{
         <h2 style={{textAlign: "center"}}>Phone</h2>
         <a href='tel:9417348549'><button className={styles.callbtn}><IoCall/> 9417348549</button></a>
         <br/>
-        <a href='tel:9417348549'><button className={styles.callbtn}><IoCall/> 9417348549</button></a>
+        <a href='tel:7973633317'><button className={styles.callbtn}><IoCall/> 7973633317</button></a>
         <h2 style={{textAlign: "center"}}>Mail</h2>
         <a href='mailto:kundanpublicschool@gmail.com'><button className={styles.callbtn}><IoMail/><p style={{fontSize: "80%"}}>kundanpublicschool@yahoo.com</p></button></a>
         <br/>

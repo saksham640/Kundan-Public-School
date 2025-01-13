@@ -51,7 +51,7 @@ export default function TopNav() {
       }
       <div className={styles.contactInfo}>
         <a href="tel:9417348549" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 9417348549</h3></a>
-        <a href="tel:973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 973633317</h3></a>
+        <a href="tel:7973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 7973633317</h3></a>
         <a href="mailto:kundanpublicschool@yahoo.com" className={styles.alink}><h3 id={styles.dugu}><IoMail/> kundanpublicschool@yahoo.com</h3></a>
       </div>
       <div className={styles.socialInfo}>
