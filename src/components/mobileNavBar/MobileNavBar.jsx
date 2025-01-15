@@ -48,7 +48,7 @@ export default function MobileNavBar() {
                 <div className={styles.navMenu}>
                     <div className={styles.navOptionBox}>
 
-                        <NavLink to={"/contact"} className={styles.NavLink}>
+                        <NavLink to={"/"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <TiHome className={styles.icons} />
                                 <h3 className={styles.option}>Home</h3>
