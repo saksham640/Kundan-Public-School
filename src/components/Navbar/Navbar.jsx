@@ -2,17 +2,17 @@ import styles from "./Navbar.module.css";
 import logo from "/logos/insignia.png";
 import TitleChanger from "../TitleChanger/TitleChanger.jsx";
 import { PiStudentFill } from "react-icons/pi";
-import { FaBook, FaBookOpen } from "react-icons/fa6";
+import { FaBookOpen } from "react-icons/fa6";
 import { FaChalkboardTeacher, FaSchool } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, ScrollRestoration } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
 
 
 export default function Navbar() {
 
-    const title = "Kundan Public School";
+    
 
     return (
         <div className={styles.navbar}>
@@ -29,12 +29,12 @@ export default function Navbar() {
             <div className={styles.navMenu}>
                 <div className={styles.navOptionBox}>
 
-                    <NavLink to={"/admissions"} className={styles.NavLink}>
+                    <a href="/#/admissions" className={styles.NavLink}>
                         <div className={styles.yo}>
                             <PiStudentFill className={styles.icons} />
                             <h3 className={styles.option}>Admissions</h3>
                         </div>
-                    </NavLink>
+                    </a>
                     <NavLink to={"/cirriculum"} className={styles.NavLink}>
                         <div className={styles.yo}>
                             <FaBookOpen className={styles.icons} />
@@ -82,6 +82,7 @@ export default function Navbar() {
                     </NavLink>
                 </div>
             </div>
+            <ScrollRestoration/>
         </div>
     );
 }
