@@ -12,8 +12,6 @@ import { HiHome } from "react-icons/hi";
 
 export default function Navbar() {
 
-    
-
     return (
         <div className={styles.navbar}>
             <div className={styles.titleBox}>
@@ -35,10 +33,10 @@ export default function Navbar() {
                             <h3 className={styles.option}>Admissions</h3>
                         </div>
                     </a>
-                    <NavLink to={"/cirriculum"} className={styles.NavLink}>
+                    <NavLink to={"/resources"} className={styles.NavLink}>
                         <div className={styles.yo}>
                             <FaBookOpen className={styles.icons} />
-                            <h3 className={styles.option}>Curriculum</h3>
+                            <h3 className={styles.option}>Resources</h3>
                         </div>
                     </NavLink>
                     <NavLink to={"/prayer"} className={styles.NavLink}>
