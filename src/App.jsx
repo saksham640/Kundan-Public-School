@@ -9,6 +9,7 @@ import Prayer from "./pages/Prayer/Prayer.jsx";
 import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Calender from "./pages/Calender/Calender.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import Resources from "./pages/Resources/Resources.jsx";
 
 const router = createHashRouter(
   [
@@ -44,6 +45,10 @@ const router = createHashRouter(
     {
       path:"/contact",
       element:<Contact/>
+    },
+    {
+      path:"/resources",
+      element:<Resources/>
     },
   ]
 );
