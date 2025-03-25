@@ -16,6 +16,7 @@ const Resources = () => {
 
     const data = [
         { class: 'Nursery', bookList: 'https://drive.google.com/file/d/1EU0gBVKBGpADVmaUiT484CNkepGwGU6n/view?usp=sharing' },
+        { class: 'LKG', bookList: '' },
         { class: 'UKG', bookList: 'https://drive.google.com/file/d/1EIPwXw93KB0d5Y3DrSsgHaqoq9zhxzhK/view?usp=sharing' },
         { class: 'Class I', bookList: 'https://drive.google.com/file/d/1Ek_GgJBty3oXBMoTmBZ9a5TYhBrq-kkG/view?usp=sharing' },
         { class: 'Class II', bookList: 'https://drive.google.com/file/d/1EsFMnDInJTpll5YrxKYXezxW8hmlhwO3/view?usp=sharing' },

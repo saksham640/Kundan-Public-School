@@ -4,7 +4,6 @@ import DownloadBtn from "../DownloadBtn/DownloadBtn";
 export default function Table({ headings, values }) {
     return (
         <div>
-            <DownloadBtn />
             <table className={styles.table}>
                 <thead>
                     <tr>
