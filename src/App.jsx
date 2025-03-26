@@ -10,6 +10,7 @@ import AdminPanel from "./pages/AdminPanel/AdminPanel.jsx";
 import Calender from "./pages/Calender/Calender.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import Resources from "./pages/Resources/Resources.jsx";
+import MandatoryDisclosures from "./pages/MandatoryDisclosures/MandatoryDisclosures.jsx";
 
 const router = createHashRouter(
   [
@@ -49,6 +50,10 @@ const router = createHashRouter(
     {
       path:"/resources",
       element:<Resources/>
+    },
+    {
+      path:"/MandatoryDisclosures",
+      element:<MandatoryDisclosures/>
     },
   ]
 );
