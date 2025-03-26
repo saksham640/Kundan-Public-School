@@ -81,7 +81,7 @@ export default function MobileNavBar() {
                         <NavLink to={"/about"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <FaSchool className={styles.icons} />
-                                <h3 className={styles.option}>About Us</h3>
+                                <h3 className={styles.option}>shivangi</h3>
                             </div>
                         </NavLink>
                     </div>
