@@ -66,10 +66,10 @@ export default function MobileNavBar() {
                                 <h3 className={styles.option}>Contact Us</h3>
                             </div>
                         </NavLink>
-                        <NavLink to={"/cirriculm"} className={styles.NavLink}>
+                        <NavLink to={"/resources"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <FaBookOpen className={styles.icons} />
-                                <h3 className={styles.option}>Curriculum</h3>
+                                <h3 className={styles.option}>Resources</h3>
                             </div>
                         </NavLink>
                         <NavLink to={"/prayer"} className={styles.NavLink}>
