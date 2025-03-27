@@ -167,32 +167,32 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>1</div>
                             <div className={styles.flexCell}>PRINCIPAL</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>Mr. HARNEET SINGH</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>2</div>
                             <div className={styles.flexCell}>TOTAL NO. OF TEACHERS</div>
                             <div className={styles.flexCell} style={{ border: "none" }}>
-                                <div>17</div>
-                                <div>PGT: 0</div>
-                                <div>TGT: 5</div>
-                                <div>PRT: 12</div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
                             <div className={styles.flexCell}>TEACHERS SECTION RATIO</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>1.5:1</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>4</div>
                             <div className={styles.flexCell}>DETAILS OF SPECIAL EDUCATOR</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>Mr. Sanket Karkhanis (M.A. Counselling)</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>5</div>
                             <div className={styles.flexCell}>DETAILS OF COUNSELLOR AND WELLNESS TEACHER</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>Ms. Inderbir Kaur (M. Sc. Psychology)</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                     </div>
                 </div>
@@ -208,32 +208,32 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>1</div>
                             <div className={styles.flexCell}>TOTAL CAMPUS AREA OF THE SCHOOL (IN SQ MTR)</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>6058.76</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>2</div>
                             <div className={styles.flexCell}>NO. AND SIZE OF THE CLASS ROOMS (IN SQ MTR)</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>21 & 47</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
                             <div className={styles.flexCell}>NO. AND SIZE OF LABORATORIES INCLUDING COMPUTER LABS (IN SQ MTR)</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>2 & 69</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>4</div>
                             <div className={styles.flexCell}>INTERNET FACILITY</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>YES</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>5</div>
                             <div className={styles.flexCell}>NO. OF GIRLS TOILETS</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>10</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>6</div>
                             <div className={styles.flexCell}>NO. OF BOYS TOILETS</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}>4</div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>7</div>
