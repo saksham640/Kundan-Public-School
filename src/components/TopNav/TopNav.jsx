@@ -41,7 +41,7 @@ export default function TopNav() {
   }, []);
 
   return (
-    <div className={styles.topNav}>
+    <div className={styles.topNav} style={{fontSize:"1rem"}}>
       <h3 className={styles.viewCount}>Views: {currentCount}</h3>
       <div></div> {/*khali space */}
       {window.innerWidth <= 648 && 
@@ -54,14 +54,11 @@ export default function TopNav() {
         <a href="tel:7973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 7973633317</h3></a>
         <a href="mailto:kundanpublicschool@yahoo.com" className={styles.alink}><h3 id={styles.dugu}><IoMail/> kundanpublicschool@yahoo.com</h3></a>
       </div>
+      <div style={{fontSize:"1rem"}}>
+       <NavLink to={"/MandatoryDisclosures"} style={{color:"white"}}><u><b>Mandatory Public Disclosure</b></u></NavLink>
+      </div>
       <div className={styles.socialInfo}>
       <h3>Socials:</h3>
-      <TiSocialFacebookCircular
-        className={styles.socialIcon}
-        onClick={() => {
-          location.assign("https://www.kundanpublicschool.org/#/errorPage");
-        }}
-      />
       <TiSocialInstagram
         className={styles.socialIcon}
         onClick={() => {
