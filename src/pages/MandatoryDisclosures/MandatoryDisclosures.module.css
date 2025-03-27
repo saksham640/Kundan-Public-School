@@ -14,16 +14,16 @@
 
 .tableWrapper {
     width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    display: flex;
-    justify-content: center;
+    overflow-x: auto; /* Ensure horizontal scrolling */
+    display: block; /* Use block to avoid flex issues */
+    margin-bottom: 8%;
 }
 
 .flexTable {
     display: table;
-    width: 70%; /* Set the table width to 80% of the screen */
+    width: 100%; /* Ensure table takes full width */
     border-collapse: collapse;
-    margin: 0 auto; /* Center align the table */
+    min-width: 600px; /* Maintain minimum width for table content */
 }
 
 .flexRow {
@@ -42,6 +42,14 @@
     font-weight: bold;
 }
 
+.titleHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
 .serialNumber {
     width: 50px; /* Adjust the width as needed */
     border-right: 2px solid #f2f2f2; /* Remove borders */
@@ -51,15 +59,28 @@
     background-color: #f2f2f2; /* Match the background color of the header */
 }
 
+
+
 @media (max-width: 600px) {
     .container {
-        width: 90%; /* Ensure container does not take more than 90% of the width */
+        width: 100%; /* Ensure container takes full width on smaller screens */
+        padding: 10px; /* Add padding for better spacing */
     }
     .tableWrapper {
-        overflow-x: auto; /* Ensure horizontal scrolling */
+        overflow-x: auto; /* Ensure horizontal scrolling for smaller screens */
+        padding: 0 10px; /* Add horizontal padding to prevent cutting */
     }
     .flexTable {
         width: 100%; /* Ensure table takes full width within the container */
+        min-width: 600px; /* Maintain minimum width for table content */
     }
 }
+
+@media (min-width: 600px) {
+    .container {
+        width: 70%; /* Ensure container takes full width on smaller screens */
+        padding: 10px; /* Add padding for better spacing */
+    }
+}
+
 
