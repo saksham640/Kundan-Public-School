@@ -41,9 +41,9 @@
 .menu{
     position: absolute;
     display:flex;
-    width: 70vw;
+    width: 50vw;
     height: 100;
-    background-color: rgba(77, 84, 87, 0.367);
+    background-color: rgba(62, 62, 62, 0.627);
     top: calc(12vh);
     right: 0vw;
     z-index: 1000;
@@ -84,7 +84,7 @@
     padding: 7px;
     border-radius: 2rem;
     overflow: visible;
-    font-size: 5vw;
+    font-size: 1.2rem;
     overflow: visible !important;
     caret-color: transparent;
     -webkit-user-select: none; /* Safari */
@@ -129,7 +129,7 @@
 }
 
 .icons{
-    font-size: 10vw;
+    font-size: 1.5rem;
     padding-right: 3px;
 }
 
