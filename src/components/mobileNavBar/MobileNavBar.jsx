@@ -9,6 +9,7 @@ import { SlCalender } from "react-icons/sl";
 import { MdHolidayVillage } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
 import { FaClock } from "react-icons/fa6";
+import { FaFileAlt } from "react-icons/fa";
 import { TiHome } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
@@ -96,6 +97,12 @@ export default function MobileNavBar() {
                             <div className={styles.yo}>
                                 <MdHolidayVillage className={styles.icons} />
                                 <h3 className={styles.option}>Holidays</h3>
+                            </div>
+                        </NavLink>
+                        <NavLink to={"/MandatoryDisclosures"} className={styles.NavLink}>
+                            <div className={styles.yo}>
+                                <FaFileAlt className={styles.icons} />
+                                <h3 className={styles.option}>Mandatory Disclosures</h3>
                             </div>
                         </NavLink>
                         <NavLink to={"/adminPanel"} className={styles.NavLink}>
