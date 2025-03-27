@@ -180,6 +180,7 @@ export default function Home() {
       <br />
       <br />
       <br />
+      <a href="/pdfs/yooo.pdf">yoooo</a>
       <Footer />
     </>
   )
