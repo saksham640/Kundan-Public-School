@@ -54,7 +54,7 @@ export default function TopNav() {
         <a href="tel:7973633317" className={styles.alink}><h3 id={styles.dugu}><IoCall/> 7973633317</h3></a>
         <a href="mailto:kundanpublicschool@yahoo.com" className={styles.alink}><h3 id={styles.dugu}><IoMail/> kundanpublicschool@yahoo.com</h3></a>
       </div>
-      <div style={{fontSize:"1rem"}}>
+      <div style={{fontSize:"1rem", display: window.innerWidth < 640 ? "none" : "block"}} >
        <NavLink to={"/MandatoryDisclosures"} style={{color:"white"}}><u><b>Mandatory Public Disclosure</b></u></NavLink>
       </div>
       <div className={styles.socialInfo}>
