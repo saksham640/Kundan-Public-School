@@ -55,15 +55,6 @@ const router = createHashRouter(
       path:"/MandatoryDisclosures",
       element:<MandatoryDisclosures/>
     },
-    {
-    path:"/FeeStructure",
-    element:<FeeStructOnly/>
-    },
-    {
-    path:"/AcademicCalender",
-    element:<AcademicCalender/>
-    }
-    
   ]
 );
 

@@ -132,12 +132,12 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>1</div>
                             <div className={styles.flexCell}>FEE STRUCTURE OF THE SCHOOL</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}><NavLink to={"/FeeStructure"}>View</NavLink></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="Mandatory-Disclosures/Academic_Calender.pdf">https://www.kundanpublicschool.org/Mandatory-Disclosures/Academic_Calender.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>2</div>
                             <div className={styles.flexCell}>ANNUAL ACADEMIC CALENDER</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}><NavLink to={"/AcademicCalender"}>View</NavLink></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
