@@ -11,8 +11,6 @@ import Calender from "./pages/Calender/Calender.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import Resources from "./pages/Resources/Resources.jsx";
 import MandatoryDisclosures from "./pages/MandatoryDisclosures/MandatoryDisclosures.jsx";
-import FeeStructOnly from "./pages/FeeStructOnly/FeeStructOnly.jsx";
-import AcademicCalender from "./pages/AcademicCalender/AcademicCalender.jsx";
 
 const router = createHashRouter(
   [
