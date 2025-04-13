@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../../components/Nav.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import styles from './MandatoryDisclosures.module.css';
+import { NavLink } from 'react-router-dom';
 
 const MandatoryDisclosures = () => {
     return (
@@ -131,7 +132,7 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>1</div>
                             <div className={styles.flexCell}>FEE STRUCTURE OF THE SCHOOL</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><NavLink to={"/FeeStructure"}>View</NavLink></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>2</div>
