@@ -142,7 +142,7 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
                             <div className={styles.flexCell}>LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}><a href="List_of_members_of_school_managing_committee.pdf">https://www.kundanpublicschool.orgpublic/List_of_members_of_school_managing_committee.pdf</a></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="List_of_members_of_school_managing_committee.pdf">https://www.kundanpublicschool.org/List_of_members_of_school_managing_committee.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>4</div>
