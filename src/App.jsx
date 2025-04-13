@@ -12,6 +12,7 @@ import Contact from "./pages/Contact/Contact.jsx";
 import Resources from "./pages/Resources/Resources.jsx";
 import MandatoryDisclosures from "./pages/MandatoryDisclosures/MandatoryDisclosures.jsx";
 import FeeStructOnly from "./pages/feeStructOnly/feeStructOnly.jsx";
+import AcademicCalender from "./pages/AcademicCalender/AcademicCalender.jsx";
 
 const router = createHashRouter(
   [
@@ -59,6 +60,10 @@ const router = createHashRouter(
     {
     path:"/FeeStructure",
     element:<FeeStructOnly/>
+    },
+    {
+    path:"/AcademicCalender",
+    element:<AcademicCalender/>
     }
     
   ]

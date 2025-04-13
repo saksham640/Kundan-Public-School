@@ -137,7 +137,7 @@ const MandatoryDisclosures = () => {
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>2</div>
                             <div className={styles.flexCell}>ANNUAL ACADEMIC CALENDER</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><NavLink to={"/AcademicCalender"}>View</NavLink></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
