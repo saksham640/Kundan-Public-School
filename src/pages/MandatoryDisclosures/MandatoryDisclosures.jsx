@@ -106,7 +106,7 @@ const MandatoryDisclosures = () => {
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>6</div>
                             <div className={styles.flexCell}>COPY OF VALID FIRE SAFETY CERTIFICATE ISSUED BY THE COMPETENT AUTHORITY</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="Fire_safety_certificate.pdf">https://www.kundanpublicschool.org/Fire_safety_certificate.pdf</a></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>7</div>
@@ -116,7 +116,7 @@ const MandatoryDisclosures = () => {
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>8</div>
                             <div className={styles.flexCell}>COPIES OF VALID WATER, HEALTH AND SANITATION CERTIFICATES</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="/Safe_drinking_water_and_sanitary_condition_certificate.pdf">https://www.kundanpublicschool.org/Safe_drinking_water_and_sanitary_condition_certificate.pdf</a></div>
                         </div>
                     </div>
                 </div>
@@ -142,12 +142,12 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
                             <div className={styles.flexCell}>LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="List_of_members_of_school_managing_committee.pdf">https://www.kundanpublicschool.orgpublic/List_of_members_of_school_managing_committee.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>4</div>
                             <div className={styles.flexCell}>LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="List_of_members_of_parent_teacher_association.pdf">https://www.kundanpublicschool.org/List_of_members_of_parent_teacher_association.pdf</a></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>5</div>
