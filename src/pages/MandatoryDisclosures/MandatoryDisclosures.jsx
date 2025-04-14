@@ -91,12 +91,12 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>3</div>
                             <div className={styles.flexCell}>COPY OF NO OBJECTION CERTIFICATE (NOC) ISSUED, IF APPLICABLE, BY THE STATE GOVT./UT</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="/No_objection_certificate_NOC.pdf">https://www.kundanpublicschool.org/No_objection_certificate_NOC.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>4</div>
                             <div className={styles.flexCell}>COPIES OF RECOGNITION CERTIFICATE UNDER RTE ACT, 2009, AND IT'S RENEWAL IF APPLICABLE</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="/Recognition_certificate.pdf">https://www.kundanpublicschool.org/Recognition_certificate.pdf</a></div>
                         </div>
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>5</div>
@@ -111,7 +111,7 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>7</div>
                             <div className={styles.flexCell}>COPY OF THE SELF CERTIFICATION SUBMITTED BY THE SCHOOL FOR AFFILIATION/UPGRADATION/EXTENSION OF AFFILIATION</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="/Self_certification_for_affiliation.pdf">https://www.kundanpublicschool.org/Self_certification_for_affiliation.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>8</div>
