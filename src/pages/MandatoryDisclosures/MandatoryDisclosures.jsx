@@ -101,7 +101,7 @@ const MandatoryDisclosures = () => {
                         <div className={styles.flexRow}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>5</div>
                             <div className={styles.flexCell}>COPY OF VALID BUILDING SAFETY CERTIFICATE AS PER THE NATIONAL BUILDING CODE</div>
-                            <div className={styles.flexCell} style={{ border: "none" }}></div>
+                            <div className={styles.flexCell} style={{ border: "none" }}><a href="/building_safety_certificate.pdf">https://www.kundanpublicschool.org/building_safety_certificate.pdf</a></div>
                         </div>
                         <div className={`${styles.flexRow} ${styles.alternateRow}`}>
                             <div className={`${styles.flexCell} ${styles.serialNumber}`}>6</div>
