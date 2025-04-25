@@ -99,12 +99,12 @@ export default function MobileNavBar() {
                                 <h3 className={styles.option}>Holidays</h3>
                             </div>
                         </NavLink>
-                        <NavLink to={"/MandatoryDisclosures"} className={styles.NavLink}>
+                        <a href ={"/Mandatory_Public_Disclosure.pdf"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <FaFileAlt className={styles.icons} />
                                 <h3 className={styles.option}>Mandatory Disclosures</h3>
                             </div>
-                        </NavLink>
+                        </a>
                         <NavLink to={"/adminPanel"} className={styles.NavLink}>
                             <div className={styles.yo}>
                                 <BiLogIn className={styles.icons} />

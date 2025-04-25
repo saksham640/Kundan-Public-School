@@ -14,7 +14,7 @@ export default function Footer() {
                     <h2 style={{width: "100%"}}>Kundan Public School</h2>
                     <h3>Address: Sarpanch Colony, Ludhiana</h3>
                     <br />
-                    <NavLink to={"/MandatoryDisclosures"} className={styles.NavLink}><h3>&gt; Mandatory Disclosures</h3></NavLink>
+                    <a className={styles.NavLink} href="Mandatory_Public_Disclosure.pdf"><h3>&gt; Mandatory Disclosures</h3></a>
                     <NavLink to={"/admissions"} className={styles.NavLink}><h3>&gt; Fee Structure</h3></NavLink>
                     <br />
                     {/* <h5 className={styles.disclaimer}>© 2024 Kundan Public School . All Rights Reserved.</h5> */}
