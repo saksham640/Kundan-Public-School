@@ -111,7 +111,6 @@ export default function MobileNavBar() {
                                 <h3 className={styles.option}>Login</h3>
                             </div>
                         </NavLink>
-                        
                     </div>
                 </div>
             </div>
