@@ -16,6 +16,7 @@ export default function Footer() {
                     <br />
                     <a className={styles.NavLink} href="Mandatory_Public_Disclosure.pdf"><h3>&gt; Mandatory Disclosures</h3></a>
                     <NavLink to={"/admissions"} className={styles.NavLink}><h3>&gt; Fee Structure</h3></NavLink>
+                    <a className={styles.NavLink} href="AFFIDAVIT_CBSE.pdf"><h3>&gt; Affidavit CBSE</h3></a>
                     <br />
                     {/* <h5 className={styles.disclaimer}>© 2024 Kundan Public School . All Rights Reserved.</h5> */}
                 </div>
