@@ -1,76 +1,60 @@
 .bgScroller {
+    position: relative;
     width: 100%;
     height: 43vh;
     overflow: hidden;
-    position: relative;
-    background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), url("/carousel_images/img_2.jpg")
+    background: #fff;
   }
   
   .image {
-    height: 110vh;
-    width: 110vw;
-    will-change: transform; /* Hint for performance */
-  }
-
-  .values{
-    color: rgb(255, 255, 255);
-    display: flex;
     position: absolute;
-    z-index: 500;
-    width: 95vw;
-    height: 48vh;
-    justify-self: center;
-    margin-left: 2.5%;
-    align-self: center;
+    top: 0;
+    left: 0;
+    width: 110vw;
+    height: 110vh;
+    object-fit: cover;
+    will-change: transform;
+    z-index: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    flex-direction: column;
+    color: #fff;
     text-align: center;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
   }
-
-  #campus{
-    font-size: 5vw;
-    margin-right: 67%;
+  
+  .title {
+    font-size: 2.2vw;
     color: yellow;
-    border: 10px solid transparent;
-    display: block;
-    text-shadow: 3px 3px 3px rgb(133, 133, 133);
-    margin-top: 6%;
+    text-shadow: 2px 2px 8px #333;
+    margin: 0 0 0.5vw 0;
   }
-
-  #description{
-    font-size: 100%;
-    color:rgb(255, 255, 255);
-    margin-left: 7%;
-    margin-right: 7%;
-    border: 5px solid transparent;
-    border-right-color: rgb(255, 255, 255);
-    border-bottom-color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.586);
+  
+  .description {
+    font-size: 1.3vw;
+    background: rgba(0,0,0,0.5);
     border-radius: 5px;
-    margin-bottom: 10%;
-  }
-@media (max-width:648px){
-  .image{
-    object-fit: cover;
-  }
-  #campus{
-    text-align: center;
+    padding: 0.3em 0.8em;
     margin: 0;
-    font-size: 12vw;
-    overflow: visible;
   }
-  #description{
-    font-size: 4.5vw;
-    overflow: visible;
+  
+  @media (max-width: 648px) {
+    .title {
+      font-size: 7vw;
+    }
+    .description {
+      font-size: 4vw;
+      padding: 0.7em 1em;
+    }
   }
-}
-@media (min-width:1000px){
-  #campus{
-    font-size: 3.5vw;
-  }
-  #description{
-    font-size: 1.7vw;
-  }
-}

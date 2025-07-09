@@ -1,43 +1,31 @@
 import { useEffect, useState } from "react";
-import styles from "../BgScroller/BgScroller.module.css";
-
+import styles from "./BgScroller.module.css";
 
 export default function BgScroller({ parallaxValues }) {
-  const [scroll, setScroll] = useState(0);
-  let offsetConstant = parallaxValues.offsetConstant;
-  
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    let animationFrame;
-
-    function handleScroll() {
-      const currentScroll = window.scrollY;
-      animationFrame = requestAnimationFrame(() => {
-        setScroll(currentScroll);
-      });
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(animationFrame);
-    };
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const { title, description, image, offsetConstant = 0 } = parallaxValues;
 
   return (
     <div className={styles.bgScroller}>
-        <div className={styles.values}>
-            <h1 id={styles.campus}>{parallaxValues.title}</h1>
-            <h2 id={styles.description}>{parallaxValues.description}</h2>
-            </div>
       <img
         className={styles.image}
-        src={parallaxValues.image}
+        src={image}
+        alt={title}
         style={{
-          transform: `translateY(${(offsetConstant + scroll) * 0.5}px)`,
+          transform: `translateY(${(offsetConstant + scrollY) * 0.5}px)`,
         }}
       />
+      <div className={styles.overlay}>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.description}>{description}</h2>
+      </div>
     </div>
   );
 }
